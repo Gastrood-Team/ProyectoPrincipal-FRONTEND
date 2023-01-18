@@ -7,9 +7,9 @@ import { AppComponent } from './app.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { RegistrerComponent } from './components/registrer/registrer.component';
 import { LoginComponent } from './components/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +17,9 @@ import { HeaderComponent } from './components/header/header.component';
     AboutUsComponent,
     ContactComponent,
     ProfileComponent,
-    RegistrerComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
