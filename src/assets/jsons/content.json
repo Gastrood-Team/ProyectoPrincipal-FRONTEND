@@ -1,0 +1,24 @@
+{
+    "navbar": [
+        {
+            "sitename": "Home",
+            "href": "/home"
+        },
+        {
+            "sitename": "Recipes",
+            "href": "/recipes"
+        },
+        {
+            "sitename": "Forum",
+            "href": "/forum"
+        },
+        {
+            "sitename": "About",
+            "href": "/about"
+        },
+        {
+            "sitename": "Contact",
+            "href": "/contact"
+        }
+    ]
+}
