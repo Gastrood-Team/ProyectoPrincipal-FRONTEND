@@ -1,1 +1,11 @@
-<p>header works!</p>
+<header>
+    <img src="./assets/images/logo/Header_Logo.jpg" alt="">
+    <nav>
+        <ul *ngFor="let site of sites"> 
+            <li>
+                <a>{{ site.sitename}}</a>
+            </li>
+        </ul>
+    </nav>
+   
+</header>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from 'src/app/services/content.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  sites:any;
+
+  constructor(public ContentService: ContentService) { }
 
   ngOnInit(): void {
+    this.ContentService.getContent().subscribe((content:any)=>{
+        let c = content;
+        this.sites = content.navbar;
+      }
+    );
   }
 
 }
