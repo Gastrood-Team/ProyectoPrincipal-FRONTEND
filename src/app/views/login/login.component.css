@@ -1,0 +1,63 @@
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.child{
+    height: 650px;
+    width: 380px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+}
+img{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+}
+form{
+    padding: 5px 30px;
+}
+input{
+    width: 100%;
+    padding: 7px 10px;
+    margin:7px 0;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+}
+button{
+    width: 100%;
+}
+.sign{
+    width: 100%;
+    padding: 7px 10px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    background-color: #E54B4B;
+}
+.gmail{
+    padding: 7px 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #E54B4B;
+    color: #E54B4B;
+    font-weight: bold;
+}
+/* .gmail:hover{
+    color: white;
+    background-color: #e49292;
+} */
+p{
+    position: relative;
+    top:60px;
+    text-align: center;
+    color: #828282;
+}
+.blue{
+    color: rgb(81, 81, 255);
+}
