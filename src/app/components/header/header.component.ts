@@ -13,9 +13,8 @@ export class HeaderComponent implements OnInit {
   constructor(public ContentService: ContentService) { }
 
   ngOnInit(): void {
-    this.ContentService.getContent().subscribe((content:any)=>{
-        let c = content;
-        this.sites = content.navbar;
+    this.ContentService.getContent().subscribe((contents:any)=>{
+        this.sites = contents.navbar;
       }
     );
   }

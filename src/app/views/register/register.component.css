@@ -60,4 +60,5 @@ p{
 }
 .blue{
     color: rgb(81, 81, 255);
+    cursor: pointer;
 }
