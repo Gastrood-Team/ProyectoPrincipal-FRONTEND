@@ -20,5 +20,59 @@
             "sitename": "Contact",
             "href": "/contact"
         }
+    ],
+    "footer_section": [
+        {
+            "title": "EXPLORE",
+            "is":"is",
+            "items:": [
+                {
+                    "name": "Home",
+                    "href": ""
+                },
+                {
+                    "name": "Recipes",
+                    "href": ""
+                },
+                {
+                    "name": "Forum",
+                    "href": ""
+                },
+                {
+                    "name": "About Us",
+                    "href": ""
+                }
+            ]
+        },
+        {
+            "title": "CONTACT",
+            "items:": [
+                {
+                    "name": "@gastroodteam",
+                    "href": ""
+                },
+                {
+                    "name": "+34 678 912 345",
+                    "href": ""
+                }
+            ]
+        },
+        {
+            "title": "POLICY",
+            "items:": [
+                {
+                    "name": "Privacy",
+                    "href": ""
+                },
+                {
+                    "name": "Cookies",
+                    "href": ""
+                },
+                {
+                    "name": "Legal Warning",
+                    "href": ""
+                }
+            ]
+        }
     ]
 }
