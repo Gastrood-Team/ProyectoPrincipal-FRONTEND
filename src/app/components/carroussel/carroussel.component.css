@@ -1,0 +1,40 @@
+img{
+width: 1600px;
+height: 553px;
+left: 20px;
+top: 0px;
+object-fit: cover;
+}
+.aboutus, .seeRecipes, .registerNow{
+    width: 15%;
+    padding: 7px 10px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: #E54B4B;
+}
+h5{
+    font-size: 100px;
+}
+p{
+    font-size: 32px;
+}
+.carousel-caption{
+    text-align: left;
+    position: absolute;
+    top: 50px;
+}
+.carousel-item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(60deg, rgba(0, 0, 0, 1) 0%, rgba(38, 0, 0, 1) 50%, rgb(68, 0, 0) 100%);
+    opacity: 0.5;
+}
