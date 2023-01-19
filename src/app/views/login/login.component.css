@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-image: url("src/assets/images/fondos/tarjetas_login_register_definitivo.png");
 }
 .child{
     height: 650px;
