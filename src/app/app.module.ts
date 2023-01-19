@@ -11,6 +11,7 @@ import { LoginComponent } from './views/login/login.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RegisterComponent } from './views/register/register.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CarrousselComponent } from './components/carroussel/carroussel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     HeaderComponent,
     RegisterComponent,
-    FooterComponent
+    FooterComponent,
+    CarrousselComponent
   ],
   imports: [
     BrowserModule,
