@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   sites:any;
 
-  constructor(public ContentService: ContentService) { }
+  constructor(private ContentService: ContentService) { }
 
   ngOnInit(): void {
     this.ContentService.getContent().subscribe((contents:any)=>{
