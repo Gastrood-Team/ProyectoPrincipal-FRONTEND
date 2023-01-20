@@ -1,0 +1,22 @@
+img{
+    height: 180px;
+}
+.titulos{
+    color: #E54B4B;
+}
+.card{
+    border-radius: 20px;
+    overflow: hidden;
+}
+.content-cards{
+    display: grid;
+    grid-template-columns: repeat(3,0.2fr);
+    justify-items: center;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 60px;
+}
+h1{
+    text-align: center;
+    margin-top: 30px
+}

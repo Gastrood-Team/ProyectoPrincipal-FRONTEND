@@ -4,7 +4,7 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"/register",pathMatch:'full'},
+ /*  {path:"",redirectTo:"/register",pathMatch:'full'}, */
   {path:"login",component:LoginComponent},
   {path:"register",component:RegisterComponent}
 ];
