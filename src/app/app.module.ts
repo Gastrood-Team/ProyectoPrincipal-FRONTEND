@@ -18,10 +18,14 @@ import { CategoriesComponent } from './components/categories/categories.componen
   declarations: [
     AppComponent,
     LoginComponent,
-    HeaderComponent,
     RegisterComponent,
+    HomeComponent,
+    ContactComponent,
+    AboutUsComponent,
+    CategoriesComponent,
+    HeaderComponent,
     FooterComponent,
-    CarrousselComponent
+    CarrousselComponent,
   ],
   imports: [
     BrowserModule,
