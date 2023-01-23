@@ -1,6 +1,6 @@
 <header>
-    <img class="logo-desk" src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood">
-    <img class="logo-cell" src="./assets/images/logo/Mobile_Logo.jpg" alt="Gastrood">
+    <img class="logo-desk" src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood" [routerLink]="['/home']">
+    <img class="logo-cell" src="./assets/images/logo/Mobile_Logo.jpg" alt="Gastrood" [routerLink]="['/home']">
     <nav class="nav-desk">
         <ul>
             <li *ngFor="let site of header?.navbar">
