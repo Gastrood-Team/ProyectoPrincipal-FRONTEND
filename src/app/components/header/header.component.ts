@@ -8,13 +8,18 @@ import { ContentService } from 'src/app/services/content.service';
 })
 export class HeaderComponent implements OnInit {
 
-  sites:any;
+  header:any;
+  display:boolean = false;
 
   constructor(private ContentService: ContentService) { }
 
+  showMenu(){
+    this.display = !this.display
+  }
+
   ngOnInit(): void {
     this.ContentService.getContent().subscribe((contents:any)=>{
-        this.sites = contents.navbar;
+        this.header = contents.header;
       }
     );
   }

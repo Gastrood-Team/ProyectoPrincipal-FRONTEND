@@ -1,11 +1,33 @@
 <header>
-    <img src="./assets/images/logo/Header_Logo.jpg" alt="">
-    <nav>
-        <ul *ngFor="let site of sites"> 
-            <li>
-                <a>{{ site.sitename}}</a>
+    <img class="logo-desk" src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood">
+    <img class="logo-cell" src="./assets/images/logo/Mobile_Logo.jpg" alt="Gastrood">
+    <nav class="nav-desk">
+        <ul>
+            <li *ngFor="let site of header?.navbar">
+                <a [routerLink]="site.href">{{site.sitename}}</a>
             </li>
         </ul>
     </nav>
-   
+    <div class="search-bar icon">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="Search">
+    </div>
+    <form onsubmit="return false">
+        <ng-container *ngFor="let button of header?.buttons">
+            <button [routerLink]="button.href" >{{button.text}}</button>
+        </ng-container>
+    </form>
+    <div class="menu-icon icon" (click)="showMenu()">
+        <i class="bi bi-list"></i>
+    </div>
+        <ng-container *ngIf="display">
+            <nav class="nav-cell">
+                <ul>
+                    <li><a href="">Log in</a></li>
+                    <li *ngFor="let site of header?.navbar">
+                        <a [routerLink]="site.href">{{site.sitename}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </ng-container>
 </header>
