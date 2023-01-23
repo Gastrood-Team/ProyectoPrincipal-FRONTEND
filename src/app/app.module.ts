@@ -12,20 +12,18 @@ import { CarrousselComponent } from './components/carroussel/carroussel.componen
 import { HomeComponent } from './views/home/home.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
-import { CategoriesComponent } from './components/categories/categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent,
-    ContactComponent,
-    AboutUsComponent,
-    CategoriesComponent,
-    HeaderComponent,
     FooterComponent,
     CarrousselComponent,
+    AboutUsComponent,
+    ContactComponent,
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
