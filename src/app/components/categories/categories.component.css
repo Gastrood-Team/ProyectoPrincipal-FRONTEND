@@ -1,11 +1,14 @@
 img{
     height: 180px;
+    object-fit: cover;
 }
 .titulos{
     color: #E54B4B;
 }
 .card{
     border-radius: 20px;
+    width: 21rem;
+    height: 20rem;
     overflow: hidden;
     box-shadow: 0 7px 7px rgba(0, 0, 0, 0.1);
 }
@@ -13,15 +16,22 @@ img{
     display: grid;
     grid-template-columns: repeat(3,0.2fr);
     justify-items: center;
-    gap: 40px;
+    gap: 40px 60px;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 h1{
     text-align: center;
     margin-top: 30px
 }
-/* .card:hover > img{
-    height: 105%;
-    width: 105%;
-} */
+@media (max-width:1400px){
+    .content-cards{
+        grid-template-columns: repeat(2,0.2fr);
+    }
+}
+@media(max-width:700px){
+    .content-cards{
+    grid-template-columns: repeat(1,0.2fr);
+    gap: 20px 0;
+    }
+}
