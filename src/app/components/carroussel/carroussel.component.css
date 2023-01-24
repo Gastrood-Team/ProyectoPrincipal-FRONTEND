@@ -53,13 +53,19 @@ img{
         font-size: 32px;
     }
     .carousel-caption p{
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin: 5px 0;
     }
     .carousel-caption button{
         width: 100px;
         padding: 0;
         font-size: 0.8rem;
-
+    }
+    span{
+        width: 12px;
+    }
+    .carousel-indicators button{
+        width: 18px;
+        height: 2px;
     }
 }
