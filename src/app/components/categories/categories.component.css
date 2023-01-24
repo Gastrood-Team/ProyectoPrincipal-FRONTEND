@@ -18,15 +18,19 @@ img{
     justify-items: center;
     gap: 40px 60px;
     justify-content: center;
-    margin-top: 40px;
 }
 h1{
     text-align: center;
-    margin-top: 30px
+    margin: 40px 0;
 }
 @media (max-width:1400px){
     .content-cards{
         grid-template-columns: repeat(2,0.2fr);
+        gap: 30px 40px;
+    }
+    h1{
+        font-size: 21px;
+        margin: 20px 0;
     }
 }
 @media(max-width:700px){

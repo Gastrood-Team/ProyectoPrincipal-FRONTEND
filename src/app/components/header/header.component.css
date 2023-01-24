@@ -5,17 +5,18 @@ header{
     padding: 5px 50px;
     background-color: #e54b4b;
 }
-img{
+.logo-desk{
     height: 50px;
     cursor: pointer;
 }
 .logo-cell{
     display: none;
+    height: 50px;
 }
 .nav-desk{
     padding-left: 20px;
-    width: auto;
     margin-right: auto;
+    width: auto;
 }
 .nav-desk ul{
     display: inline-block;

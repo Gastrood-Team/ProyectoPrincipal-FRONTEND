@@ -1,30 +1,26 @@
 img{
-width: 1600px;
-height: 553px;
-left: 20px;
-top: 0px;
-object-fit: cover;
-}
-.aboutus, .seeRecipes, .registerNow{
-    width: 15%;
-    padding: 7px 10px;
-    margin: 20px 0;
-    border: none;
-    border-radius: 16px;
-    color: white;
-    font-weight: bold;
-    background-color: #E54B4B;
-}
-h5{
-    font-size: 100px;
-}
-p{
-    font-size: 32px;
+    height: 550px;
+    object-fit: cover;
 }
 .carousel-caption{
-    text-align: left;
     position: absolute;
-    top: 50px;
+    text-align: left;
+    top: 110px;
+}
+.carousel-caption button{
+    width: 150px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: #E54B4B;
+}
+.carousel-caption h5{
+    margin: 0;
+    font-size: 82px;
+}
+.carousel-caption p{
+    font-size: 24px;
 }
 .carousel-item::before{
     content: '';
@@ -37,4 +33,33 @@ p{
     background: rgb(0, 0, 0);
     background: linear-gradient(60deg, rgba(0, 0, 0, 1) 0%, rgba(38, 0, 0, 1) 50%, rgb(68, 0, 0) 100%);
     opacity: 0.5;
+}
+@media (max-width: 1400px){
+    img{
+        height: 400px;
+    }
+    .carousel-caption{
+        top: 60px;
+    }
+}
+@media(max-width:700px){
+    img{
+        height: 210px;
+    }
+    .carousel-caption{
+        top: 30px;
+    }
+    .carousel-caption h5{
+        font-size: 32px;
+    }
+    .carousel-caption p{
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+    .carousel-caption button{
+        width: 100px;
+        padding: 0;
+        font-size: 0.8rem;
+
+    }
 }
