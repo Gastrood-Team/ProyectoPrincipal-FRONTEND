@@ -20,19 +20,45 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
             <table>
-                <div>
-                    <ng-container *ngFor="let section of contents?.footer_section">
-                        <thead>
-                            <tr>
-                                <th>{{section.title}}</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let item of section.items">
-                                {{item.name}}
-                            </tr>
-                        </tbody>
-                    </ng-container>
+                <div class="content-table">
+                    <div>
+                        <div class="titulos">
+                            <thead>
+                                <tr>
+                                    <th>EXPLORE</th>
+                                    <th>CONTACT US</th>
+                                    <th>POLICY</th>
+                                </tr>
+                            </thead>
+                        </div>
+                        <div class="content-titulos">
+                            <tbody>
+                                <tr>
+                                    <td>Home</td>
+                                    <td>@gastroodteam</td>
+                                    <td>Privacy</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>Recipes</td>
+                                    <td>+34 662387283</td>
+                                    <td>Cookies</td>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>Forum</td>
+                                    <td></td>
+                                    <td>Legal warning</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>About Us</td>
+                                </tr>
+                            </tbody>
+                        </div>
+                    </div>
                 </div>
             </table>
         </div>

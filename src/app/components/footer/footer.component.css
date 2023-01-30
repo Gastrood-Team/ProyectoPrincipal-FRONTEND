@@ -79,8 +79,6 @@ p{
 .content-footer{
     display: flex;
     width: 100%;
+    justify-content: space-around;
 }
 
-table{
-   display: flex; 
-}
