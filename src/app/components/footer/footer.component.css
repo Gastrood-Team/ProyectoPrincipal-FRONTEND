@@ -27,6 +27,7 @@ p{
 .content-follow {
     width: 100%;
     position: relative;
+    margin-top: 200px;
 }
 
 .content-follow img {
@@ -77,8 +78,40 @@ p{
     color: #fff;
 }
 .content-footer{
-    display: flex;
     width: 100%;
+    display: flex;
     justify-content: space-around;
+    align-items: center;
+    
 }
-
+iframe{
+    width: 518px;
+    height: 346px;
+    margin-top: 50px;
+}
+.content-links{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 170px;
+}
+.links1, .links2, .links3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+h4{
+    color: #fff;
+    font-size: 24px;
+}
+.line{
+    width: 90%;
+    margin: 0px auto;
+    border-bottom: 1px solid #ff9f9f;
+    padding-top: 30px;
+}
