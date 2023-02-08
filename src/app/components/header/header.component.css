@@ -4,6 +4,10 @@ header{
     justify-content: flex-end;
     padding: 5px 50px;
     background-color: #e54b4b;
+    position: fixed;
+    z-index:5;
+    width: 100%;
+    top: 0px;
 }
 .logo-desk{
     height: 50px;
@@ -177,3 +181,4 @@ form button:nth-child(2):hover{
     }
 
 }
+
