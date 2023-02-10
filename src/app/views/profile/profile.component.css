@@ -1,0 +1,23 @@
+.cabezera-image img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+.second-header{
+    background-color: #E54B4B;
+    width: 100%;
+    height: 76px;
+    opacity: 85%;
+}
+.btn-edit{
+    width: 157px;
+    height: 39px;;
+    border-radius: 50px;
+    color: white;
+    border: 1px solid white;
+    background-color: #e54b4b;
+    margin-left: 1670px;
+}
+div nav ul li {
+    list-style-type:none;
+}
