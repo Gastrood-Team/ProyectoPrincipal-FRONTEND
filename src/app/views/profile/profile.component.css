@@ -265,6 +265,37 @@
     font-size: 14px;
     color: #828282;
 }
+
+@media only screen and (min-width:1600px) {
+    .content-recipes {
+        width: 93%;
+        height: 187px;
+        background: #FFFFFF;
+        border-radius: 32px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    .icons-content {
+        margin-left: 30px;
+        cursor: pointer;
+    }
+    .icons-content img{
+        margin-left: 30px;
+    }
+    .info-recipes{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .main-content-recipes {
+        overflow-y: auto;
+        height: 800px;
+        width: 100%;
+        margin-right: 3px;
+        margin-top: 25px;
+    }
+}
 @media only screen and (min-width: 1920px) {
     .btn-edit {
         margin-left: 1698px;
