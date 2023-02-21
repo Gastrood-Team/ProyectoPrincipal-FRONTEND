@@ -1,16 +1,17 @@
-.content-edit-profile{
+.content-edit-profile {
     width: 100%;
-    height: 100vh;
 }
+
 .cabezera-image {
     width: 100%;
 }
+
 .cabezera-image img {
     width: 100%;
     object-fit: contain;
 }
+
 .second-header {
-    position: relative;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -18,7 +19,194 @@
     width: 100%;
     height: 76px;
     opacity: 85%;
-} 
-.content-info-recipe{
-    
+}
+
+.content-info-recipes,
+.face-profile {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.content-info-recipes a {
+    height: 50px;
+    background: #E54B4B;
+    border: 1.5px solid #FF6584;
+    border-radius: 50px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.content-info-recipes {
+    margin-top: 20px;
+}
+
+.face-profile {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.block-image img {
+    position: relative;
+    object-fit: contain;
+}
+
+.content-profile {
+    width: 50%;
+    margin-top: 150px;
+}
+
+.content-profile h1 {
+    font-weight: 500;
+    font-size: 40px;
+    color: #000000;
+}
+
+.content-profile span {
+    font-weight: 200;
+    font-size: 20px;
+    color: #000000;
+}
+
+/* Content-Forms */
+.content-forms {
+    margin-top: 160px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.username-form {
+    width: 55%;
+}
+
+.text-forms {
+    margin-right: 200px;
+}
+
+.span {
+    border-top-left-radius: 0.55rem !important;
+    border-bottom-left-radius: 0.55rem !important;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+}
+
+.text-forms p {
+    margin: 0px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 21px;
+    color: #000000;
+}
+
+.website-form {
+    width: 55%;
+    margin-top: 50px;
+    border-top: 2px solid gray;
+    padding-top: 50px;
+}
+
+.website-forms p {
+    margin: 0px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 21px;
+    color: #000000;
+}
+
+.website-forms {
+    margin-right: 217px;
+}
+
+.photo-forms {
+    margin-right: 217px;
+}
+
+.photo-forms p {
+    margin: 0px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 21px;
+    color: #000000;
+}
+
+.photo-forms span {
+    font-weight: 200;
+    font-size: 18px;
+    color: #000000;
+}
+
+.btns {
+    width: 44%;
+    text-align: center;
+    line-height: 3;
+
+}
+
+.btns a {
+    display: inline-block;
+    height: 39px;
+    width: 165px;
+    background: #E54B4B;
+    border: 1px solid #FF6584;
+    border-radius: 50px;
+    margin-left: 65.5px;
+    font-weight: 500;
+    font-size: 13px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Description Form */
+.description-form {
+    width: 55%;
+    margin-top: 50px;
+    border-top: 2px solid gray;
+    padding-top: 50px;
+}
+
+.description-forms {
+    width: 590px;
+    height: 304px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    border-top-left-radius: 1rem !important;
+    border-bottom-left-radius: 1rem !important;
+}
+/* Section Change Password */
+.change-password-form{
+    width: 55%;
+    margin-top: 50px;
+    border-top: 2px solid gray;
+    padding-top: 50px;
+}
+.change-password-form input{
+    border-top-left-radius: 0.45rem !important;
+    border-bottom-left-radius: 0.45rem !important;
+}
+.change-password{
+    width: 55%;
+    margin-top: 5px;
+    padding-top: 20px;
+}
+.change-password input{
+    border-top-left-radius: 0.45rem !important;
+    border-bottom-left-radius: 0.45rem !important;
+}
+.repeat-password{
+    width: 55%;
+    margin-top: 5px;
+    padding-top: 20px;
+}
+.repeat-password input{
+    border-top-left-radius: 0.45rem !important;
+    border-bottom-left-radius: 0.45rem !important;
 }
