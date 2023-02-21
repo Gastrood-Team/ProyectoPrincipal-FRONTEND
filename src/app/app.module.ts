@@ -16,6 +16,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ProfileComponent } from './views/profile/profile.component';
 import { RecipesComponent } from './views/recipes/recipes.component';
 import { ForumComponent } from './views/forum/forum.component';
+import { EditProfileComponent } from './views/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ForumComponent } from './views/forum/forum.component';
     CategoriesComponent,
     ProfileComponent,
     RecipesComponent,
-    ForumComponent
+    ForumComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,
