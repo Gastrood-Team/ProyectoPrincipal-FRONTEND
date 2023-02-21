@@ -266,6 +266,7 @@
     color: #828282;
 }
 
+
 @media only screen and (min-width:1600px) {
     .content-recipes {
         width: 93%;
@@ -288,6 +289,7 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+    
     .main-content-recipes {
         overflow-y: auto;
         height: 800px;
