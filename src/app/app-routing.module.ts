@@ -8,6 +8,8 @@ import { RegisterComponent } from './views/register/register.component';
 import { RecipesComponent } from "./views/recipes/recipes.component";
 import { ForumComponent } from './views/forum/forum.component';
 import { ProfileComponent } from './views/profile/profile.component';
+import { EditProfileComponent } from './views/edit-profile/edit-profile.component';
+
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: 'full' },
@@ -19,6 +21,7 @@ const routes: Routes = [
   { path: "recipes", component: RecipesComponent },
   { path: "forum", component: ForumComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'edit-profile', component: EditProfileComponent},
 ];
 
 @NgModule({
