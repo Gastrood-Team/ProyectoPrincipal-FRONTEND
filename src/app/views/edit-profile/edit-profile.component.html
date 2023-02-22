@@ -5,8 +5,8 @@
     </div>
     <div class="second-header">
         <div class="content-info-recipes">
-            <a>Cancel</a>
-            <a>Save Changes</a>
+            <a [routerLink]="['/profile/view', profile.id]">Cancel</a>
+            <a (click)="updateProfile()">Save Changes</a>
         </div>
         <div class="face-profile">
             <div class="block-image">
@@ -25,7 +25,7 @@
                 <p>Username</p>
             </div>
             <span class="input-group-text span" id="basic-addon1">UserName</span>
-            <input type="text" class="form-control" placeholder="@Username" aria-label="Username"
+            <input type="text" class="form-control" placeholder="{{profile.username}}" [(ngModel)]="profile.username" aria-label="Username"
                 aria-describedby="basic-addon1">
         </div>
         <div class="input-group mb-3 website-form">

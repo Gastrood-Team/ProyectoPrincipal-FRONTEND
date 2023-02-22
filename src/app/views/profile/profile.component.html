@@ -8,7 +8,7 @@
         <a>Post</a>
     </div>
 </div>
-<button class="btn-edit">Edit Profile</button>
+<button class="btn-edit" [routerLink]="['/profile/edit', profile.id]">Edit Profile</button>
 <div class="content-main">
     <div class="content-info-profile">
         <div class="bg-content-profile">
@@ -16,7 +16,7 @@
                 <img src="assets/images/profile/faceprofile.png" alt="faceprofile">
             </div>
             <div class="content-name">
-                <h2>Elisabeth Scott</h2>
+                <h2>{{profile.firstName}} {{profile.lastName}}</h2>
                 <p>@msElisabethScott</p>
                 <p>Software Developer</p>
             </div>
