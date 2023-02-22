@@ -20,8 +20,8 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent },
   { path: "recipes", component: RecipesComponent },
   { path: "forum", component: ForumComponent },
-  { path: 'profile/view/:id', component: ProfileComponent },
-  { path: 'profile/edit/:id', component: EditProfileComponent},
+  { path: "profile/view/:id",component:ProfileComponent},
+  { path: "profile/edit/:id",component:EditProfileComponent}
 ];
 
 @NgModule({
