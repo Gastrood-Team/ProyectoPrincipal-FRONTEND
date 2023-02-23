@@ -82,7 +82,18 @@
     align-items: center;
     justify-content: center;
 }
-
+.emails-forms span{
+    display: inline-block;
+    width: 286px;
+    text-align: center;
+    margin-left: 5px;
+}
+.email{
+    height: 54px;
+    border-top-left-radius: 0.45rem !important;
+    border-bottom-left-radius: 0.45rem !important;
+    margin-top: 20px;
+}
 .username-form {
     width: 55%;
 }
@@ -113,13 +124,28 @@
     border-top: 2px solid gray;
     padding-top: 50px;
 }
-
+.emails-forms p {
+    margin: 0px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 21px;
+    color: #000000;
+}
 .website-forms p {
     margin: 0px;
     padding: 10px;
     font-weight: 500;
     font-size: 21px;
     color: #000000;
+}
+.email-forms{
+    width: 55%;
+    margin-top: 50px;
+    border-top: 2px solid gray;
+    padding-top: 50px;
+}
+.emails-forms{
+    margin-right: 217px;
 }
 
 .website-forms {
@@ -137,7 +163,11 @@
     font-size: 21px;
     color: #000000;
 }
-
+.emails-forms span{
+    font-weight: 200;
+    font-size: 18px;
+    color: #000000;
+}
 .photo-forms span {
     font-weight: 200;
     font-size: 18px;
@@ -148,7 +178,6 @@
     width: 44%;
     text-align: center;
     line-height: 3;
-
 }
 
 .btns a {
@@ -193,20 +222,44 @@
     border-bottom-left-radius: 0.45rem !important;
 }
 .change-password{
-    width: 55%;
+    width: 56.5%;
     margin-top: 5px;
     padding-top: 20px;
 }
 .change-password input{
+    margin-right: 10px;
     border-top-left-radius: 0.45rem !important;
     border-bottom-left-radius: 0.45rem !important;
 }
 .repeat-password{
-    width: 55%;
+    width: 58.3%;
     margin-top: 5px;
     padding-top: 20px;
 }
 .repeat-password input{
+    margin-right: 25px;
     border-top-left-radius: 0.45rem !important;
     border-bottom-left-radius: 0.45rem !important;
+}
+
+.message-icon{
+    position: absolute;
+    left: 517px;
+    top: 84px;
+    z-index: 1;
+}
+.email{
+    padding-left: 40px;
+}
+
+@media only screen and (max-width: 1600px) {
+    .website-form {
+        width: 67%;
+    }
+    .description-form {
+        width: 64%;
+    }
+    .username-form {
+        width: 68%;
+    }
 }
