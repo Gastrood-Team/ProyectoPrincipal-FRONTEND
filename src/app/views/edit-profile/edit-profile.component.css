@@ -264,3 +264,82 @@
         width: 68%;
     }
 }
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+    .content-profile {
+      margin-top: 80px; 
+    }
+    
+    .face-profile {
+      width: 60%;
+    }
+    
+    .content-forms {
+      margin-top: 100px;
+    }
+    
+    .btns {
+      width: 80%;
+    }
+    
+    .btns a {
+      width: 100%;
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+    
+    .description-form {
+      width: 80%;
+      margin-top: 50px;
+      padding-top: 20px;
+    }
+    
+    .description-forms {
+      width: 100%;
+      height: 200px;
+    }
+    
+    .change-password-form {
+      width: 80%;
+      margin-top: 50px;
+      padding-top: 20px;
+    }
+  }
+  
+  /* Tablet */
+  @media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .content-profile {
+      margin-top: 100px;
+    }
+    
+    .face-profile {
+      width: 50%;
+    }
+    
+    .content-forms {
+      margin-top: 100px;
+    }
+    
+    .btns {
+      width: 60%;
+    }
+    
+    .description-form {
+      width: 60%;
+      margin-top: 50px;
+      padding-top: 20px;
+    }
+    
+    .description-forms {
+      width: 100%;
+      height: 250px;
+    }
+    
+    .change-password-form {
+      width: 60%;
+      margin-top: 50px;
+      padding-top: 20px;
+    }
+  }
+  

@@ -96,19 +96,93 @@ h1 {
 }
 
 button {
- width: 340px;
- height: 50px;
- border-radius: 10px;
- background-color: black;
- color: #f5f5f5;
- border:none;
- margin-top: 5px;
- font-size: 16px;
- font-weight: bold;
+    width: 340px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: black;
+    color: #f5f5f5;
+    border: none;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
 }
-.lema p{
+
+.lema p {
     color: #828282;
     font-size: 36px;
     margin-top: 200px;
     text-align: center;
+}
+
+@media (max-width: 767px) {
+    .content-contact {
+        padding: 20px;
+        margin-top: 80px;
+        border-radius: 0;
+        flex-direction: column;
+        border-radius: 26px;
+    }
+
+    .content-form {
+        width: 100%;
+        height: 371px;
+        background-color: #e54b4b;
+        position: static;
+        border-radius: 0;
+        box-shadow: none;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        right: 0;
+        border-radius: 26px;
+    }
+
+    .contact-info {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-img {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .icon-phone {
+        margin-top: 20px;
+    }
+
+    .image-left {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    input,
+    textarea {
+        width: 89%;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 90%;
+        height: 40px;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .lema p {
+        font-size: 24px;
+        margin-top: 50px;
+    }
 }
