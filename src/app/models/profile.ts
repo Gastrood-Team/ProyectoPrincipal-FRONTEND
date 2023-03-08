@@ -5,5 +5,6 @@ export class Profile{
     lastName!: string;
     profilePic!: string;
     bannerPic!: string;
-    biogaphy!: Text;
+    biography!: Text;
+    website!:string;
 }

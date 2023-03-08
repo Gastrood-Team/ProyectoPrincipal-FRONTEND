@@ -10,14 +10,14 @@
 </div>
 <button class="btn-edit" [routerLink]="['/profile/edit', profile.id]">Edit Profile</button>
 <div class="content-main">
-    <div class="content-info-profile">
+    <div class="content-info-profile"> s
         <div class="bg-content-profile">
             <div class="content-image">
                 <img src="assets/images/profile/faceprofile.png" alt="faceprofile">
             </div>
             <div class="content-name">
                 <h2>{{profile.firstName}} {{profile.lastName}}</h2>
-                <p>@msElisabethScott</p>
+                <p>{{profile.username}}</p>
                 <p>Software Developer</p>
             </div>
             <div class="content-profile-icon">
@@ -31,19 +31,13 @@
                     <div>
                         <img src="assets/images/profile/webworld.png" alt="map">
                     </div>
-                    <p>example.com</p>
+                    <p>{{profile.website}}</p>
                 </div>
                 <div class="img-4 d-flex">
                     <div>
                         <img src="assets/images/profile/calendar.png" alt="map">
                     </div>
                     <p>12/02/2022</p>
-                </div>
-                <div class="img-5 d-flex">
-                    <div>
-                        <img src="assets/images/profile/photos.png" alt="map">
-                    </div>
-                    <p>8900 recipes and videos</p>
                 </div>
             </div>
         </div>
@@ -56,13 +50,7 @@
         </div>
         <div class="content-about-me">
             <h4>About Me</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ut perspiciatis natus ipsam architecto
-                laborum expedita incidunt optio, fuga ipsa quasi consequuntur similique tempora aspernatur eos nisi
-                dolorum ex debitis.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim maxime facilis, fuga modi eius suscipit
-                atque assumenda saepe amet? Vero aspernatur voluptate repellat harum, ea dolorum libero esse totam
-                minus.
-            </p>
+            <p>{{profile.biography}}</p>
         </div>
     </div>
     <div class="main-content-recipes">
