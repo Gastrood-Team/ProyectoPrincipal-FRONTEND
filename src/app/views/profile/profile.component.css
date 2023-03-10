@@ -53,6 +53,7 @@
 .content-info-profile {
     width: 50%;
     margin-left: 35px;
+    margin-top: 300px;
 }
 
 .bg-content-profile {
@@ -316,12 +317,13 @@
     .content-message {
         height: 40px;
         width: 356px;
-        margin-top: 215px;
+        margin-top: 279px;
         background: #E54B4B;
         border: 1px solid #FF6584;
         border-radius: 50px;
         text-align: center;
         cursor: pointer;
+        margin-bottom: 40px;
     }
 
     .recipes-info h3 {

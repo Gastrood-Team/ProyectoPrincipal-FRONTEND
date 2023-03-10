@@ -10,7 +10,7 @@
 </div>
 <button class="btn-edit" [routerLink]="['/profile/edit', profile.id]">Edit Profile</button>
 <div class="content-main">
-    <div class="content-info-profile"> s
+    <div class="content-info-profile">
         <div class="bg-content-profile">
             <div class="content-image">
                 <img src="assets/images/profile/faceprofile.png" alt="faceprofile">
@@ -41,13 +41,15 @@
                 </div>
             </div>
         </div>
-        <div class="content-message">
-            <p>Message to Elisabeth Scott</p>
-        </div>
-        <div class="content-followers">
+
+        <!-- <div class="content-message">
+            <p>Message to {{profile.firstName}} {{profile.lastName}}</p>
+        </div> -->
+        <!--         <div class="content-followers">
             <img src="assets/images/profile/pngwing 13.png" alt="map">
             <span>140 Followers you Know</span>
-        </div>
+        </div> -->
+
         <div class="content-about-me">
             <h4>About Me</h4>
             <p>{{profile.biography}}</p>
@@ -58,7 +60,7 @@
             <div class="content-post-recipes">
                 <div class="recipes-info">
                     <img src="assets/images/profile/image 69.png" alt="image-69">
-                    <h3>Elisabeth Scott</h3>
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
                     <span>{{profile.username}}</span>
                 </div>
                 <div class="content-options">
@@ -90,7 +92,7 @@
             <div class="content-post-recipes">
                 <div class="recipes-info">
                     <img src="assets/images/profile/image 69.png" alt="image-69">
-                    <h3>Elisabeth Scott</h3>
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
                     <span>{{profile.username}}</span>
                 </div>
                 <div class="content-options">
@@ -122,7 +124,7 @@
             <div class="content-post-recipes">
                 <div class="recipes-info">
                     <img src="assets/images/profile/image 69.png" alt="image-69">
-                    <h3>Elisabeth Scott</h3>
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
                     <span>{{profile.username}}</span>
                 </div>
                 <div class="content-options">
@@ -154,7 +156,7 @@
             <div class="content-post-recipes">
                 <div class="recipes-info">
                     <img src="assets/images/profile/image 69.png" alt="image-69">
-                    <h3>Elisabeth Scott</h3>
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
                     <span>{{profile.username}}</span>
                 </div>
                 <div class="content-options">
@@ -186,7 +188,7 @@
             <div class="content-post-recipes">
                 <div class="recipes-info">
                     <img src="assets/images/profile/image 69.png" alt="image-69">
-                    <h3>Elisabeth Scott</h3>
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
                     <span>{{profile.username}}</span>
                 </div>
                 <div class="content-options">
