@@ -55,8 +55,9 @@
                 <p>Your Bio</p>
                 <span>Write a short information</span>
             </div>
-            <textarea class="form-control description-forms" placeholder="Add short bio....."
-                aria-label="With textarea"></textarea>
+            <textarea class="form-control description-forms" [(ngModel)]="profile.biography"[(ngModel)]="texto" (input)="actualizarContador()" placeholder="Add short bio....."
+                aria-label="With textarea" maxlength="350"></textarea>
+                <div class="contador">{{ contador }} / 350 caracteres</div>
         </div>
 
         <div class="input-group mb-3 change-password-form">
@@ -92,7 +93,5 @@
             <input type="email" class="form-control email" placeholder="Email" aria-label="Email">
         </div>
     </div>
-
 </div>
-
 <app-footer></app-footer>

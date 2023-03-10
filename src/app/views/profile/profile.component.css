@@ -146,6 +146,8 @@
     background: #FFFFFF;
     border-radius: 30px;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .content-about-me h4 {
@@ -162,6 +164,8 @@
     line-height: 26px;
     font-weight: 300;
     font-size: 14px;
+    word-wrap: break-word;
+    
 }
 
 /* Content-Recipes */

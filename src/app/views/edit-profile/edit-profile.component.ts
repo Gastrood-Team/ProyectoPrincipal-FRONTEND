@@ -12,8 +12,10 @@ import Swal from 'sweetalert2';
 })
 export class EditProfileComponent implements OnInit {
 
+  texto: string = '';
+  contador: number = 0;
   public profile: Profile = new Profile;
-  
+
   constructor(
     private profileService: ProfileService,
     private userService: UserService,
@@ -28,7 +30,7 @@ export class EditProfileComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe(param => {
       let id: number = parseInt(param.get('id')!);
       if (id) {
-        this.profileService.getProfilebyId(id).subscribe(response => { this.profile = response.profile; console.log(response.profile)})
+        this.profileService.getProfilebyId(id).subscribe(response => { this.profile = response.profile; console.log(response.profile) })
       }
     })
   }
@@ -36,8 +38,8 @@ export class EditProfileComponent implements OnInit {
   updateProfile() {
     this.profileService.update(this.profile).subscribe({
       next: (res) => {
-        this.route.navigate(['profile/view',`${this.profile.id}`])
-        Swal.fire('Success',res.message,'success');
+        this.route.navigate(['profile/view', `${this.profile.id}`])
+        Swal.fire('Success', res.message, 'success');
       },
       error: (err) => {
         Swal.fire(err.error.message, err.error.error, 'error');
@@ -45,7 +47,7 @@ export class EditProfileComponent implements OnInit {
     })
   }
 
-  deleteProfile(){
+  deleteProfile() {
     Swal.fire({
       title: 'Are you sure?',
       text: `¿Are you sure you want to delete ${this.profile.firstName} ${this.profile.lastName} profile`,
@@ -67,5 +69,9 @@ export class EditProfileComponent implements OnInit {
         })
       }
     });
+  }
+
+  actualizarContador(): void {
+    this.contador = this.texto.length;
   }
 }

@@ -252,13 +252,15 @@
 .email{
     padding-left: 40px;
 }
-
+.contador{
+    padding-left: 890px;
+}
 @media only screen and (max-width: 1600px) {
     .website-form {
         width: 67%;
     }
     .description-form {
-        width: 64%;
+        width: 65%;
     }
     .username-form {
         width: 68%;
