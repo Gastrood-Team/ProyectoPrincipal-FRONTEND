@@ -3,7 +3,7 @@
         <img src="./assets/images/logo/Entire_Logo_White.jpg" alt="" [routerLink]="['/home']">
         <form>
             <input type="text" placeholder="Email" name="email" [(ngModel)]="user.email">
-            <input type="text" placeholder="Password" name="password" [(ngModel)]="user.password">
+            <input type="password" placeholder="Password" name="password" [(ngModel)]="user.password">
             <button class="sign" (click)="login()">Login</button>
             <button class="gmail">Login with Google</button>
             <p class="highlight">Forget your password?</p>
