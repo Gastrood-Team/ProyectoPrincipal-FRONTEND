@@ -1,33 +1,58 @@
 <header>
-    <img class="logo-desk" src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood" [routerLink]="['/home']">
-    <img class="logo-cell" src="./assets/images/logo/Mobile_Logo.jpg" alt="Gastrood" [routerLink]="['/home']">
-    <nav class="nav-desk">
-        <ul>
-            <li *ngFor="let site of header?.navbar">
-                <a [routerLink]="site.href">{{site.sitename}}</a>
-            </li>
-        </ul>
+  <img
+    class="logo-desk"
+    src="./assets/images/logo/Header_Logo.jpg"
+    alt="Gastrood"
+    [routerLink]="['/home']"
+  />
+  <img
+    class="logo-cell"
+    src="./assets/images/logo/Mobile_Logo.jpg"
+    alt="Gastrood"
+    [routerLink]="['/home']"
+  />
+  <nav class="nav-desk">
+    <ul>
+      <li *ngFor="let site of header?.navbar">
+        <a [routerLink]="site.href">{{ site.sitename }}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="search-bar icon">
+    <i class="bi bi-search"></i>
+    <input type="text" placeholder="Search" />
+  </div>
+  <!--  <form onsubmit="return false">
+    <ng-container *ngFor="let button of header?.buttons">
+      <button [routerLink]="button.href">{{ button.text }}</button>
+    </ng-container>
+  </form> -->
+  <div class="menu-icon icon" (click)="showMenu()">
+    <i class="bi bi-list"></i>
+  </div>
+  <!--   <ng-container *ngIf="display">
+    <nav class="nav-cell">
+      <ul>
+        <li><a [routerLink]="['/login']">Log in</a></li>
+        <li *ngFor="let site of header?.navbar">
+          <a [routerLink]="site.href">{{ site.sitename }}</a>
+        </li>
+      </ul>
     </nav>
-    <div class="search-bar icon">
-        <i class="bi bi-search"></i>
-        <input type="text" placeholder="Search">
-    </div>
+  </ng-container> -->
+  <ng-container *ngIf="display; then login; else register"></ng-container>
+  <ng-template #register>
+      <button class="create-recipes" [routerLink]="['/create-recipes']">Create Recipes</button>
+    <img
+      src="./assets/images/profile/faceprofiles.png"
+      alt="face-profile"/>
+  </ng-template>
+  <ng-template #login>
     <form onsubmit="return false">
-        <ng-container *ngFor="let button of header?.buttons">
-            <button [routerLink]="button.href" >{{button.text}}</button>
-        </ng-container>
+      <ng-container *ngFor="let button of header?.buttons">
+        <button [routerLink]="button.href">{{ button.text }}</button>
+      </ng-container>
     </form>
-    <div class="menu-icon icon" (click)="showMenu()">
-        <i class="bi bi-list"></i>
-    </div>
-        <ng-container *ngIf="display">
-            <nav class="nav-cell">
-                <ul>
-                    <li><a [routerLink]="['/login']">Log in</a></li>
-                    <li *ngFor="let site of header?.navbar">
-                        <a [routerLink]="site.href">{{site.sitename}}</a>
-                    </li>
-                </ul>
-            </nav>
-        </ng-container>
+  </ng-template>
+  <!-- </header> -->
 </header>

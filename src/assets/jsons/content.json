@@ -22,66 +22,66 @@
                 "href": "/contact"
             }
         ],
-        "buttons":[
+        "buttons": [
             {
-                "text":"Log in",
-                "href":"/login"
+                "text": "Log in",
+                "href": "/login"
             },
             {
-                "text":"Sign Up",
-                "href":"/register"
+                "text": "Sign Up",
+                "href": "/register"
             }
         ]
     },
-    "footer_section":[
+    "footer_section": [
         {
-            "title":"EXPLORE",
-            "items":[
+            "title": "EXPLORE",
+            "items": [
                 {
-                    "name":"Home",
-                    "href":"/home"
+                    "name": "Home",
+                    "href": "/home"
                 },
                 {
-                    "name":"Recipes",
-                    "href":"/recipes"
+                    "name": "Recipes",
+                    "href": "/recipes"
                 },
                 {
-                    "name":"Forum",
-                    "href":"/forum"
+                    "name": "Forum",
+                    "href": "/forum"
                 },
                 {
-                    "name":"About Us",
-                    "href":"/about"
+                    "name": "About Us",
+                    "href": "/about"
                 }
             ]
         },
         {
-            "title":"CONTACT US",
-            "items":[
+            "title": "CONTACT US",
+            "items": [
                 {
-                    "name":"info@gastrood.com",
-                    "href":"/contact"
+                    "name": "info@gastrood.com",
+                    "href": "/contact"
                 },
                 {
-                    "name":"+34 662 387 283",
-                    "href":"/contact"
+                    "name": "+34 662 387 283",
+                    "href": "/contact"
                 }
             ]
         },
         {
-            "title":"POLICY",
-            "items":[
+            "title": "POLICY",
+            "items": [
                 {
-                    "name":"Privacy",
-                    "href":"/home"
+                    "name": "Privacy",
+                    "href": "/home"
                 },
                 {
-                    "name":"Cookies",
-                    "href":"/home"
+                    "name": "Cookies",
+                    "href": "/home"
                 },
                 {
-                    "name":"Legal warning",
-                    "href":"/home"
+                    "name": "Legal warning",
+                    "href": "/home"
                 }
             ]
         }

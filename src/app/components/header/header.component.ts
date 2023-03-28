@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentService } from 'src/app/services/content.service';
+import { AuthService }  from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   constructor(private ContentService: ContentService) { }
 
   showMenu(){
-    this.display = !this.display
+    this.display = !this.display;
   }
 
   ngOnInit(): void {
@@ -23,5 +24,4 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
-
 }
