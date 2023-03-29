@@ -1,43 +1,50 @@
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 5px 50px;
     background-color: #e54b4b;
     position: fixed;
-    z-index:5;
+    z-index: 5;
     width: 100%;
     top: 0px;
 }
-.logo-desk{
+
+.logo-desk {
     height: 50px;
     cursor: pointer;
 }
-.logo-cell{
+
+.logo-cell {
     display: none;
     height: 50px;
 }
-.nav-desk{
+
+.nav-desk {
     padding-left: 20px;
     margin-right: auto;
     width: auto;
 }
-.nav-desk ul{
+
+.nav-desk ul {
     display: inline-block;
     margin: 0;
     padding: 0;
-    list-style: none; 
+    list-style: none;
     line-height: 50px;
 }
-.nav-desk li{
+
+.nav-desk li {
     display: inline;
     padding: 0 30px;
     cursor: pointer;
 }
-.nav-desk li a{
+
+.nav-desk li a {
     color: white;
 }
-.icon{
+
+.icon {
     display: inline-block;
     position: relative;
     width: 35px;
@@ -47,19 +54,25 @@ header{
     background-color: white;
     overflow: hidden;
 }
-.menu-icon{
+
+.menu-icon {
     display: none;
 }
-.menu-icon:hover{
+
+.menu-icon:hover {
     background-color: #EAEAEA;
 }
-.search-bar{
+
+.search-bar {
     transition: 0.5s;
 }
-.search-bar:hover, .search-bar:focus-within{
+
+.search-bar:hover,
+.search-bar:focus-within {
     width: 350px;
 }
-i{
+
+i {
     position: absolute;
     right: -10px;
     top: 4px;
@@ -67,10 +80,12 @@ i{
     height: 35px;
     z-index: 1;
 }
-.search-bar i{
+
+.search-bar i {
     background-color: white;
 }
-.search-bar input{
+
+.search-bar input {
     position: absolute;
     left: 20px;
     height: 35px;
@@ -78,10 +93,12 @@ i{
     border: none;
     outline: none;
 }
-form{
+
+form {
     display: inline-block;
 }
-form button{
+
+form button {
     display: inline;
     width: 100px;
     height: 35px;
@@ -91,20 +108,24 @@ form button{
     border-radius: 50px;
     background-color: white;
 }
-form button:first-child:hover{
+
+form button:first-child:hover {
     background-color: #EAEAEA;
 }
-form button:nth-child(2){
+
+form button:nth-child(2) {
     color: white;
     border: 1px solid white;
     background-color: #e54b4b;
 }
-form button:nth-child(2):hover{
+
+form button:nth-child(2):hover {
     color: white;
     border: 1px solid white;
     background-color: #d34242;
 }
-.nav-cell{
+
+.nav-cell {
     position: absolute;
     display: none;
     top: 65px;
@@ -117,68 +138,109 @@ form button:nth-child(2):hover{
     overflow: hidden;
     z-index: 2;
 }
-.nav-cell ul{
+
+.nav-cell ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.nav-cell li{
+
+.nav-cell li {
     padding: 10px 20px;
 }
-.nav-cell li a{
+
+.nav-cell li a {
     color: black;
 }
-.nav-cell li:hover{
+
+.nav-cell li:hover {
     background-color: #D4D4D4;
 }
-.nav-cell li:first-child{
+
+.nav-cell li:first-child {
     border-bottom: 1px solid #D4D4D4;
 }
-@media (max-width: 1400px){
-    header{
+
+.create-recipes {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13px;
+}
+
+.plus-symbol {
+    color: white;
+    font-size: 36px;
+}
+.dropdown-menu button:hover, a:hover {
+    background-color: transparent !important;
+    color: white !important;
+  }
+  
+  
+
+@media (max-width: 1400px) {
+    header {
         padding: 5px 20px;
     }
-    form{
+
+    form {
         display: none;
     }
-    .menu-icon{
+
+    .menu-icon {
         display: inline-block;
     }
-    .search-bar:hover, .search-bar:focus-within{
+
+    .search-bar:hover,
+    .search-bar:focus-within {
         width: 450px;
     }
-    .nav-desk{
+
+    .nav-desk {
         display: none;
     }
-    .nav-cell{
+
+    .nav-cell {
         display: block;
         height: calc(100vh - 75px);
     }
-    img{
+
+    img {
         margin-right: auto;
     }
 }
-@media (max-width: 700px){
-    header{
+
+@media (max-width: 700px) {
+    header {
         padding: 5px 10px;
     }
-    .logo-desk{
+
+    .logo-desk {
         display: none;
     }
-    .logo-cell{
+
+    .logo-cell {
         display: block;
     }
-    .search-bar:hover, .search-bar:hover{
+
+    .search-bar:hover,
+    .search-bar:hover {
         width: 240px;
     }
-    .nav-cell{
+
+    .nav-cell {
         top: 55px;
         right: 5px;
         height: calc(100vh - 60px);
     }
-    img{
+
+    img {
         height: 40px;
     }
 
 }
-
