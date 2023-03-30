@@ -13,6 +13,7 @@ export class AuthService {
 
     // Variable que indica si el usuario ha iniciado sesión o no
     private loggedIn: boolean = false;
+    private token: any;
 
     constructor(private http: HttpClient, private router: Router) { }
 
@@ -22,6 +23,7 @@ export class AuthService {
             // Si la petición se resuelve correctamente, se guarda el token en el local storage y se indica que el usuario ha iniciado sesión
             map((response: any) => {
                 localStorage.setItem('token', response.access_token);
+                this.token = response.access_token;
                 this.loggedIn = true;
                 return response;
             }),
@@ -34,11 +36,12 @@ export class AuthService {
                 return throwError(() => e);
             })
         );
-    }
+    };  
 
     // Método para hacer logout
     logout() {
         localStorage.removeItem('token'); // Borramos el token del local storage
+        console.log(this.token);
         this.loggedIn = false; // Indicamos que el usuario no está autenticado
         this.router.navigate(['/']); // Navegamos a la página principal
     }

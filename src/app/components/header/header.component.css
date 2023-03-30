@@ -179,8 +179,12 @@ form button:nth-child(2):hover {
 .dropdown-menu button:hover, a:hover {
     background-color: transparent !important;
     color: white !important;
-  }
-  
+}
+.face-profiles{
+    height: 42px;
+    width: 42px;
+    margin-left: 10px;
+}  
   
 
 @media (max-width: 1400px) {
