@@ -16,7 +16,6 @@ import { AboutUsComponent } from './views/about-us/about-us.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { RecipesComponent } from './views/recipes/recipes.component';
-import { ForumComponent } from './views/forum/forum.component';
 import { EditProfileComponent } from './views/edit-profile/edit-profile.component';
 import { CreateRecipesComponent } from './views/create-recipes/create-recipes.component';
 
@@ -34,7 +33,6 @@ import { CreateRecipesComponent } from './views/create-recipes/create-recipes.co
     CategoriesComponent,
     ProfileComponent,
     RecipesComponent,
-    ForumComponent,
     EditProfileComponent,
     CreateRecipesComponent,
   ],
