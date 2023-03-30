@@ -6,7 +6,6 @@ import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { RecipesComponent } from "./views/recipes/recipes.component";
-import { ForumComponent } from './views/forum/forum.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { EditProfileComponent } from './views/edit-profile/edit-profile.component';
 import { CreateRecipesComponent } from './views/create-recipes/create-recipes.component';
@@ -20,7 +19,6 @@ const routes: Routes = [
   { path: "about", component: AboutUsComponent },
   { path: "contact", component: ContactComponent },
   { path: "recipes", component: RecipesComponent },
-  { path: "forum", component: ForumComponent },
   { path: "profile/view/:id", component: ProfileComponent },
   { path: "profile/edit/:id", component: EditProfileComponent },
   { path: "create-recipes", component: CreateRecipesComponent }
