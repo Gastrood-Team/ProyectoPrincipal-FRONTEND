@@ -1,57 +1,87 @@
-.main-content{
-    width: 100%;   
+.content-main-recipes {
+  width: 100%;
+  margin-top: 100px;
 }
-.container-image{
+.content-filter-recipes {
+  width: 100%;
+  max-width: 942px;
+  height: 500px;
+  background: #e54b4b;
+  border-radius: 28px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 50px;
+  gap: 30px;
+  justify-content: center;
+}
+span {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+.filter {
+  width: 100%;
+  max-width: 831px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+}
+.labels-recipes {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.label-recipe {
+  width: 100%;
+  max-width: 140px;
+  height: 38px;
+  background: #ff9f9f;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+}
+.closed {
+  cursor: pointer;
+}
+/* by-recipe-or-ingredient */
+.by-recipe-or-ingredient {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.by-recipe-or-ingredient input {
+  width: 100%;
+  max-width: 469px;
+  height: 47px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+}
+.filter::placeholder, .by-recipe-or-ingredient input::placeholder{
+    padding-left: 20px;
+}
+.by-recipe-or-ingredient button{
     width: 100%;
-    height: 946px;
-    background-color: rgba(229, 75, 75, 0.85);
-    margin-top: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    
-}
-.container-image img{
-    width: 987px;
-    height: 569px;
-    border: 4px solid white;
-    border-radius: 2%;
-}
-h1{
+    max-width: 340px;
+    height: 51px;
+    background: #000000;
+    border-radius: 8px;
     color:white;
-    font-size: 67px;
+    margin-right: 50px;
 }
-.step{
-    width: 945px;
-    height: 368px;
-    background-color: white;
-    border-radius: 32px;
-}
-.step img{
-    width: 300px;
-    height: 250px;
-}
-.ingredients{
-    width: 353px;
-    height: 829px;
-    background-color: white;
-    border-radius: 32px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-li{
-    padding: 10px;
-}
-.ingredients h3{
-    padding: 10px;
-}
-.steps-ingredients{    display: flex;
 
+/* BEST RATED */
+.content-best-rated{
     width: 100%;
-
-    max-width: 1200px;
-    align-items: center;
-    justify-content: center;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+.title-best-rated{
+    
 }
