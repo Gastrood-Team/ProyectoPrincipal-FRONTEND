@@ -75,12 +75,8 @@ export class CreateRecipesComponent implements OnInit {
             const ratio = Math.min(250 / this.width, 250 / this.height);
             const newWidth = this.width * ratio;
             const newHeight = this.height * ratio;
-
-
-
             previewContainer2.innerHTML = '';
             previewContainer2.style.display = 'block';
-
             const previewImage2 = document.createElement('img');
             previewImage2.src = reader2.result as string;
             previewImage2.style.width = `${newWidth}px`;
@@ -94,8 +90,5 @@ export class CreateRecipesComponent implements OnInit {
         previewContainer2.style.display = 'none';
       }
     });
-
-
-    
   }
 }
