@@ -5,7 +5,7 @@
             <input type="text" placeholder="First Name" name="firstName" [(ngModel)]="profile.firstName">
             <input type="text" placeholder="Last name" name="lastName" [(ngModel)]="profile.lastName">
             <input type="text" placeholder="Email" name="email" [(ngModel)]="user.email">
-            <input type="password" placeholder="Password" name="password" [(ngModel)]="user.password">
+            <input type="password" placeholder="Password" name="password" [(ngModel)]="user.plainPassword">
             <button class="sign" (click)="register()">Register</button>
             <button class="gmail">Sign up with Google</button>
             <p>Already registered? <span class="highlight" [routerLink]="['/login']">Login</span></p>
