@@ -14,14 +14,7 @@
       <div class="content-steps">
         <div class="content-show-recipes">
           <h3>Step 1</h3>
-          <div class="message-step">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-              dolorum nesciunt cumque molestias accusantium natus incidunt
-              impedit corporis. Impedit, molestias earum? Nemo dolore adipisci
-              quod optio distinctio quisquam officiis nobis?
-            </p>
-          </div>
+            <textarea class="message-step" name="description" id="description" cols="20" rows="10"></textarea>
         </div>
 
         <div class="input-file">
@@ -86,7 +79,7 @@
       </label>
       <div class="preview-container2"></div>
     </div>
-    <button class="btnColor">CREATE</button>
+    <button (click)="createRecipe()" class="btnColor">CREATE</button>
   </div>
 </div>
 <app-footer></app-footer>

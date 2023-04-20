@@ -16,7 +16,6 @@ export class CreateRecipesComponent implements OnInit {
     const fileInput = document.getElementById('file-input') as HTMLInputElement;
     const previewContainer = document.querySelector('.preview-container') as HTMLDivElement;
 
-
     fileInput.addEventListener('change', function (this: HTMLInputElement) {
       const file = this.files?.[0];
 
@@ -27,14 +26,10 @@ export class CreateRecipesComponent implements OnInit {
           const image = new Image();
           image.src = reader.result as string;
 
-
-
           image.addEventListener('load', function () {
             const ratio = Math.min(250 / this.width, 250 / this.height);
             const newWidth = this.width * ratio;
             const newHeight = this.height * ratio;
-
-
 
             previewContainer.innerHTML = '';
             previewContainer.style.display = 'block';
@@ -69,8 +64,6 @@ export class CreateRecipesComponent implements OnInit {
           const image2 = new Image();
           image2.src = reader2.result as string;
 
-
-
           image2.addEventListener('load', function () {
             const ratio = Math.min(250 / this.width, 250 / this.height);
             const newWidth = this.width * ratio;
@@ -91,4 +84,25 @@ export class CreateRecipesComponent implements OnInit {
       }
     });
   }
+
+  createRecipe(): void {
+    // obtener los valores de los campos de entrada de texto
+    
+    const title = (document.getElementById('title') as HTMLInputElement).value;
+    const description = (document.getElementById('description') as HTMLInputElement).value;
+    const ingredients = (document.getElementById('ingredients') as HTMLInputElement).value;
+    const instructions = (document.getElementById('instructions') as HTMLInputElement).value;
+
+    // construir el objeto de receta
+    const recipe = {
+      title,
+      description,
+      ingredients,
+      instructions,
+    };
+
+    // enviar la receta al servidor o hacer lo que sea necesario con ella
+    console.log(recipe);
+  }
 }
+

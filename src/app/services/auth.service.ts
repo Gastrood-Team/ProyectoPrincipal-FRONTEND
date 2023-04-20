@@ -14,7 +14,7 @@ export class AuthService {
     // Variable que indica si el usuario ha iniciado sesión o no
     private loggedIn: boolean = false;
     private token: any;
-
+    
     constructor(private http: HttpClient, private router: Router) { }
 
     // Función para iniciar sesión
@@ -41,7 +41,6 @@ export class AuthService {
     // Método para hacer logout
     logout() {
         localStorage.removeItem('token'); // Borramos el token del local storage
-        console.log(this.token);
         this.loggedIn = false; // Indicamos que el usuario no está autenticado
         this.router.navigate(['/']); // Navegamos a la página principal
     }
