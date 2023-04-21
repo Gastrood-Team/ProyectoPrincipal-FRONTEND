@@ -9,7 +9,7 @@ import { RecipesComponent } from "./views/recipes/recipes.component";
 import { ProfileComponent } from './views/profile/profile.component';
 import { EditProfileComponent } from './views/edit-profile/edit-profile.component';
 import { CreateRecipesComponent } from './views/create-recipes/create-recipes.component';
-
+import { RecipeDetailsComponent } from './views/recipe-details/recipe-details.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: 'full' },
@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: "about", component: AboutUsComponent },
   { path: "contact", component: ContactComponent },
   { path: "recipes", component: RecipesComponent },
+  { path: "recipe-details/:id", component: RecipeDetailsComponent},
   { path: "profile/view/:id", component: ProfileComponent },
   { path: "profile/edit/:id", component: EditProfileComponent },
   { path: "create-recipes", component: CreateRecipesComponent }

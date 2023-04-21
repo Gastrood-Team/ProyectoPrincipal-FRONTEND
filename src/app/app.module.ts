@@ -18,6 +18,7 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { RecipesComponent } from './views/recipes/recipes.component';
 import { EditProfileComponent } from './views/edit-profile/edit-profile.component';
 import { CreateRecipesComponent } from './views/create-recipes/create-recipes.component';
+import { RecipeDetailsComponent } from './views/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CreateRecipesComponent } from './views/create-recipes/create-recipes.co
     RecipesComponent,
     EditProfileComponent,
     CreateRecipesComponent,
+    RecipeDetailsComponent,
   ],
   imports: [
     BrowserModule,
