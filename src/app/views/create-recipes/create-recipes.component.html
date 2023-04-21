@@ -5,20 +5,29 @@
       CREATE YOUR RECIPE
     </h1>
   </div>
-  <div class="content-ingredient">
+  <div class="content-ingredient" >
     <div class="min-content-ingredient">
       <div class="add-ingredient">
         <input type="text" placeholder="ingredient..." />
         <button>Add</button>
       </div>
+      <div *ngIf="recipesList">
+        <select name="" id=""  [(ngModel)]="recipesListRecipe">
+          <option value="0">Selecciona</option>
+          <option *ngFor="let type of recipesList;" value="{{type.recipeTypeId}}">
+            {{ type.recipeTypeName }}
+          </option>
+        </select>
+      </div>
       <div class="content-steps">
         <div class="content-show-recipes">
           <h3>Step 1</h3>
-            <textarea class="message-step" name="description" id="description" cols="20" rows="10"></textarea>
+          <input type="text" name="titulo" placeholder="titulo" [(ngModel)]="titulo">
+            <textarea class="message-step" name="description" id="description" cols="20" rows="10" [(ngModel)]="descripcion">{{ descripcion }}</textarea>
         </div>
 
         <div class="input-file">
-          <input type="file" id="file-input" name="file" />
+          <input type="file" id="file-input" name="file" (change)="procesarImagen($event)" />
           <label for="file-input">
             <img
               src="../../../assets/images/create-recipes/icon-camara.png"

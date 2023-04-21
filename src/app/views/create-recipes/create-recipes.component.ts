@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { RecipeService } from 'src/app/services/recipe.service';
 
 
 
@@ -8,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-recipes.component.css']
 })
 export class CreateRecipesComponent implements OnInit {
+
+  titulo: string = "";
+  descripcion: string = "";
+  recipesListRecipe : string = "";
+  imagenSel: File | any = null;
+
+  recipesList : any = [];
+  recipe = inject(RecipeService)
   constructor() { }
+
 
 
 
@@ -83,26 +93,49 @@ export class CreateRecipesComponent implements OnInit {
         previewContainer2.style.display = 'none';
       }
     });
+
+
+    // listar tipos de recetas
+
+    this.recipe.lista().subscribe((e:any) =>{
+      this.recipesList = e.data;
+      console.log(this.recipesList[0].recipeTypeName)
+      console.log(e)
+    })
+  }
+
+  public procesarImagen(evento: any): void {
+    const archivo: File = evento.target.files[0];
+    const lector: FileReader = new FileReader();
+    lector.readAsDataURL(archivo);
+    lector.onload = () => {
+      this.imagenSel = lector.result;
+
+    };
   }
 
   createRecipe(): void {
-    // obtener los valores de los campos de entrada de texto
+
+    let formData = new FormData();
+    formData.append('recipeName', this.titulo);
+    formData.append('recipeDescription', this.descripcion);
+    formData.append('recipeImage', this.imagenSel);
+    formData.append('recipeTypes', this.recipesListRecipe);
     
-    const title = (document.getElementById('title') as HTMLInputElement).value;
-    const description = (document.getElementById('description') as HTMLInputElement).value;
-    const ingredients = (document.getElementById('ingredients') as HTMLInputElement).value;
-    const instructions = (document.getElementById('instructions') as HTMLInputElement).value;
+    console.log({
+      titulo: this.titulo,
+      descripcion: this.descripcion,
+      lista: this.recipesListRecipe
 
-    // construir el objeto de receta
-    const recipe = {
-      title,
-      description,
-      ingredients,
-      instructions,
-    };
+    });
+    console.log(formData)
 
-    // enviar la receta al servidor o hacer lo que sea necesario con ella
-    console.log(recipe);
+    this.recipe.create(formData).subscribe((e:any) =>{
+      console.log(e)
+    })
+
+    console.log(this.imagenSel)
+
   }
 }
 
