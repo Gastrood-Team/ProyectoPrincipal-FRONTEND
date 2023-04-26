@@ -12,14 +12,11 @@ export class CreateRecipesComponent implements OnInit {
 
   titulo: string = "";
   descripcion: string = "";
-  recipesListRecipe : string = "";
+  recipesListRecipe: string = "";
   imagenSel: File | any = null;
-
-  recipesList : any = [];
+  recipesList: any = [];
   recipe = inject(RecipeService)
   constructor() { }
-
-
 
 
   ngOnInit(): void {
@@ -51,8 +48,6 @@ export class CreateRecipesComponent implements OnInit {
             previewContainer.appendChild(previewImage);
           });
         });
-
-
 
         reader.readAsDataURL(file);
       } else {
@@ -94,48 +89,44 @@ export class CreateRecipesComponent implements OnInit {
       }
     });
 
-
-    // listar tipos de recetas
-
-    this.recipe.lista().subscribe((e:any) =>{
-      this.recipesList = e.data;
-      console.log(this.recipesList[0].recipeTypeName)
-      console.log(e)
-    })
+    this.listRecipes();
   }
 
   public procesarImagen(evento: any): void {
     const archivo: File = evento.target.files[0];
-    const lector: FileReader = new FileReader();
-    lector.readAsDataURL(archivo);
-    lector.onload = () => {
-      this.imagenSel = lector.result;
-
-    };
+    this.imagenSel = archivo.name;
   }
+    
+
 
   createRecipe(): void {
-
     let formData = new FormData();
     formData.append('recipeName', this.titulo);
     formData.append('recipeDescription', this.descripcion);
     formData.append('recipeImage', this.imagenSel);
     formData.append('recipeTypes', this.recipesListRecipe);
-    
+
     console.log({
       titulo: this.titulo,
       descripcion: this.descripcion,
+      image: this.imagenSel,
       lista: this.recipesListRecipe
-
     });
-    console.log(formData)
+    console.log(this.imagenSel);
 
-    this.recipe.create(formData).subscribe((e:any) =>{
+    this.recipe.create(formData).subscribe((e: any) => {
       console.log(e)
     })
-
-    console.log(this.imagenSel)
-
   }
+
+  listRecipes(): void {
+    // listar tipos de recetas
+    this.recipe.lista().subscribe((e: any) => {
+      this.recipesList = e.data;
+    })
+  }
+
+
+
 }
 

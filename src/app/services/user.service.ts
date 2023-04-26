@@ -13,7 +13,7 @@ export class UserService{
     constructor(private http: HttpClient) { }
 
     register(user: User): Observable<any>{
-        return this.http.post<any>(`${this.urlEndPoint}/register`,user).pipe(
+        return this.http.post<any>(`${this.urlEndPoint}/signup`,user).pipe(
             catchError(e => {
                 Swal.fire(e.error.message, e.error.error, 'error');
                 return throwError(() => e);
