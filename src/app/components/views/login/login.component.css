@@ -1,0 +1,63 @@
+.parent{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("src/assets/images/backgrounds/tarjetas_login_register_definitivo.png");
+}
+.child{
+    height: 580px;
+    width: 400px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+img{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+    cursor: pointer;
+}
+form{
+    padding: 5px 30px;
+    background-color: white;
+}
+input:first-child{
+    margin-top: 20px;
+}
+input{
+    width: 100%;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+}
+button{
+    width: 100%;
+    padding: 5px 10px;
+    margin: 7px 0 30px 0;
+    border-radius: 12px;
+}
+.sign{
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: #E54B4B;
+}
+.gmail{
+    border: 1px solid #E54B4B;
+    color: #E54B4B;
+    font-weight: bold;
+    background-color: white;
+}
+/* .gmail:hover{
+    color: white;
+    background-color: #e49292;
+} */
+p{
+    margin: 0;
+    position: relative;
+    top: 15px;
+    text-align: center;
+    color: #828282;
+}

@@ -1,0 +1,21 @@
+<header>
+    <!-- <img src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood">
+    <img src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood" hidden> -->
+    <nav>
+        <ul>
+            <li><a routerLink="/home" >Home</a></li>
+            <li><a routerLink="/recipes">Recipes</a></li>
+            <li><a routerLink="/about">About</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+        <ng-container *ngIf="token; then authenticated; else unauthenticated"></ng-container>
+        <ng-template #authenticated>
+            <button (click)="logout()">Logout</button>
+        </ng-template>
+        <ng-template #unauthenticated>
+            <button routerLink="/login">Login</button>
+            <button routerLink="/register">Register</button>
+        </ng-template>
+        
+    </nav>
+</header>
