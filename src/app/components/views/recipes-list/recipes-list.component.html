@@ -1,1 +1,15 @@
 <app-header></app-header>
+<ng-container *ngIf="types; then typesTemplate; else loading"></ng-container>
+
+<ng-template #typesTemplate>
+    <ng-container *ngFor="let type of types">
+        <div>{{type.name}}</div>
+        <img [src]="type.image" alt="Recipe Type" style="width: 100px;">
+    </ng-container>
+</ng-template>
+
+<ng-template #loading>
+    Loading...
+</ng-template>
+
+

@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'recipes', component: RecipesListComponent},
   { path: 'recipes/:id', component: RecipesDetailComponent},
   { path: 'recipes/form', component: RecipesFormComponent},
-  { path: 'profile/:id', component: ProfileComponent},
+  { path: 'profile/:username', component: ProfileComponent},
   { path: 'about', component: AboutUsComponent},
   { path: 'contact', component: ContactComponent},
 ]
