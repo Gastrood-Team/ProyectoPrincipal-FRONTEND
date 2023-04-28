@@ -1,0 +1,96 @@
+<app-header></app-header>
+<div class="content-edit-profile">
+    <div class="cabezera-image">
+        <img src="assets/images/edit-profile/edit-profile.png" alt="edit-profile">
+    </div>
+    <div class="second-header">
+        <div class="content-info-recipes">
+            <a [routerLink]="['/profile/view', profile.id]">Cancel</a>
+            <a (click)="updateProfile()">Save Changes</a>
+        </div>
+        <div class="face-profile">
+            <div class="block-image">
+                <img src="assets/images/edit-profile/face-profile.png" alt="edit-profile">
+            </div>
+            <div class="content-profile">
+                <h1>Profile</h1>
+                <span>update your photo and personal details</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-forms">
+        <div class="input-group mb-3 username-form">
+            <div class="text-forms">
+                <p>Username</p>
+            </div>
+            <span class="input-group-text span" id="basic-addon1">UserName</span>
+            <input type="text" class="form-control" [(ngModel)]="profile.username" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 website-form">
+            <div class="website-forms">
+                <p>Website</p>
+            </div>
+            <span class="input-group-text span" id="basic-addon1">Http://</span>
+            <input type="text" class="form-control" [(ngModel)]="profile.website" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 website-form">
+            <div class="photo-forms">
+                <p>Your Photo</p>
+                <span>This will be displayed on your profile</span>
+            </div>
+            <div class="face-profile-2">
+                <img src="assets/images/edit-profile/face-profile-2.png" alt="">
+            </div>
+            <div class="btns">
+                <a>Upload</a>
+            </div>
+        </div>
+
+        <div class="input-group mb-3 description-form">
+            <div class="photo-forms">
+                <p>Your Bio</p>
+                <span>Write a short information</span>
+            </div>
+            <textarea class="form-control description-forms" [(ngModel)]="profile.biography" [(ngModel)]="texto"
+                (input)="actualizarContador()" placeholder="Add short bio....." aria-label="With textarea"
+                maxlength="350"></textarea>
+            <div class="contador">{{ contador }} / 350 caracteres</div>
+        </div>
+        <div class="input-group mb-3 change-password-form">
+            <div class="text-forms">
+                <p>OldPassword</p>
+            </div>
+            <input type="password" class="form-control" placeholder="*********" aria-label="OldPassword"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 change-password">
+            <div class="text-forms">
+                <p>New Password</p>
+            </div>
+            <input type="password" class="form-control change-passwords" placeholder="*********"
+                aria-label="NewPassword" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3 repeat-password">
+            <div class="text-forms">
+                <p>Repeat Password</p>
+            </div>
+            <input type="password" class="form-control repeat-passwords" placeholder="*********"
+                aria-label="RepeatPassword" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3 email-forms">
+            <div class="emails-forms">
+                <p>Email</p>
+                <span class="h-70">Enter an alternative email if you’d like to be contacted via a different email</span>
+            </div>
+            <div class="message-icon">
+                <img src="assets/images/edit-profile/message-icon.png" alt="message-icon">
+            </div>
+            <input type="email" class="form-control email" placeholder="Email" aria-label="Email">
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

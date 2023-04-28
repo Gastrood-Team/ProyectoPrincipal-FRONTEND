@@ -1,0 +1,85 @@
+{
+    "header": {
+        "navbar": [
+            {
+                "sitename": "Home",
+                "href": "/home"
+            },
+            {
+                "sitename": "Recipes",
+                "href": "/recipes"
+            },
+            {
+                "sitename": "About",
+                "href": "/about"
+            },
+            {
+                "sitename": "Contact",
+                "href": "/contact"
+            }
+        ],
+        "buttons": [
+            {
+                "text": "Log in",
+                "href": "/login"
+            },
+            {
+                "text": "Sign Up",
+                "href": "/register"
+            }
+        ]
+    },
+    "footer_section": [
+        {
+            "title": "EXPLORE",
+            "items": [
+                {
+                    "name": "Home",
+                    "href": "/home"
+                },
+                {
+                    "name": "Recipes",
+                    "href": "/recipes"
+                },
+                {
+                    "name": "Forum",
+                    "href": "/forum"
+                },
+                {
+                    "name": "About Us",
+                    "href": "/about"
+                }
+            ]
+        },
+        {
+            "title": "CONTACT US",
+            "items": [
+                {
+                    "name": "info@gastrood.com",
+                    "href": "/contact"
+                },
+                {
+                    "name": "+34 662 387 283",
+                    "href": "/contact"
+                }
+            ]
+        },
+        {
+            "title": "POLICY",
+            "items": [
+                {
+                    "name": "Privacy",
+                    "href": "/home"
+                },
+                {
+                    "name": "Cookies",
+                    "href": "/home"
+                },
+                {
+                    "name": "Legal warning",
+                    "href": "/home"
+                }
+            ]
+        }
+    ]
+}

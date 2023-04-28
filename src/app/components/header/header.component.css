@@ -1,0 +1,250 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px 50px;
+    background-color: #e54b4b;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: 0px;
+}
+
+.logo-desk {
+    height: 50px;
+    cursor: pointer;
+}
+
+.logo-cell {
+    display: none;
+    height: 50px;
+}
+
+.nav-desk {
+    padding-left: 20px;
+    margin-right: auto;
+    width: auto;
+}
+
+.nav-desk ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 50px;
+}
+
+.nav-desk li {
+    display: inline;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.nav-desk li a {
+    color: white;
+}
+
+.icon {
+    display: inline-block;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    margin: 0 7px;
+    border-radius: 50px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon:hover {
+    background-color: #EAEAEA;
+}
+
+.search-bar {
+    transition: 0.5s;
+}
+
+.search-bar:hover,
+.search-bar:focus-within {
+    width: 350px;
+}
+
+i {
+    position: absolute;
+    right: -10px;
+    top: 4px;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+}
+
+.search-bar i {
+    background-color: white;
+}
+
+.search-bar input {
+    position: absolute;
+    left: 20px;
+    height: 35px;
+    width: 80%;
+    border: none;
+    outline: none;
+}
+
+form {
+    display: inline-block;
+}
+
+form button {
+    display: inline;
+    width: 100px;
+    height: 35px;
+    padding: 4px 0;
+    margin: 0 7px;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+}
+
+form button:first-child:hover {
+    background-color: #EAEAEA;
+}
+
+form button:nth-child(2) {
+    color: white;
+    border: 1px solid white;
+    background-color: #e54b4b;
+}
+
+form button:nth-child(2):hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #d34242;
+}
+
+.nav-cell {
+    position: absolute;
+    display: none;
+    top: 65px;
+    right: 10px;
+    width: 220px;
+    height: 91vh;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.nav-cell ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-cell li {
+    padding: 10px 20px;
+}
+
+.nav-cell li a {
+    color: black;
+}
+
+.nav-cell li:hover {
+    background-color: #D4D4D4;
+}
+
+.nav-cell li:first-child {
+    border-bottom: 1px solid #D4D4D4;
+}
+
+.create-recipes {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 13px;
+}
+
+.plus-symbol {
+    color: white;
+    font-size: 36px;
+}
+.dropdown-menu button:hover, a:hover {
+    background-color: transparent !important;
+    color: white !important;
+}
+.face-profiles{
+    height: 42px;
+    width: 42px;
+    margin-left: 10px;
+}  
+  
+
+@media (max-width: 1400px) {
+    header {
+        padding: 5px 20px;
+    }
+
+    form {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline-block;
+    }
+
+    .search-bar:hover,
+    .search-bar:focus-within {
+        width: 450px;
+    }
+
+    .nav-desk {
+        display: none;
+    }
+
+    .nav-cell {
+        display: block;
+        height: calc(100vh - 75px);
+    }
+
+    img {
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    .logo-desk {
+        display: none;
+    }
+
+    .logo-cell {
+        display: block;
+    }
+
+    .search-bar:hover,
+    .search-bar:hover {
+        width: 240px;
+    }
+
+    .nav-cell {
+        top: 55px;
+        right: 5px;
+        height: calc(100vh - 60px);
+    }
+
+    img {
+        height: 40px;
+    }
+
+}

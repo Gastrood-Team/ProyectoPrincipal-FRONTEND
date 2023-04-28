@@ -1,0 +1,263 @@
+<app-header></app-header>
+<div class="cabezera-image">
+    <img src="assets/images/profile/cabecera.png" alt="">
+</div>
+<div class="second-header">
+    <div class="content-info-recipes">
+        <a>Recipes</a>
+        <a>Post</a>
+    </div>
+</div>
+<button class="btn-edit" [routerLink]="['/profile/edit', profile.id]">Edit Profile</button>
+<div class="content-main">
+    <div class="content-info-profile">
+        <div class="bg-content-profile">
+            <div class="content-image">
+                <img src="assets/images/profile/faceprofile.png" alt="faceprofile">
+            </div>
+            <div class="content-name">
+                <h2>{{profile.firstName}} {{profile.lastName}}</h2>
+                <p>@{{profile.username}}</p>
+                <p>Software Developer</p>
+            </div>
+            <div class="content-profile-icon">
+                <div class="img-1 d-flex">
+                    <div>
+                        <img src="assets/images/profile/map.png" alt="map">
+                    </div>
+                    <p>Barcelona</p>
+                </div>
+                <div class="img-2 d-flex">
+                    <div>
+                        <img src="assets/images/profile/webworld.png" alt="map">
+                    </div>
+                    <p>{{profile.website}}</p>
+                </div>
+                <div class="img-4 d-flex">
+                    <div>
+                        <img src="assets/images/profile/calendar.png" alt="map">
+                    </div>
+                    <p>12/02/2022</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="content-message">
+            <p>Message to {{profile.firstName}} {{profile.lastName}}</p>
+        </div> -->
+        <!--         <div class="content-followers">
+            <img src="assets/images/profile/pngwing 13.png" alt="map">
+            <span>140 Followers you Know</span>
+        </div> -->
+
+        <div class="content-about-me">
+            <h4>About Me</h4>
+            <p>{{profile.biography}}</p>
+        </div>
+    </div>
+    <div class="main-content-recipes">
+        <div class="content-recipes">
+            <div class="content-post-recipes">
+                <div class="recipes-info">
+                    <img src="assets/images/profile/image 69.png" alt="image-69">
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
+                    <span>@{{profile.username}}</span>
+                </div>
+                <div class="content-options">
+                    <span class="minutes">32m</span>
+                    <img src="assets/images/profile/puntos.png" alt="puntos">
+                </div>
+            </div>
+            <div class="info-recipes">
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu neque erat. Vestibulum et leo
+                    nec
+                    nisl facilisis porta. Quisque non nulla odio. In non leo eu sem pretium pellentesque. Proin
+                    fermentum
+                    lacus quam, vitae imperdiet justo consequat vitae. Phasellus id neque porta, lacinia lorem et,
+                    vehicula
+                    orci. Quisque commodo cursus ante non mollis. Integer eu lectus aliquet, dignissim turpis vitae,
+                    porta
+                    mauris.
+                </span>
+            </div>
+            <div class="icons-content">
+                <img src="assets/images/profile/image 73.png" alt="image-73">
+                <img src="assets/images/profile/image 72.png" alt="image-73">
+                <img src="assets/images/profile/image 74.png" alt="image-73">
+            </div>
+        </div>
+
+        <div class="content-recipes">
+            <div class="content-post-recipes">
+                <div class="recipes-info">
+                    <img src="assets/images/profile/image 69.png" alt="image-69">
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
+                    <span>@{{profile.username}}</span>
+                </div>
+                <div class="content-options">
+                    <span class="minutes">32m</span>
+                    <img src="assets/images/profile/puntos.png" alt="puntos">
+                </div>
+            </div>
+            <div class="info-recipes">
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu neque erat. Vestibulum et leo
+                    nec
+                    nisl facilisis porta. Quisque non nulla odio. In non leo eu sem pretium pellentesque. Proin
+                    fermentum
+                    lacus quam, vitae imperdiet justo consequat vitae. Phasellus id neque porta, lacinia lorem et,
+                    vehicula
+                    orci. Quisque commodo cursus ante non mollis. Integer eu lectus aliquet, dignissim turpis vitae,
+                    porta
+                    mauris.
+                </span>
+            </div>
+            <div class="icons-content">
+                <img src="assets/images/profile/image 73.png" alt="image-73">
+                <img src="assets/images/profile/image 72.png" alt="image-73">
+                <img src="assets/images/profile/image 74.png" alt="image-73">
+            </div>
+        </div>
+
+        <div class="content-recipes">
+            <div class="content-post-recipes">
+                <div class="recipes-info">
+                    <img src="assets/images/profile/image 69.png" alt="image-69">
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
+                    <span>@{{profile.username}}</span>
+                </div>
+                <div class="content-options">
+                    <span class="minutes">32m</span>
+                    <img src="assets/images/profile/puntos.png" alt="puntos">
+                </div>
+            </div>
+            <div class="info-recipes">
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu neque erat. Vestibulum et leo
+                    nec
+                    nisl facilisis porta. Quisque non nulla odio. In non leo eu sem pretium pellentesque. Proin
+                    fermentum
+                    lacus quam, vitae imperdiet justo consequat vitae. Phasellus id neque porta, lacinia lorem et,
+                    vehicula
+                    orci. Quisque commodo cursus ante non mollis. Integer eu lectus aliquet, dignissim turpis vitae,
+                    porta
+                    mauris.
+                </span>
+            </div>
+            <div class="icons-content">
+                <img src="assets/images/profile/image 73.png" alt="image-73">
+                <img src="assets/images/profile/image 72.png" alt="image-73">
+                <img src="assets/images/profile/image 74.png" alt="image-73">
+            </div>
+        </div>
+
+        <div class="content-recipes">
+            <div class="content-post-recipes">
+                <div class="recipes-info">
+                    <img src="assets/images/profile/image 69.png" alt="image-69">
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
+                    <span>@{{profile.username}}</span>
+                </div>
+                <div class="content-options">
+                    <span class="minutes">32m</span>
+                    <img src="assets/images/profile/puntos.png" alt="puntos">
+                </div>
+            </div>
+            <div class="info-recipes">
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu neque erat. Vestibulum et leo
+                    nec
+                    nisl facilisis porta. Quisque non nulla odio. In non leo eu sem pretium pellentesque. Proin
+                    fermentum
+                    lacus quam, vitae imperdiet justo consequat vitae. Phasellus id neque porta, lacinia lorem et,
+                    vehicula
+                    orci. Quisque commodo cursus ante non mollis. Integer eu lectus aliquet, dignissim turpis vitae,
+                    porta
+                    mauris.
+                </span>
+            </div>
+            <div class="icons-content">
+                <img src="assets/images/profile/image 73.png" alt="image-73">
+                <img src="assets/images/profile/image 72.png" alt="image-73">
+                <img src="assets/images/profile/image 74.png" alt="image-73">
+            </div>
+        </div>
+
+        <div class="content-recipes">
+            <div class="content-post-recipes">
+                <div class="recipes-info">
+                    <img src="assets/images/profile/image 69.png" alt="image-69">
+                    <h3>{{profile.firstName}} {{profile.lastName}}</h3>
+                    <span>@{{profile.username}}</span>
+                </div>
+                <div class="content-options">
+                    <span class="minutes">32m</span>
+                    <img src="assets/images/profile/puntos.png" alt="puntos">
+                </div>
+            </div>
+            <div class="info-recipes">
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu neque erat. Vestibulum et leo
+                    nec
+                    nisl facilisis porta. Quisque non nulla odio. In non leo eu sem pretium pellentesque. Proin
+                    fermentum
+                    lacus quam, vitae imperdiet justo consequat vitae. Phasellus id neque porta, lacinia lorem et,
+                    vehicula
+                    orci. Quisque commodo cursus ante non mollis. Integer eu lectus aliquet, dignissim turpis vitae,
+                    porta
+                    mauris.
+                </span>
+            </div>
+            <div class="icons-content">
+                <img src="assets/images/profile/image 73.png" alt="image-73">
+                <img src="assets/images/profile/image 72.png" alt="image-73">
+                <img src="assets/images/profile/image 74.png" alt="image-73">
+            </div>
+        </div>
+    </div>
+
+    <div class="content-main-categories">
+        <div class="content-categories">
+            <div class="info-categories">
+                <h3>Categories</h3>
+            </div>
+            <div class="categories-recipes">
+                <div>
+                    <img src="assets/images/profile/categories-recipes.png" alt="image-73">
+                    <span>Recipes Peruvian</span>
+                </div>
+                <div>
+                    <img src="assets/images/profile/categories-recipes.png" alt="image-73">
+                    <span>Recipes Japanese</span>
+                </div>
+                <div>
+                    <img src="assets/images/profile/categories-recipes.png" alt="image-73">
+                    <span>Recipes Mexican</span>
+                </div>
+            </div>
+        </div>
+        <div class="content-popular-recipes">
+            <div class="info-categories">
+                <h3>Most Popular Recipes</h3>
+            </div>
+            <div class="categories-most-popular-recipes">
+                <div>
+                    <img src="assets/images/profile/categories-recipes.png" alt="image-73">
+                    <span>Recipes Spanish</span>
+                </div>
+                <div>
+                    <img src="assets/images/profile/categories-recipes.png" alt="image-73">
+                    <span>Recipes Japanese</span>
+                </div>
+                <div>
+                    <img src="assets/images/profile/categories-recipes.png" alt="image-73">
+                    <span>Recipes Mexican</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

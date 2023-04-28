@@ -1,0 +1,94 @@
+<app-header></app-header>
+<div class="container-recipes">
+  <div class="content-title">
+    <h1>
+      CREATE YOUR RECIPE
+    </h1>
+  </div>
+  <div class="content-ingredient" >
+    <div class="min-content-ingredient">
+      <div class="add-ingredient">
+        <input type="text" placeholder="ingredient..." />
+        <button>Add</button>
+      </div>
+      <div *ngIf="recipesList">
+        <select name="" id=""  [(ngModel)]="recipesListRecipe">
+          <option value="0">Selecciona</option>
+          <option *ngFor="let type of recipesList;" value="{{type.recipeTypeId}}">
+            {{ type.recipeTypeName }}
+          </option>
+        </select>
+      </div>
+      <div class="content-steps">
+          <div class="content-show-recipes">
+          <h3>Step 1</h3>
+          <input type="text" name="titulo" placeholder="titulo" [(ngModel)]="titulo">
+            <textarea class="message-step" name="description" id="description" cols="20" rows="10" [(ngModel)]="descripcion">{{ descripcion }}</textarea>
+        </div>
+
+        <div class="input-file">
+          <input type="file" id="file-input" name="file" (change)="procesarImagen($event)" />
+          <label for="file-input">
+            <img
+              src="../../../assets/images/create-recipes/icon-camara.png"
+              alt="Icono de cámara"
+            />
+          </label>
+          <div class="preview-container"></div>
+        </div>
+        <div class="input-file">
+          <input type="file" id="file-input2" name="file2" />
+          <label for="file-input2">
+            <img
+              src="../../../assets/images/create-recipes/icon-camara.png"
+              alt="Icono de cámara"
+            />
+          </label>
+          <div class="preview-container2"></div>
+        </div>
+      </div>
+      <div class="text-more-steps">
+        <button class="btn-add-more">Add More Steps</button>
+      </div>
+    </div>
+
+    <div class="content-show-labels-ingredients">
+      <div class="ingredients-type">
+        <p>Ingredients of your recipes</p>
+      </div>
+      <div class="show-labels-ingredients">
+        <div class="label-recipe">
+          <span>Tomatoes <span class="closed">X</span></span>
+        </div>
+        <div class="label-recipe">
+          <span>Salt <span class="closed">X</span></span>
+        </div>
+        <div class="label-recipe">
+          <span>Patatas <span class="closed">X</span></span>
+        </div>
+        <div class="label-recipe">
+          <span>Rice <span class="closed">X</span></span>
+        </div>
+        <div class="label-recipe">
+          <span>Oli <span class="closed">X</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content-photo-finish">
+    <button class="photo-finish">Photo Finish</button>
+    <div class="input-file input-files-finish">
+      <input type="file" id="file-input2" name="file2" />
+      <label for="file-input2">
+        <img
+          src="../../../assets/images/create-recipes/icon-camara.png"
+          alt="Icono de cámara"
+        />
+      </label>
+      <div class="preview-container2"></div>
+    </div>
+    <button (click)="createRecipe()" class="btnColor">CREATE</button>
+  </div>
+</div>
+<app-footer></app-footer>
