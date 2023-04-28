@@ -11,7 +11,7 @@
         <ng-container *ngIf="token; then authenticated; else unauthenticated"></ng-container>
         <ng-template #authenticated>
             <button [routerLink]="['/recipes/form']">Create Recipe</button>
-            <!-- <button [routerLink]="['/profile/', profile.username]">View Profile</button> -->
+            <button [routerLink]="['/profile/', profileUsername]">View Profile</button>
             <button (click)="logout()">Logout</button>
         </ng-template>
         <ng-template #unauthenticated>
