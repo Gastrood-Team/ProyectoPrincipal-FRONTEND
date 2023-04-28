@@ -3,13 +3,24 @@
 
 <ng-template #typesTemplate>
     <ng-container *ngFor="let type of types">
-        <div>{{type.name}}</div>
-        <img [src]="type.image" alt="Recipe Type" style="width: 100px;">
+        <div (click)="getRecipes(type.name)">
+            <div>{{type.name}}</div>
+            <img [src]="type.image" alt="Recipe Type" style="width: 100px;">
+        </div>
     </ng-container>
 </ng-template>
 
 <ng-template #loading>
     Loading...
 </ng-template>
+
+<ng-container *ngIf="recipes && recipes.length > 0; then recipesTemplate; else loading"></ng-container>
+
+<ng-template #recipesTemplate>
+    <ng-container *ngFor="let recipe of recipes">
+        <div>{{recipe.name}}</div>
+    </ng-container>
+</ng-template>
+
 
 

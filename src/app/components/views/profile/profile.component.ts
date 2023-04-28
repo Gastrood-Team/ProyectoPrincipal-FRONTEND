@@ -37,7 +37,7 @@ export class ProfileComponent implements OnInit {
             if (token) {
               this.userService.getLoggedUser().subscribe({
                 next: (res) => {
-                  this.profile.id == res.data.id ? this.isLoggedUserProfile = true : this.isLoggedUserProfile = false;
+                  this.profile.id == res.data.profileId ? this.isLoggedUserProfile = true : this.isLoggedUserProfile = false;
                   console.log(this.isLoggedUserProfile);
                 },
               })
