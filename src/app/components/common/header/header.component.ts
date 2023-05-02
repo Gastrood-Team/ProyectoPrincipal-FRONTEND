@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   public token!: string | null;
   public profileUsername!: string;
+  public profilePic!: string;
 
   constructor(private authservice: AuthService, private userService: UserService ,private router: Router) { }
 
@@ -25,6 +26,7 @@ export class HeaderComponent implements OnInit {
       this.userService.getLoggedUser().subscribe({
         next: (res) => {
           this.profileUsername = res.data.username
+          this.profilePic = res.data.profilePic
         },
       })
     }
@@ -33,6 +35,5 @@ export class HeaderComponent implements OnInit {
   public logout(): void{
     this.authservice.logout();
   }
-
 
 }

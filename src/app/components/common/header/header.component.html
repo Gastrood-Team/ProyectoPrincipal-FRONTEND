@@ -1,23 +1,91 @@
-<header>
-    <!-- <img src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood">
-    <img src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood" hidden> -->
-    <nav>
-        <ul>
-            <li><a routerLink="/home" >Home</a></li>
-            <li><a routerLink="/recipes">Recipes</a></li>
-            <li><a routerLink="/about">About</a></li>
-            <li><a routerLink="/contact">Contact</a></li>
-        </ul>
-        <ng-container *ngIf="token; then authenticated; else unauthenticated"></ng-container>
-        <ng-template #authenticated>
-            <button [routerLink]="['/recipes/form']">Create Recipe</button>
-            <button [routerLink]="['/profile/', profileUsername]">View Profile</button>
-            <button (click)="logout()">Logout</button>
-        </ng-template>
-        <ng-template #unauthenticated>
-            <button routerLink="/login">Login</button>
-            <button routerLink="/register">Register</button>
-        </ng-template>
-        
-    </nav>
+<header class="header_wrp main-color">
+    <div class="header_inner">
+        <div class="heaeder_left">
+            <div class="header_logo">
+                <a [routerLink]="['/home']">
+                    <img src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood" class="gtd-icon">
+                </a>
+            </div>
+            <div class="header_tab_wrp">
+                <div class="header_tab">
+                    <p class="header_tab_name" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</p>
+                </div>
+                <div class="header_tab">
+                    <p class="header_tab_name" [routerLink]="['/recipes']" routerLinkActive="router-link-active">Recipes
+                    </p>
+                </div>
+                <div class="header_tab">
+                    <p class="header_tab_name" [routerLink]="['/about']" routerLinkActive="router-link-active">About</p>
+                </div>
+                <div class="header_tab">
+                    <p class="header_tab_name" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="header_main">
+            <div class="header_search_wrp">
+                <div class="header_search_icon">
+                    <i class="bi bi-search"></i>
+                </div>
+                <div class="header_search_bar">
+                    <input type="text" placeholder="Search" class="header_search_input">
+                </div>
+            </div>
+        </div>
+        <div class="header_right">
+            <div class="header_session_wrp">
+                <ng-container *ngIf="token; then authenticated; else unauthenticated"></ng-container>
+                <ng-template #authenticated>
+                    <div class="header_icon">
+                        <i class="bi bi-bell-fill fa-10x"></i>
+                    </div>
+                    <div class="header_icon">
+                        <img [src]="profilePic" alt="Profile Pic" *ngIf="profilePic" class="header_icon_pic">
+                        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"
+                            alt="Profile Pic" *ngIf="!profilePic" class="header_icon_pic">
+                    </div>
+                    <div class="header_profile_menu">
+                        <div class="header_section">
+                            <p class="header_section_title">My Information</p>
+                            <div class="header_section_option">
+                                <div class="option" [routerLink]="['/profile/', profileUsername]">
+                                    <p class="option_text">Profile</p>
+                                    <i class="bi bi-caret-right-fill option_arrow"></i>
+                                </div>
+                                <div class="option">
+                                    <p class="option_text">Information Managment</p>
+                                    <i class="bi bi-caret-right-fill option_arrow"></i>
+                                </div>
+                                <div class="option">
+                                    <p class="option_text">Privacy Settings</p>
+                                    <i class="bi bi-caret-right-fill option_arrow"></i>
+                                </div>
+                                <div class="option">
+                                    <p class="option_text">Manage Blocklist</p>
+                                    <i class="bi bi-caret-right-fill option_arrow"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header_section">
+                            <p class="header_section_title">Settings</p>
+                            <div class="header_section_option">
+                                <div class="option">
+                                    <p class="option_text">Change Lenguage</p>
+                                    <i class="bi bi-caret-right-fill option_arrow"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header_section">
+                            <p class="option" (click)="logout()">Logout</p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template #unauthenticated>
+                    <button [routerLink]="['/login']" class="header_session_btn">Login</button>
+                    <button [routerLink]="['/register']" class="header_session_btn">Register</button>
+                </ng-template>
+            </div>
+        </div>
+    </div>
 </header>
