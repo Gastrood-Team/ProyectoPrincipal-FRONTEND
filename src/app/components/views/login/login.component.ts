@@ -15,13 +15,16 @@ export class LoginComponent{
 
   constructor(private authService: AuthService, private route: Router) { }
 
-  public login(): void {
+  public login(event: MouseEvent): void {
+    let loginBtn = event.target as HTMLElement;
+    loginBtn.innerHTML = 'Validating...';
     this.authService.login(this.user).subscribe({
       next: (res) => { 
         this.route.navigate(['home']);
         localStorage.setItem('token', res.token);
       },
       error: (err) => {
+        loginBtn.innerHTML = 'Login';
         Swal.fire(err.error.message, err.error.error, 'error');
       }
     })

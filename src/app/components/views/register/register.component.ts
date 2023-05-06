@@ -15,13 +15,16 @@ export class RegisterComponent{
 
   constructor(private authService: AuthService, private route: Router) { }
 
-  public signup(): void {
+  public signup(event: MouseEvent): void {
+    let registerBtn = event.target as HTMLElement;
+    registerBtn.innerHTML = 'Registering...';
     this.authService.signup(this.singUpData).subscribe({
       next: (res) => { 
         this.route.navigate(['login']);
         Swal.fire("Registration success", res.message, 'success');
       },
       error: (err) => {
+        registerBtn.innerHTML = 'Login';
         Swal.fire("Ooops", err.error.message, 'error');
       }
     })
