@@ -7,7 +7,7 @@
             <input type="text" placeholder="Last name" name="lastName" [(ngModel)]="singUpData.lastName">
             <input type="text" placeholder="Email" name="email" [(ngModel)]="singUpData.email">
             <input type="password" placeholder="Password" name="password" [(ngModel)]="singUpData.password">
-            <button class="sign" (click)="signup()">Register</button>
+            <button class="sign" (click)="signup($event)">Register</button>
             <p>Already registered? <span class="highlight" [routerLink]="['/login']">Login</span></p>
         </form>
     </div>
