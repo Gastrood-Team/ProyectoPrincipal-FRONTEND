@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { RecipeNavigationComponent } from './components/recipe-navigation/recipe-navigation.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    RecipeNavigationComponent
+  ],
   imports: [
     SharedModule
   ]

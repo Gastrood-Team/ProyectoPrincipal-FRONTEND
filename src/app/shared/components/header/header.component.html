@@ -1,90 +1,103 @@
-<header class="header_wrp main-color">
-    <div class="header_inner">
-        <div class="heaeder_left">
+<header class="header_wrp">
+    <div class="header_inner main-color">
+        <div class="header_left">
             <div class="header_logo">
-                <a [routerLink]="['/home']">
-                    <img src="./assets/images/logo/Header_Logo.jpg" alt="Gastrood" class="gtd-icon">
+                <a [routerLink]="['/']">
+                    <img src="/assets/images/logo/Header_Logo.jpg" alt="CarverLogo" class="carver-icon" />
                 </a>
             </div>
             <div class="header_tab_wrp">
                 <div class="header_tab">
-                    <p class="header_tab_name" [routerLink]="['/home']" routerLinkActive="router-link-active">Home</p>
-                </div>
-                <div class="header_tab">
-                    <p class="header_tab_name" [routerLink]="['/recipes']" routerLinkActive="router-link-active">Recipes
+                    <p class="header_tab_name" [routerLink]="['/']" routerLinkActive="router-link-active">
+                        {{ 'commons.home' | translate }}
                     </p>
                 </div>
                 <div class="header_tab">
-                    <p class="header_tab_name" [routerLink]="['/about']" routerLinkActive="router-link-active">About</p>
-                </div>
-                <div class="header_tab">
-                    <p class="header_tab_name" [routerLink]="['/contact']" routerLinkActive="router-link-active">Contact
+                    <p class="header_tab_name" [routerLink]="['/recipes']" routerLinkActive="router-link-active">
+                        {{ 'commons.recipes' | translate }}
                     </p>
                 </div>
-            </div>
-        </div>
-        <div class="header_main">
-            <div class="header_search_wrp">
-                <div class="header_search_icon">
-                    <i class="bi bi-search"></i>
+                <div class="header_tab">
+                    <p class="header_tab_name" [routerLink]="['/about']" routerLinkActive="router-link-active">
+                        {{ 'commons.about' | translate }}
+                    </p>
                 </div>
-                <div class="header_search_bar">
-                    <input type="text" placeholder="Search" class="header_search_input">
+                <div class="header_tab">
+                    <p class="header_tab_name" [routerLink]="['/contact']" routerLinkActive="router-link-active">
+                         {{ 'commons.contact' | translate }}
+                    </p>
                 </div>
             </div>
         </div>
         <div class="header_right">
             <div class="header_session_wrp">
-                <ng-container *ngIf="token; then authenticated; else unauthenticated"></ng-container>
-                <ng-template #authenticated>
-                    <div class="header_icon">
-                        <i class="bi bi-bell-fill fa-10x"></i>
+                <span class="material-icons header_burger">menu</span>
+                <div class="header_profile_menu">
+                    <div class="header_section header_section_user" *ngIf="token">
+                        <p class="user">{{profile.firstName}} {{ profile.lastName}}</p>
+                        <p class="email">{{email}}</p>
                     </div>
-                    <div class="header_icon">
-                        <img [src]="profilePic" alt="Profile Pic" *ngIf="profilePic" class="header_icon_pic">
-                        <img src="https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg"
-                            alt="Profile Pic" *ngIf="!profilePic" class="header_icon_pic">
+                    <div class="header_section header_section_nav">
+                        <p class="header_section_title">{{ 'profileMenu.navigation' | translate }}</p>
+                        <div class="header_section_option">
+                            <div class="option">
+                                <mat-icon>home</mat-icon>
+                                <p class="option_text" [routerLink]="['/']">{{ 'commons.home' | translate }}</p>
+                            </div>
+                            <div class="option">
+                                <mat-icon> fastfood</mat-icon>
+                                <p class="option_text" [routerLink]="['/recipes']">{{ 'commons.recipes' | translate }}
+                                </p>
+                            </div>
+                            <div class="option">
+                                <mat-icon>info</mat-icon>
+                                <p class="option_text" [routerLink]="['/about']">{{ 'commons.about' | translate }}</p>
+                            </div>
+                            <div class="option">
+                                <mat-icon>contact_support</mat-icon>
+                                <p class="option_text" [routerLink]="['/contact']">{{ 'commons.contact' | translate }}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="header_profile_menu">
-                        <div class="header_section">
-                            <p class="header_section_title">My Information</p>
-                            <div class="header_section_option">
-                                <div class="option" [routerLink]="['/profile/', profileUsername]">
-                                    <p class="option_text">Profile</p>
-                                    <i class="bi bi-caret-right-fill option_arrow"></i>
-                                </div>
-                                <div class="option">
-                                    <p class="option_text">Information Managment</p>
-                                    <i class="bi bi-caret-right-fill option_arrow"></i>
-                                </div>
-                                <div class="option">
-                                    <p class="option_text">Privacy Settings</p>
-                                    <i class="bi bi-caret-right-fill option_arrow"></i>
-                                </div>
-                                <div class="option">
-                                    <p class="option_text">Manage Blocklist</p>
-                                    <i class="bi bi-caret-right-fill option_arrow"></i>
+                    <div class="header_section" *ngIf="token">
+                        <p class="header_section_title">{{ 'profileMenu.info' | translate }}</p>
+                        <div class="header_section_option">
+                            <div class="option" [routerLink]="['/profile', profile.username]">
+                                <mat-icon>account_circle</mat-icon>
+                                <p class="option_text">{{ 'profileMenu.profileTitle' | translate }}</p>
+                            </div>
+                            <div class="option">
+                                <mat-icon> local_dining</mat-icon>
+                                <p class="option_text">{{ 'recipes.myRecipesTitle' | translate }}</p>
+                            </div>
+                            <div class="option">
+                                <mat-icon>settings</mat-icon>
+                                <p class="option_text">{{ 'profileMenu.management' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_section">
+                        <p class="header_section_title">{{ 'profileMenu.settings' | translate }}</p>
+                        <div class="header_section_option">
+                            <div class="option lenguage_opt">
+                                <mat-icon>translate</mat-icon>
+                                <p class="option_text">{{ 'profileMenu.changeLenguage' | translate }}</p>
+                                <div class="lenguage_container">
+                                    <p class="option" (click)="switchLanguage('es-es')">{{ 'languages.es-es' | translate }}</p>
+                                    <p class="option" (click)="switchLanguage('ca-es')">{{ 'languages.ca-es' | translate }}</p>
+                                    <p class="option" (click)="switchLanguage('en-en')">{{ 'languages.en-en' | translate }}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="header_section">
-                            <p class="header_section_title">Settings</p>
-                            <div class="header_section_option">
-                                <div class="option">
-                                    <p class="option_text">Change Lenguage</p>
-                                    <i class="bi bi-caret-right-fill option_arrow"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="header_section">
-                            <p class="option" (click)="logout()">Logout</p>
-                        </div>
                     </div>
-                </ng-template>
-                <ng-template #unauthenticated>
-                    <button [routerLink]="['/login']" class="header_session_btn">Login</button>
-                    <button [routerLink]="['/register']" class="header_session_btn">Register</button>
-                </ng-template>
+                    <div class="header_section" *ngIf="token">
+                        <p class="option" (click)="logout()">Logout</p>
+                    </div>
+                    <div class="header_section" *ngIf="!token">
+                        <p class="option" [routerLink]="['/login']">Login</p>
+                        <p class="option" [routerLink]="['/register']">{{ 'commons.register' | translate }}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
