@@ -1,0 +1,47 @@
+{
+    "commons": {
+        "home": "Inicio",
+        "recipes":"Recetas",
+        "about":"Sobre",
+        "contact":"Contacto",
+        "register":"Registrar",
+        "title": "Título",
+        "description": "Descripción",
+        "password": "Contraseña",
+        "link": "Enlace",
+        "image": "URL Imagen",
+        "edit": "Editar",
+        "delete": "Borrar",
+        "confirm": "Confirmar",
+        "cancel": "Cancelar",
+        "createBtn": "Crear",
+        "updateBtn": "Actualizar",
+        "loggedAs": "Logueado como"
+    },
+    "profileMenu": {
+        "info": "Mi Información",
+        "management": "Gestiónar de perfil",
+        "profileTitle": "Ver Perfil",
+        "settings": "Configuración",
+        "changeLenguage": "Cambiar de idioma",
+        "navigation": "Navegación"
+    },
+    "languages": {
+        "es-es": "Castellano",
+        "ca-es": "Catalán",
+        "en-en": "Inglés"
+    },
+    "recipes": {
+        "myRecipesTitle": "Mis recetas",
+        "createViewTitle": "Crear receta",
+        "createTitle": "Receta creada",
+        "createDesc": "creada correctamente",
+        "updateViewTitle": "Actualizar receta",
+        "updateTitle": "Receta actualizada",
+        "updateDesc": "Receta actualizada correctamente",
+        "deleteConfirmTitle": "¿Estás seguro?",
+        "deleteConfirmDesc": "Estás a punto de eliminar la receta",
+        "deleteTitle": "Receta eliminada",
+        "deleteDesc": "ha sido eliminada correctamente"
+    }
+}

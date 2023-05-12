@@ -1,0 +1,47 @@
+{
+    "commons": {
+        "home": "Inici",
+        "recipes":"Recetas",
+        "about":"Sobre",
+        "contact":"Contacte",
+        "register":"Registre",
+        "title": "Títol",
+        "description": "Descripció",
+        "password": "Contrasenya",
+        "link": "Enllaç",
+        "image": "URL imatge",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "confirm": "Confirmar",
+        "cancel": "Cancel·lar",
+        "createBtn": "Crear",
+        "updateBtn": "Actualitzar",
+        "loggedAs": "Loguejat com"
+    },
+    "profileMenu": {
+        "info": "La meva informació",
+        "management": "Gestió de perfil",
+        "profileTitle": "Veura Perfil",
+        "settings": "Configuració",
+        "changeLenguage": "Canviar d'idioma",
+        "navigation": "Navegador"
+    },
+    "languages": {
+        "es-es": "Castellà",
+        "ca-es": "Català",
+        "en-en": "Anglès"
+    },
+    "recipes": {
+        "myRecipesTitle": "Les meves recetas",
+        "createViewTitle": "Crear receta",
+        "createTitle": "Receta creada",
+        "createDesc": "creada correctament",
+        "updateViewTitle": "Actualitzar receta",
+        "updateTitle": "Receta actualitzada",
+        "updateDesc": "Receta actualitzada correctament",
+        "deleteConfirmTitle": "Estàs segur?",
+        "deleteConfirmDesc": "Estàs a punt d'eliminar la receta",
+        "deleteTitle": "Receta eliminada!",
+        "deleteDesc": "eliminada correctament"
+    }
+}
