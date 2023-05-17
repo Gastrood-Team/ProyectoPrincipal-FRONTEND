@@ -16,9 +16,15 @@ export class HeaderComponent implements OnInit {
   public email!: string;
 
   constructor(
-    private authservice: AuthService, 
+    private authservice: AuthService,
     private userService: UserService,
-    public translate: TranslateService ) { }
+    public translate: TranslateService
+  ) {
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      this.translate.use(storedLanguage);
+    }
+  }
 
   ngOnInit(): void {
     this.getLoggedUser();
@@ -26,9 +32,10 @@ export class HeaderComponent implements OnInit {
 
   switchLanguage(lang: string): void {
     this.translate.use(lang);
-}
+    localStorage.setItem('selectedLanguage', lang);
+  }
 
-  public getLoggedUser(){
+  public getLoggedUser() {
     this.token = localStorage.getItem('token');
     if (this.token) {
       this.userService.getLoggedUser().subscribe({
@@ -40,7 +47,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  public logout(): void{
+  public logout(): void {
     this.authservice.logout();
   }
 
