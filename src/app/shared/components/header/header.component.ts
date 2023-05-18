@@ -19,12 +19,7 @@ export class HeaderComponent implements OnInit {
     private authservice: AuthService,
     private userService: UserService,
     public translate: TranslateService
-  ) {
-    const storedLanguage = localStorage.getItem('selectedLanguage');
-    if (storedLanguage) {
-      this.translate.use(storedLanguage);
-    }
-  }
+  ) { }
 
   ngOnInit(): void {
     this.getLoggedUser();
