@@ -18,7 +18,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private authservice: AuthService, 
     private userService: UserService,
-    public translate: TranslateService ) { }
+    public translate: TranslateService
+  ) { }
 
   ngOnInit(): void {
     this.getLoggedUser();
