@@ -2,7 +2,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("src/assets/images/backgrounds/tarjetas_login_register_definitivo.png");
+    background-image: url("src/assets/images/backgrounds/auth-card-bg.png");
 }
 .child{
     height: 580px;
