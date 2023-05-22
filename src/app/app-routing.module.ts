@@ -12,6 +12,7 @@ import { RecipeListComponent } from './modules/recipe/components/recipe-list/rec
 import { RecipeTypeListComponent } from './modules/recipe-type/components/recipe-type-list/recipe-type-list.component';
 import { RecipeDetailsComponent } from './modules/recipe/components/recipe-details/recipe-details.component';
 import { ContactComponent } from './modules/layouts/components/contact/contact.component';
+import { AboutUsComponent } from './modules/layouts/components/about-us/about-us.component';
 
 const routes: Routes = [
   { path: "", pathMatch: 'full', redirectTo: '/home' },
@@ -24,7 +25,7 @@ const routes: Routes = [
   // { path: 'login', component: LoginComponent},
   // { path: 'recipes/form', component: RecipesFormComponent},
   // { path: 'profile/:username', component: ProfileViewComponent},
-  // { path: 'about', component: AboutUsComponent},
+   { path: 'about', component: AboutUsComponent},
   { path: 'contact', component: ContactComponent},
 ]
 
