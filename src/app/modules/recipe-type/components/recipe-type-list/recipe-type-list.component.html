@@ -18,7 +18,7 @@
             </div>
             <div class="grid-inner-wrapper">
                 <ng-container *ngFor="let type of recipeTypes">
-                    <div class="grid-tile" [routerLink]="['/recipes', type.name]">
+                    <div class="grid-tile" [routerLink]="['/categories', type.name]">
                         <div class="grid-tile-img">
                             <img [src]="type.image">
                         </div>

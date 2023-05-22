@@ -20,4 +20,8 @@ export class RecipeService {
     return this.http.get<any>(url);
 
   }
+
+  public getbyId(id: number): Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}/${id}`);
+  }
 }

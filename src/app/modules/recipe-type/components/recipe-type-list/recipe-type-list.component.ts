@@ -3,11 +3,11 @@ import { IRecipeType } from 'src/app/core/models/category.model';
 import { RecipeTypeService } from 'src/app/core/services/recipe-type.service';
 
 @Component({
-  selector: 'app-recipe-type-nav',
-  templateUrl: './recipe-type-nav.component.html',
-  styleUrls: ['./recipe-type-nav.component.css']
+  selector: 'app-recipe-type-list',
+  templateUrl: './recipe-type-list.component.html',
+  styleUrls: ['./recipe-type-list.component.css']
 })
-export class RecipeTypeNavComponent implements OnInit {
+export class RecipeTypeListComponent implements OnInit {
 
   recipeTypes!: IRecipeType[];
 

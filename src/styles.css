@@ -22,6 +22,9 @@ html, body{
 .bg-main{
     background-color: #E54B4B;
 }
+.bg-secondary{
+    background-color:  #ffd45c !important;;
+}
 .text-main{
     color: #E54B4B;
 }

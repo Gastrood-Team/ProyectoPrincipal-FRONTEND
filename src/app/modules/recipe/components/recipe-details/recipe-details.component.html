@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="custom-container">
+    <div class="container-image">
+        <img [src]="recipe.image">
+    </div>
+    <div class="content">
+        <div class="content-text">
+            <div class="content-title poppin">
+                {{ recipe.name }}
+            </div>
+            <div class="content-subtitle">
+                {{ profile.firstName }} {{ profile.lastName }}
+            </div>
+            <div class="content-description">
+                {{ recipe.description }}
+            </div>
+            <div class="content-options">
+                <button mat-flat-button [routerLink]="['/recipes', recipe.id]">
+                    Details
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
