@@ -1,10 +1,10 @@
 {
     "commons": {
         "home": "Inici",
-        "recipes":"Recetas",
-        "about":"Sobre",
-        "contact":"Contacte",
-        "register":"Registre",
+        "recipes": "Recetas",
+        "about": "Sobre",
+        "contact": "Contacte",
+        "register": "Registre",
         "title": "Títol",
         "description": "Descripció",
         "password": "Contrasenya",
@@ -16,7 +16,20 @@
         "cancel": "Cancel·lar",
         "createBtn": "Crear",
         "updateBtn": "Actualitzar",
-        "loggedAs": "Loguejat com"
+        "loggedAs": "Loguejat com",
+        "info-contact": "Si vols posar-te en contacte amb el nostre equip, simplement a continuació et deixarem un petit formulari on contactaràs nosaltres i qualsevol suggeriment que tingueu o qualsevol pregunta estarem encantats d'ajudar-vos, la resposta estarà en un temps estimat de 24 o 48 hores, si no rebeu cap resposta possible, torneu a enviar el vostre suggeriment en el formulari.",
+        "user":"Usuari",
+        "email":"Correu",
+        "desc":"Descripció...",
+        "send":"Enviar",
+        "lema":"Alimenta la teva ment amb grans pensaments per creure en que l'heroic fa a gran als herois",
+        "tel":"Telèfon",
+        "find":"Troba",
+        "categories":"categories",
+        "discover":"per descubrir",
+        "discovered":"Descobreix a partir de les coses que ja estimes",
+        "popular":"Categories Populars",
+        "category":"categoria"
     },
     "profileMenu": {
         "info": "La meva informació",

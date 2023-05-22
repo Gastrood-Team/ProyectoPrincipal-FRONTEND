@@ -3,38 +3,33 @@
     <div class="contact-info">
         <div class="content-phrase">
             <h1>{{ 'commons.contact' | translate }}</h1>
-            <p>If you want to get in touch with our team, simply below we will leave a small form where you will contact
-                us
-                and any suggestion you have or any question we will be happy to answer, the answer will be in an
-                estimated
-                time in a period of 24 and 48 hours , if you do not receive any possible response, please resubmit your
-                suggestion in the form.</p>
+            <p>{{'commons.info-contact' | translate}}</p>
         </div>
         <div class="content-img">
             <img class="image-left" src="assets/images/contact/image-left.png" alt="">
             <div class="info">
                 <img class="icon-mail" src="assets/images/iconos/mail.png" alt="">
                 <p>Email</p>
-                <p>info@gastrood.com</p>
+                <p>soporte.gastrood@gmail.com</p>
                 <img class="icon-phone" src="assets/images/iconos/phone.png" alt="">
-                <p>Telephone</p>
+                <p>{{ 'commons.tel' | translate }}</p>
                 <p>+34 664 667 446</p>
             </div>
         </div>
     </div>
     <div class="content-form">
-        <h2>Contact</h2>
+        <h2>{{ 'commons.contact' | translate }}</h2>
         <div class="form">
             <form onsubmit="return false">
-                <input type="text" placeholder="User">
-                <input type="text" placeholder="Email">
-                <textarea name="description" id="desc" placeholder="Description..."></textarea>
-                <button type="submit">Send</button>
+                <input type="text" placeholder="{{ 'commons.user' | translate }}">
+                <input type="text" placeholder="{{ 'commons.email' | translate }}">
+                <textarea name="description" id="desc" placeholder="{{ 'commons.desc' | translate }}."></textarea>
+                <button type="submit">{{ 'commons.send' | translate }}</button>
             </form>
         </div>
     </div>
 </div>
 <div class="lema">
-    <p>“Nurture your mind with great thougths to believe in the heroic makes heroes“</p>
+    <p>"{{ 'commons.lema' | translate }}"</p>
 </div>
 <app-footer></app-footer>

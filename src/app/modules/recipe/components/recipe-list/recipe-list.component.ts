@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-
+  loading: boolean = true;
   type!: string;
   recipes!: IRecipe[];
 
@@ -21,6 +21,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   getRecipes(): void {
+    this.loading = true;
     this.route.params.subscribe(params => {
       this.type = params['id'];
       if (this.type) {
@@ -35,9 +36,10 @@ export class RecipeListComponent implements OnInit {
                 types: recipe.types?.slice(0, 3),
               }
             });
+            this.loading = false;
           },
           error: (err) => {
-            
+            // Manejo del error si es necesario
           }
         })
       }

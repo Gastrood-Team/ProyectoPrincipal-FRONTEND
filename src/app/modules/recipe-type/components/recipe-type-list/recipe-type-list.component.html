@@ -1,38 +1,50 @@
 <app-header></app-header>
 <div class="custom-container">
-    <div class="container-image">
-        <img src="/assets/images/backgrounds/category-sec-bg.jpg">
+  <div class="container-image">
+    <img src="/assets/images/backgrounds/category-sec-bg.jpg" />
+  </div>
+  <div class="content">
+    <div class="content-text">
+      <div class="content-title poppin">
+        {{ "commons.find" | translate
+        }}<span class="poppin text-secondary">
+          {{ "commons.categories" | translate }} </span
+        >{{ "commons.discover" | translate }}
+      </div>
+      <div class="content-subtitle">
+        -- {{ "commons.discovered" | translate }}
+      </div>
     </div>
-    <div class="content">
-        <div class="content-text">
-            <div class="content-title poppin">
-                Find<span class="poppin text-secondary"> Categories </span>to discover
+    <div class="grid-wrapper">
+      <div class="grid-title poppin text-secondary">
+        {{ "commons.popular" | translate }}
+      </div>
+      <div class="grid-inner-wrapper">
+        <!-- Mostrar spinner cuando loading es true -->
+
+        <div *ngIf="loading" class="spinner-container">
+            <div class="spinner"></div>
+          </div>
+          
+        <!-- Mostrar los datos cuando loading es false -->
+        <ng-container *ngIf="!loading">
+          <ng-container *ngFor="let type of recipeTypes">
+            <div class="grid-tile" [routerLink]="['/categories', type.name]">
+              <div class="grid-tile-img">
+                <img [src]="type.image" />
+              </div>
+              <div class="grid-tile-text">
+                <div class="grid-tile-subtitle text-secondary">
+                  {{ "commons.category" | translate }}
+                </div>
+                <div class="grid-tile-title">
+                  {{ type.name }}
+                </div>
+              </div>
             </div>
-            <div class="content-subtitle">
-                -- Discovered through the things you already love
-            </div>
-        </div>
-        <div class="grid-wrapper">
-            <div class="grid-title poppin text-secondary">
-                Popular Categories
-            </div>
-            <div class="grid-inner-wrapper">
-                <ng-container *ngFor="let type of recipeTypes">
-                    <div class="grid-tile" [routerLink]="['/categories', type.name]">
-                        <div class="grid-tile-img">
-                            <img [src]="type.image">
-                        </div>
-                        <div class="grid-tile-text">
-                            <div class="grid-tile-subtitle text-secondary">
-                                CATEGORY
-                            </div>
-                            <div class="grid-tile-title">
-                                {{ type.name }}
-                            </div>
-                        </div>
-                    </div>
-                </ng-container>
-            </div>
-        </div>
+          </ng-container>
+        </ng-container>
+      </div>
     </div>
+  </div>
 </div>

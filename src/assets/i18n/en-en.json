@@ -16,8 +16,20 @@
         "cancel": "Cancel",
         "createBtn": "Create",
         "updateBtn": "Update",
-        "loggedAs": "Logged in as"
-
+        "loggedAs": "Logged in as",
+        "info-contact":"If you want to get in touch with our team, simply below we will leave you a small form where you will contact us and any suggestion you have or any question we will be happy to assist you, the answer will be in a My dear time within 24 or 48 hours, if you do not receive any possible response, please re-send your suggestion in the form.",
+        "user":"User",
+        "email":"Email",
+        "desc":"Description...",
+        "send":"Send",
+        "lema":"Nurture your mind with great thougths to believe in the heroic makes heroes",
+        "tel":"Telephone",
+        "find":"Find",
+        "categories":"categories",
+        "discover":"to discover",
+        "discovered":" Discovered through the things you already love",
+        "popular":"Popular Categories",
+        "category":"category"
     },
     "profileMenu": {
         "info": "My Information",

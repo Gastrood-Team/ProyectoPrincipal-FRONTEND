@@ -8,7 +8,7 @@ import { RecipeTypeService } from 'src/app/core/services/recipe-type.service';
   styleUrls: ['./recipe-type-list.component.css']
 })
 export class RecipeTypeListComponent implements OnInit {
-
+  loading: boolean = true;
   recipeTypes!: IRecipeType[];
 
   constructor(
@@ -20,9 +20,11 @@ export class RecipeTypeListComponent implements OnInit {
   }
 
   readAll(): void {
+    this.loading = true;
     this.recipeTypeService.getAll().subscribe(res => {
       this.recipeTypes = res.data.slice(0, 12);
-    })
+      this.loading = false;
+    });
   }
-
+  
 }

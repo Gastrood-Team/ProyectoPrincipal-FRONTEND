@@ -1,10 +1,10 @@
 {
     "commons": {
         "home": "Inicio",
-        "recipes":"Recetas",
-        "about":"Sobre",
-        "contact":"Contacto",
-        "register":"Registrar",
+        "recipes": "Recetas",
+        "about": "Sobre",
+        "contact": "Contacto",
+        "register": "Registrar",
         "title": "Título",
         "description": "Descripción",
         "password": "Contraseña",
@@ -16,7 +16,20 @@
         "cancel": "Cancelar",
         "createBtn": "Crear",
         "updateBtn": "Actualizar",
-        "loggedAs": "Logueado como"
+        "loggedAs": "Logueado como",
+        "info-contact": "Si quieres ponerte en contacto con nuestro equipo, simplemente debajo te dejaremos un pequeño formulario donde contactarás con nosotros y cualquier sugerencia que tengas o cualquier duda estaremos encantados de atenderte, la respuesta estará en un tiempo  estimado de 24 o 48 horas, si no recibe alguna posible respuesta, por favor vuelva a enviar su sugerencia en el formulario.",
+        "user":"Usuario",
+        "email":"Correo",
+        "desc":"Descripción...",
+        "send":"Enviar",
+        "lema":"Alimenta tu mente con grandes pensamientos para creer en que lo heroico hace a grande a los heroes",
+        "tel":"Teléfono",
+        "find":"Encuentra",
+        "categories":"Categorias",
+        "discover":"para descubrir",
+        "discovered":"Descubre a través de las cosas que ya amas",
+        "popular":"Categorias Populares",
+        "category":"categoria"
     },
     "profileMenu": {
         "info": "Mi Información",
