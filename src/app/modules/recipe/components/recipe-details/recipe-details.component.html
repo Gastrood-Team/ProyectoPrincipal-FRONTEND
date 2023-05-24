@@ -1,25 +1,38 @@
 <app-header></app-header>
-<div class="custom-container">
-    <div class="container-image">
-        <img [src]="recipe.image">
-    </div>
-    <div class="content">
-        <div class="content-text">
-            <div class="content-title poppin">
-                {{ recipe.name }}
-            </div>
-            <div class="content-subtitle">
-                {{ profile.firstName }} {{ profile.lastName }}
-            </div>
-            <div class="content-description">
-                {{ recipe.description }}
-            </div>
-            <div class="content-options">
-                <button mat-flat-button [routerLink]="['/recipes', recipe.id]">
-                    Details
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
 
+<div class="custom-container">
+  <!-- Mostrar spinner mientras se carga la imagen -->
+  <div *ngIf="loading" class="spinner-container">
+    <div class="spinner"></div>
+  </div>
+
+  <div class="container-image" *ngIf="!loading">
+    <!-- Cargar la imagen cuando loading es falso -->
+    <img [src]="recipe.image">
+  </div>
+
+  <div class="content">
+    <!-- Mostrar spinner mientras se cargan los datos -->
+    <div *ngIf="loading" class="spinner-container">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Mostrar los datos cuando loading es falso -->
+    <div class="content-text" *ngIf="!loading">
+      <div class="content-title poppin">
+        {{ recipe.name }}
+      </div>
+      <div class="content-subtitle">
+        {{ profile.firstName }} {{ profile.lastName }}
+      </div>
+      <div class="content-description">
+        {{ recipe.description }}
+      </div>
+      <div class="content-options">
+        <button mat-flat-button [routerLink]="['/recipes', recipe.id]">
+          Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

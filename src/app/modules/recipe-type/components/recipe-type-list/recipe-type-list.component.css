@@ -111,7 +111,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
 }
 
 .spinner {
@@ -122,13 +122,16 @@
   border-top-color: #333;
   border-radius: 50%;
   animation: spinner 0.8s ease-in-out infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
-
 @keyframes spinner {
   to {
     transform: rotate(360deg);
   }
 }
+
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .container-image {

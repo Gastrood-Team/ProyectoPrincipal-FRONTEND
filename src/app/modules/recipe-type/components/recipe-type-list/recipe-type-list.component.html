@@ -1,31 +1,31 @@
 <app-header></app-header>
+
 <div class="custom-container">
   <div class="container-image">
     <img src="/assets/images/backgrounds/category-sec-bg.jpg" />
   </div>
   <div class="content">
-    <div class="content-text">
+    <div class="content-text" *ngIf="!loading">
       <div class="content-title poppin">
         {{ "commons.find" | translate
         }}<span class="poppin text-secondary">
           {{ "commons.categories" | translate }} </span
         >{{ "commons.discover" | translate }}
       </div>
-      <div class="content-subtitle">
+      <div class="content-subtitle" *ngIf="!loading">
         -- {{ "commons.discovered" | translate }}
       </div>
     </div>
     <div class="grid-wrapper">
-      <div class="grid-title poppin text-secondary">
+      <div class="grid-title poppin text-secondary" *ngIf="!loading">
         {{ "commons.popular" | translate }}
       </div>
       <div class="grid-inner-wrapper">
         <!-- Mostrar spinner cuando loading es true -->
-
         <div *ngIf="loading" class="spinner-container">
-            <div class="spinner"></div>
-          </div>
-          
+          <div class="spinner"></div>
+        </div>
+        
         <!-- Mostrar los datos cuando loading es false -->
         <ng-container *ngIf="!loading">
           <ng-container *ngFor="let type of recipeTypes">

@@ -12,28 +12,31 @@ import { RecipeService } from 'src/app/core/services/recipe.service';
 export class RecipeDetailsComponent implements OnInit {
 
   recipe!: IRecipe;
-  profile! : IProfile;
+  profile!: IProfile;
+  loading: boolean = true;
 
   constructor(
     private recipeService: RecipeService,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.getRecipeDetails();
   }
 
-  getRecipeDetails(): void{
+  getRecipeDetails(): void {
     this.route.params.subscribe(params => {
       let id = params['id'];
-      if(id){
+      if (id) {
+        this.loading = true;
         this.recipeService.getbyId(id).subscribe({
           next: (res) => {
             this.profile = res.data;
             this.recipe = res.data;
+            this.loading = false;
           }
-        })
+        });
       }
-    })
+    });
   }
 }

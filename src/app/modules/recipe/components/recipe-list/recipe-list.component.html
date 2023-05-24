@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="custom-container">
   <div class="content">
-    <div class="content-title poppin">
+    <div class="content-title poppin"  *ngIf="!loading">
       {{ type }}
     </div>
 
@@ -34,8 +34,7 @@
                 <button
                   mat-flat-button
                   class="bg-secondary"
-                  [routerLink]="['/recipes', recipe.id]"
-                >
+                  [routerLink]="['/recipes', recipe.id]">
                   Details
                 </button>
               </div>
