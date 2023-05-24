@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="custom-container">
+    <div class="content">
+        <div class="content-title poppin">
+            {{ type }}
+        </div>
+        <div class="grid-wrapper">
+            <ng-container *ngFor="let recipe of recipes ">
+                <div class="grid-tile" [routerLink]="['/recipes', recipe.id]">
+                    <div class="grid-tile-img">
+                        <img [src]="recipe.image">
+                    </div>
+                    <div class="grid-tile-text">
+                        <div class="grid-tile-title">
+                            {{ recipe.name }}
+                        </div>
+                        <div class="grid-tile-subtitle text-main">
+                            <ng-container *ngFor="let type of recipe.types">
+                                {{ type.name }}
+                            </ng-container>
+                        </div>
+                        <div class="grid-tile-description">
+                            {{ recipe.description }}
+                        </div>
+                        <div class="grid-tile-options">
+                            <button mat-flat-button>
+                                Save
+                            </button>
+                            <button mat-flat-button [routerLink]="['/recipes', recipe.id]">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

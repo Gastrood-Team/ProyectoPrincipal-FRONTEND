@@ -1,0 +1,511 @@
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+h1 {
+    font-size: 100px;
+}
+
+p {
+    font-size: 24px;
+}
+
+.content-text {
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 80px;
+}
+
+.content-text p {
+    width: 900px;
+    margin: 0px auto;
+}
+
+.grey {
+    width: 350px;
+    height: 383px;
+    background-color: #9e9e9e;
+    margin-top: 20px;
+}
+
+.first-content {
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+
+}
+
+.text {
+    background-color: #f2f2f2;
+    width: 582px;
+    height: 479px;
+    text-align: center;
+    padding-top: 150px;
+    position: absolute;
+    right: 400px;
+    z-index: 4;
+    top: -90px;
+
+
+}
+
+.purple {
+    width: 400px;
+    height: 383px;
+    background-color: #9747ff;
+    position: absolute;
+    right: 0px;
+    top: -59px;
+}
+
+.image {
+    z-index: 2;
+}
+
+.image1 {
+    position: absolute;
+    width: 381px;
+    height: 229px;
+    left: -42px;
+    top: 1882px;
+}
+
+.image2 {
+    position: absolute;
+    width: 204px;
+    height: 417px;
+    left: 887px;
+    top: 1858px;
+    z-index: 5
+}
+
+.image3 {
+    position: absolute;
+    width: 153px;
+    height: 312px;
+    left: 1422px;
+    top: 1973px;
+    z-index: 4;
+}
+
+.content-images {
+    padding-bottom: 400px;
+}
+
+.pink {
+    width: 350px;
+    height: 383px;
+    background-color: #FF6584;
+    margin-top: 20px;
+}
+
+.second-content {
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+
+}
+
+.text2 {
+    background-color: #f2f2f2;
+    width: 582px;
+    height: 479px;
+    text-align: center;
+    padding-top: 150px;
+    position: absolute;
+    right: 400px;
+    z-index: 4;
+    top: -90px;
+
+
+}
+
+.blue {
+    width: 400px;
+    height: 383px;
+    background-color: #4b73ff;
+    position: absolute;
+    right: 0px;
+    top: -59px;
+}
+
+.image-2 {
+    z-index: 2;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 150px;
+    font-size: 42px;
+}
+
+.third-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
+
+}
+
+.target1 {
+    background-color: #f5f5f5;
+    width: 391px;
+    height: 338px;
+    border-radius: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.target2 {
+    background-color: #f5f5f5;
+    width: 391px;
+    height: 338px;
+    border-radius: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.target3 {
+    background-color: #f5f5f5;
+    width: 391px;
+    height: 338px;
+    border-radius: 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parraf-1,
+.parraf-2 {
+    color: #828282;
+}
+
+.target1 img {
+    object-fit: contain;
+}
+
+.inside-content1 {
+    margin: 0px auto;
+}
+
+.inside-content2 {
+    margin: 0px auto;
+}
+
+.inside-content3 {
+    margin: 0px auto;
+}
+
+.target1 p,
+.target2 p,
+.target3 p {
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.target2 p {
+    width: 256px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .recipe-image img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .content-text {
+        text-align: center;
+        margin-top: 30px;
+        padding-bottom: 50px;
+    }
+
+    .content-text p {
+        width: 600px;
+        margin: 0 auto;
+    }
+
+    .grey,
+    .pink {
+        width: 250px;
+        height: 250px;
+    }
+
+    .purple,
+    .blue {
+        width: 300px;
+        height: 250px;
+    }
+
+    .first-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        position: relative;
+    }
+
+    .text {
+        background-color: #f2f2f2;
+        width: 500px;
+        height: 350px;
+        text-align: center;
+        padding-top: 80px;
+        position: absolute;
+        right: 0px;
+        top: -50px;
+        z-index: 4;
+    }
+
+    .purple {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .image {
+        z-index: 2;
+    }
+
+    .image1 {
+        position: absolute;
+        width: 200px;
+        height: 120px;
+        left: -20px;
+        top: 940px;
+    }
+
+    .image2 {
+        position: absolute;
+        width: 120px;
+        height: 240px;
+        left: 169px;
+        top: 939px;
+        z-index: 5;
+
+    }
+
+    .image3 {
+        position: absolute;
+        width: 90px;
+        height: 190px;
+        left: 728px;
+        top: 657px;
+        z-index: 4;
+    }
+
+    .content-images {
+        padding-bottom: 140px;
+    }
+
+    .second-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        position: relative;
+    }
+
+    .text2 {
+        background-color: #f2f2f2;
+        width: 500px;
+        height: 350px;
+        text-align: center;
+        padding-top: 80px;
+        position: absolute;
+        right: 0px;
+        top: -50px;
+        z-index: 4;
+    }
+
+    .blue {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .image-2 {
+        z-index: 2;
+    }
+
+    h2 {
+        text-align: center;
+        padding-top: 80px;
+        font-size: 36px;
+    }
+
+    .third-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1px;
+
+    }
+
+    .target1,
+    .target2,
+    .target3 {
+        background-color: #f5f5f5;
+        width: 360px;
+        height: 385px;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .recipe-image img {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .content-text p {
+        width: 90%;
+    }
+
+    .first-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .grey {
+        display: none;
+    }
+
+    .text {
+        width: 90%;
+        height: auto;
+        top: -50px;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 31px;
+    }
+
+    .purple {
+        width: 90%;
+        height: auto;
+        top: unset;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .image1,
+    .image2,
+    .image3 {
+        display: none;
+    }
+
+    .content-images {
+        padding-bottom: 100px;
+    }
+
+    .pink {
+        width: 90%;
+        height: auto;
+        top: unset;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .second-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text2 {
+        width: 90%;
+        height: auto;
+        top: -50px;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 31px;
+    }
+
+    .blue {
+        width: 90%;
+        height: auto;
+        top: unset;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    h2 {
+        font-size: 32px;
+        padding-top: 50px;
+    }
+
+    .third-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 65px;
+    }
+
+    .target1,
+    .target2,
+    .target3 {
+        width: 75%;
+        height: 250px;
+        margin-bottom: 36px;
+    }
+
+    .target1 img,
+    .target2 img,
+    .target3 img {
+        width: 50%;
+        height: auto;
+        margin-left: 77px;
+    }
+
+    .content-text {
+        padding-bottom: 0px;
+    }
+
+    .second-content {
+        margin-top: 0px;
+    }
+
+    .target1 p,
+    .target2 p,
+    .target3 p {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .target2 p {
+        width: 80%;
+    }
+}

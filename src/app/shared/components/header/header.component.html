@@ -1,5 +1,5 @@
 <header class="header_wrp">
-    <div class="header_inner main-color">
+    <div class="header_inner bg-main">
         <div class="header_left">
             <div class="header_logo">
                 <a [routerLink]="['/']">
@@ -13,7 +13,7 @@
                     </p>
                 </div>
                 <div class="header_tab">
-                    <p class="header_tab_name" [routerLink]="['/recipes']" routerLinkActive="router-link-active">
+                    <p class="header_tab_name" [routerLink]="['/categories']" routerLinkActive="router-link-active">
                         {{ 'commons.recipes' | translate }}
                     </p>
                 </div>
@@ -45,8 +45,8 @@
                                 <p class="option_text" [routerLink]="['/']">{{ 'commons.home' | translate }}</p>
                             </div>
                             <div class="option">
-                                <mat-icon> fastfood</mat-icon>
-                                <p class="option_text" [routerLink]="['/recipes']">{{ 'commons.recipes' | translate }}
+                                <mat-icon>fastfood</mat-icon>
+                                <p class="option_text" [routerLink]="['/categories']">{{ 'commons.recipes' | translate }}
                                 </p>
                             </div>
                             <div class="option">

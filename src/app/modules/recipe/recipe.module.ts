@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { RecipeNavigationComponent } from './components/recipe-navigation/recipe-navigation.component';
+import { RouterModule } from '@angular/router';
+import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
+import { RecipeDetailsComponent } from './components/recipe-details/recipe-details.component';
 
 @NgModule({
   declarations: [
-    RecipeNavigationComponent
+    RecipeListComponent,
+    RecipeDetailsComponent
   ],
   imports: [
     SharedModule

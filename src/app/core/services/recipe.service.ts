@@ -12,12 +12,16 @@ export class RecipeService {
 
   constructor(private http: HttpClient) { }
 
-  public getRecipes(recipeType?: string, page?: number): Observable<any>{
+  public getAll(recipeType?: string, page?: number): Observable<any>{
     let url = this.baseUrl;
     if(recipeType){
       url += `?type=${recipeType}`;
     }
     return this.http.get<any>(url);
 
+  }
+
+  public getbyId(id: number): Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}/${id}`);
   }
 }
