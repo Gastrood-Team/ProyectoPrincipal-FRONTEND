@@ -14,7 +14,7 @@
                         <div class="grid-tile-title">
                             {{ recipe.name }}
                         </div>
-                        <div class="grid-tile-subtitle">
+                        <div class="grid-tile-subtitle text-main">
                             <ng-container *ngFor="let type of recipe.types">
                                 {{ type.name }}
                             </ng-container>
@@ -23,17 +23,16 @@
                             {{ recipe.description }}
                         </div>
                         <div class="grid-tile-options">
-                            <button mat-flat-button class="bg-secondary">
-                                 Save
+                            <button mat-flat-button>
+                                Save
                             </button>
-                            <button mat-flat-button class="bg-secondary" [routerLink]="['/recipes', recipe.id]">
-                                Details
+                            <button mat-flat-button [routerLink]="['/recipes', recipe.id]">
+                                View Details
                             </button>
                         </div>
                     </div>
                 </div>
             </ng-container>
-            
         </div>
     </div>
 </div>

@@ -8,17 +8,49 @@
             <div class="content-title poppin">
                 {{ recipe.name }}
             </div>
-            <div class="content-subtitle">
+            <div class="content-subtitle" [routerLink]="['/profile', profile.username]" routerLinkActive="router-link-active" >
                 {{ profile.firstName }} {{ profile.lastName }}
             </div>
             <div class="content-description">
                 {{ recipe.description }}
             </div>
             <div class="content-options">
-                <button mat-flat-button [routerLink]="['/recipes', recipe.id]">
-                    Details
-                </button>
+                <a mat-flat-button (click)="scrollToDetails()">View Details</a>
+                <a mat-flat-button>See Reviews</a>
             </div>
+            <div class="content-information">
+                <div class="content-information-text">
+                    <div class="icon"><mat-icon color="primary">thumb_up</mat-icon></div>
+                    <p class="value">192</p>
+                    <p class="info">Like</p>
+                </div>
+                <div class="content-information-text">
+                    <div class="icon"><mat-icon color="warn">thumb_down</mat-icon></div>
+                    <p class="value">56</p>
+                    <p class="info">Dislike</p>
+                </div>
+                <div class="content-information-text">
+                    <div class="icon"><mat-icon>comment</mat-icon></div>
+                    <p class="value">12</p>
+                    <p class="info">Reviews</p>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="showDetails" class="recipe-wraper" #detailsSection>
+            <div class="custom-card">
+                <div class="card-title poppin">
+                    Description
+                </div>
+                <div class="card-description">
+                    {{ recipe.description }}
+                </div>
+                <div class="card-category-list">
+                    <ng-container *ngFor="let type of recipe.types">
+                        <div class="card-category" [routerLink]="['/categories', type.name]">{{ type.name }}</div>
+                    </ng-container>
+                </div>
+            </div>
+            <button class="hide-details" (click)="hideDetails()">Hide Details</button>
         </div>
     </div>
 </div>

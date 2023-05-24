@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { delay } from 'rxjs';
 import { IProfile } from 'src/app/core/models/profile.model';
 import { IRecipe } from 'src/app/core/models/recipe.model';
 import { RecipeService } from 'src/app/core/services/recipe.service';
@@ -13,6 +14,8 @@ export class RecipeDetailsComponent implements OnInit {
 
   recipe!: IRecipe;
   profile! : IProfile;
+  showDetails: boolean = false;
+  @ViewChild('detailsSection') detailsSection!: ElementRef;
 
   constructor(
     private recipeService: RecipeService,
@@ -35,5 +38,14 @@ export class RecipeDetailsComponent implements OnInit {
         })
       }
     })
+  }
+
+  scrollToDetails() {
+    this.showDetails = true;
+    setTimeout(() => { this.detailsSection.nativeElement.scrollIntoView({ behavior: 'smooth' }) }, 100)
+  }
+
+  hideDetails() {
+    this.showDetails = false;
   }
 }

@@ -1,0 +1,54 @@
+.custom-container {
+    position: relative;
+}
+
+.banner-image {
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.banner-image::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #241e1ee0 67%);
+    content: '';
+}
+
+.banner-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.content {
+    width: 100%;
+    padding: 0 60px;
+    z-index: 50;
+    background-color: red;
+}
+
+.wraper{
+    position: relative;
+}
+
+.profile-header{
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+}
+
+
+
+.profile-image{
+    background-color: white;
+}
+.profile-username{
+    background-color: blue;
+}

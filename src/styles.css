@@ -1,43 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Roboto:wght@300;400;500;700&display=swap');
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     user-select: none;
     font-family: "Roboto", sans-serif;
 }
-html, body{
+
+html,
+body {
     background-color: #EAEAEA;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
- }
+    scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
 
-.bg-main{
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #777;
+}
+
+
+.bg-main {
     background-color: #E54B4B;
 }
-.bg-secondary{
-    background-color:  #ffd45c !important;;
+
+.bg-secondary {
+    background-color: #ffd45c !important;
+    ;
 }
-.text-main{
+
+.text-main {
     color: #E54B4B;
 }
-.text-secondary{
+
+.text-secondary {
     color: #ffd45c !important;
 }
-.highlight{
+
+.highlight {
     color: rgb(155, 161, 255);
     cursor: pointer;
 }
-.poppin{
+
+.poppin {
     font-family: "Poppins";
 }
-.font-weight-normal{
+
+.font-weight-normal {
     font-weight: 400;
 }

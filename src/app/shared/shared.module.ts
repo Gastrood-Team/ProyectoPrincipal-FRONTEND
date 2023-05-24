@@ -29,6 +29,8 @@ import { FooterComponent } from './components/footer/footer.component';
     TranslateModule
   ],
   exports: [
+    FooterComponent,
+    HeaderComponent,
     CommonModule,
     FormsModule,
     RouterModule,
@@ -37,9 +39,7 @@ import { FooterComponent } from './components/footer/footer.component';
     MatIconModule,
     MatButtonModule,
     MatGridListModule,
-    MatCardModule,
-    FooterComponent,
-    HeaderComponent
+    MatCardModule
   ],
   providers: [],
 })
