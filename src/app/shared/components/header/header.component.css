@@ -173,7 +173,13 @@
     left: -150px;
     background-color: white;
 }
-
+.header_wrp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
 @media (max-width:1400px) {
 
     .header_tab_wrp{

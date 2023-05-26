@@ -75,11 +75,11 @@ p {
 
 .image2 {
     position: absolute;
-    width: 204px;
-    height: 417px;
+    width: 200px;
+    height: 395px;
     left: 887px;
-    top: 1858px;
-    z-index: 5
+    top: 1960px;
+    z-index: 999999;
 }
 
 .image3 {
@@ -87,7 +87,7 @@ p {
     width: 153px;
     height: 312px;
     left: 1422px;
-    top: 1973px;
+    top: 2120px;
     z-index: 4;
 }
 

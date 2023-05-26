@@ -2,7 +2,7 @@
     "commons": {
         "home": "Inici",
         "recipes":"Recetas",
-        "about":"Sobre",
+        "about":"Sobre Nosaltres",
         "contact":"Contacte",
         "register":"Registre",
         "title": "Títol",
@@ -16,7 +16,17 @@
         "cancel": "Cancel·lar",
         "createBtn": "Crear",
         "updateBtn": "Actualitzar",
-        "loggedAs": "Loguejat com"
+        "loggedAs": "Loguejat com",
+        "aboutus":"Sobre Nosaltres",
+        "phrase":"!Hola! Gastrood som una empresa jove que ens encanta seguir renovant el món de la cuina, som conscients de com és d'important cuidar la salut alimentària, i per això t'oferim les millors receptes perquè puguis compartir amb amics i família. Estem encantats de poder estar amb vosaltres acompanyant-vos en els vostres viatges gastronòmics.",
+        "whatwedo":"Que Fem",
+        "whoweare":"Qui Som",
+        "whatwebelieve":"En Què Creiem",
+        "simple":"Tan simple com respondre a la realitat",
+        "sustan":"La sostenibilitat s'aconsegueix amb petites accions",
+        "eat":"Menja bé sense sentir-te malament",
+        "transwhatwedo":"Gastrood és una aplicació innovadora que permet als usuaris compartir i descobrir receptes delicioses en un sol lloc. Explora el nostre món culinari i comparteix les teves millors creacions gastronòmiques amb la nostra comunitat apasionada!",
+        "transwhoweare":"A Gastrood som un equip apassionat dedicat a crear una comunitat vibrant on els amants del menjar puguin connectar-se, compartir i descobrir una varietat infinita de delicioses receptes."
     },
     "profileMenu": {
         "info": "La meva informació",

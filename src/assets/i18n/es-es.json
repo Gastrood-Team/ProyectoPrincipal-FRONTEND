@@ -2,7 +2,7 @@
     "commons": {
         "home": "Inicio",
         "recipes":"Recetas",
-        "about":"Sobre",
+        "about":"Sobre Nosotros",
         "contact":"Contacto",
         "register":"Registrar",
         "title": "Título",
@@ -16,7 +16,17 @@
         "cancel": "Cancelar",
         "createBtn": "Crear",
         "updateBtn": "Actualizar",
-        "loggedAs": "Logueado como"
+        "loggedAs": "Logueado como",
+        "aboutus":"Sobre Nosotros",
+        "phrase":"!¡Hola! Gastrood somos una empresa joven que nos encanta seguir renovando el mundo de la cocina, somos conscientes de lo importante que es cuidar la salud alimentaria, y por eso te ofrecemos las mejores recetas para que puedas compartir con amigos, familia, y estamos encantados de poder estar con vosotros acompañándoos en vuestros viajes gastronómicos.",
+        "whatwedo":"Que Hacemos",
+        "whoweare":"Quienes Somos",
+        "whatwebelieve":"En Que Creemos",
+        "simple":"Tan simple como responder a la realidad",
+        "sustan":"La sostenibilidad se consigue con pequeñas acciones",
+        "eat":"Come bien sin sentirte mal",
+        "transwhatwedo":"Gastrood es una aplicación innovadora que permite a los usuarios compartir y descubrir recetas deliciosas en un solo sitio. ¡Explora nuestro mundo culinario y comparte tus mejores creaciones gastronómicas con nuestra comunidad apasionada!",
+        "transwhoweare":"En Gastrood, somos un equipo apasionado dedicado a crear una comunidad vibrante donde los amantes de la comida puedan conectarse, compartir y descubrir una variedad infinita de deliciosas recetas."
     },
     "profileMenu": {
         "info": "Mi Información",

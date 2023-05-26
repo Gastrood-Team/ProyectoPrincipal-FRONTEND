@@ -2,7 +2,7 @@
     "commons": {
         "home": "Home",
         "recipes":"Recipes",
-        "about":"About",
+        "about":"About Us",
         "contact":"Contact",
         "register":"Register",
         "title": "Title",
@@ -16,8 +16,17 @@
         "cancel": "Cancel",
         "createBtn": "Create",
         "updateBtn": "Update",
-        "loggedAs": "Logged in as"
-
+        "loggedAs": "Logged in as",
+        "aboutus":"About Us",
+        "phrase":"!Hello! Gastrood we are a young company that we love to continue renewing the world of cooking, we are aware of how important it is to take care of food health, and that is why we offer you the best recipes so that you can share with friends, family, and we are delighted to be able to be with you accompanying him on his gastronomic journeys.",
+        "whatwedo":"What We Do",
+        "whoweare":"Who We Are",
+        "whatwebelieve":"What We Believe",
+        "simple":"As simple as response to reality",
+        "sustan":"Sustainability is achieved with small actions",
+        "eat":"Eat well without feeling bad",
+        "transwhatwedo":"Gastrood is an innovative app that allows users to share and discover delicious recipes in one place. Explore our culinary world and share your best culinary creations with our passionate community!",
+        "transwhoweare":"At Gastrood, we are a passionate team dedicated to creating a vibrant community where foodies can connect, share and discover an endless variety of delicious recipes."
     },
     "profileMenu": {
         "info": "My Information",
