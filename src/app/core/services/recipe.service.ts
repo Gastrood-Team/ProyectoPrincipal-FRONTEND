@@ -24,4 +24,8 @@ export class RecipeService {
   public getbyId(id: number): Observable<any>{
     return this.http.get<any>(`${this.baseUrl}/${id}`);
   }
+
+  public delete(id: number): Observable<any>{
+    return this.http.delete<any>(`${this.baseUrl}/${id}`);
+  }
 }
