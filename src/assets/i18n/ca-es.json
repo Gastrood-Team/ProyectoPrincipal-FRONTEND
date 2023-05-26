@@ -26,7 +26,12 @@
         "sustan":"La sostenibilitat s'aconsegueix amb petites accions",
         "eat":"Menja bé sense sentir-te malament",
         "transwhatwedo":"Gastrood és una aplicació innovadora que permet als usuaris compartir i descobrir receptes delicioses en un sol lloc. Explora el nostre món culinari i comparteix les teves millors creacions gastronòmiques amb la nostra comunitat apasionada!",
-        "transwhoweare":"A Gastrood som un equip apassionat dedicat a crear una comunitat vibrant on els amants del menjar puguin connectar-se, compartir i descobrir una varietat infinita de delicioses receptes."
+        "transwhoweare":"A Gastrood som un equip apassionat dedicat a crear una comunitat vibrant on els amants del menjar puguin connectar-se, compartir i descobrir una varietat infinita de delicioses receptes.",
+        "followus":"SEGUEIX-NOS",
+        "explore":"EXPLORAR",
+        "contactus":"CONTACTE",
+        "policy":"POLITIQUES",
+        "privacy":"Privacitat"
     },
     "profileMenu": {
         "info": "La meva informació",

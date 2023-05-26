@@ -26,7 +26,12 @@
         "sustan":"Sustainability is achieved with small actions",
         "eat":"Eat well without feeling bad",
         "transwhatwedo":"Gastrood is an innovative app that allows users to share and discover delicious recipes in one place. Explore our culinary world and share your best culinary creations with our passionate community!",
-        "transwhoweare":"At Gastrood, we are a passionate team dedicated to creating a vibrant community where foodies can connect, share and discover an endless variety of delicious recipes."
+        "transwhoweare":"At Gastrood, we are a passionate team dedicated to creating a vibrant community where foodies can connect, share and discover an endless variety of delicious recipes.",
+        "followus":"FOLLOW US",
+        "explore":"EXPLORE",
+        "contactus":"CONTACT",
+        "policy":"POLICYS",
+        "privacy":"Privacy"
     },
     "profileMenu": {
         "info": "My Information",
