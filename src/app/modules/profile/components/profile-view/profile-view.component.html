@@ -1,21 +1,56 @@
 <app-header></app-header>
-<div class="custom-container">
-    <div class="banner-image">
-        <img src="/assets/images/backgrounds/category-sec-bg.jpg">
-    </div>
-    <div class="content">
-        <div class="wraper">
-            <div class="profile-header">
-                <div class="profile-image col-3">
-                    a
+<ng-container *ngIf="profile; then renderProfile; else spinner"></ng-container>
+
+<ng-template #spinner>
+    <app-spinner></app-spinner>
+</ng-template>
+
+<ng-template #renderProfile>
+    <div class="custom-container">
+        <div class="banner-image">
+            <img [src]="profile.bannerImg">
+        </div>
+        <div class="content">
+            <div class="wraper">
+                <div class="profile-header">
+                    <div class="profile-image">
+                        <img [src]="profile.profileImg" alt="">
+                    </div>
+                    <div class="profile-text">
+                        <div class="profile-name">
+                            {{ profile.firstName }} {{ profile.lastName }} <span class="username">{{ profile.username
+                                }}</span>
+                        </div>
+                        <div class="profile-bio">
+                            {{ profile.biography }}
+                        </div>
+                    </div>
+                    <div class="profile-options" *ngIf="userProfile">
+                        <div class="option-btn bg-main text-white" [routerLink]="['/recipes/form']">
+                            <mat-icon>add</mat-icon>
+                            Crear Receta
+                        </div>
+                        <div class="option-btn bg-white">
+                            <mat-icon>edit</mat-icon>
+                            Editar Perfil
+                        </div>
+                    </div>
                 </div>
-                <div class="profile-text">
-                    {{ profile.firstName }}
+                <div class="profile-nav">
+                    <div class="nav-tab">
+                        Recipes
+                    </div>
+                    <div class="nav-tab">
+                        Likes
+                    </div>
+                    <div class="nav-tab">
+                        Reviews
+                    </div>
                 </div>
-                <div class="profile-options">
-                    as
-                </div>
+                <app-profile-recipes [recipes]="profile.recipes" (reload)="reloadRecipes()"></app-profile-recipes>
             </div>
         </div>
     </div>
-</div>
+</ng-template>
+
+<app-footer></app-footer>

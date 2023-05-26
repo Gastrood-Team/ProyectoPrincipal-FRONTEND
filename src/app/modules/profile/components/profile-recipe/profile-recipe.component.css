@@ -1,25 +1,9 @@
-.custom-container {
-    position: relative;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.content {
-    width: 100%;
-    padding: 0 60px;
-    z-index: 3;
-}
-.content-title{
-    padding: 10px 0;
-    font-size: 3rem;
-}
 .grid-wrapper {
+    width: 100%;
+    padding: 40px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    width: 100%;
-    padding-bottom: 40px;
 }
 .grid-tile {
     height: 220px;
@@ -70,7 +54,7 @@
     overflow: hidden;
     display: -webkit-box;
     margin: 10px 0;
-    height: 80px;
+    height: 90px;
     font-size: 0.9rem;
     text-overflow: ellipsis;
     -webkit-line-clamp: 4;

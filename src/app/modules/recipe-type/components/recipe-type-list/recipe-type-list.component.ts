@@ -12,7 +12,7 @@ export class RecipeTypeListComponent implements OnInit {
   recipeTypes!: IRecipeType[];
 
   constructor(
-    private recipeTypeService: RecipeTypeService
+    private recipeTypeService: RecipeTypeService,
     ) { }
 
   ngOnInit(): void {

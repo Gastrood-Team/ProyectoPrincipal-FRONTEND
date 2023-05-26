@@ -11,9 +11,10 @@ import { IProfile } from "src/app/core/models/profile.model";
 })
 export class HeaderComponent implements OnInit {
 
-  public token!: string | null;
-  public profile!: IProfile
-  public email!: string;
+  token!: string | null;
+  profile!: IProfile
+  email!: string;
+  fetching: boolean = false;
 
   constructor(
     private authservice: AuthService,
@@ -30,7 +31,8 @@ export class HeaderComponent implements OnInit {
     localStorage.setItem('selectedLanguage', lang);
   }
 
-  public getLoggedUser() {
+  getLoggedUser() {
+    this.fetching = true;
     this.token = localStorage.getItem('token');
     if (this.token) {
       this.userService.getLoggedUser().subscribe({
@@ -40,9 +42,10 @@ export class HeaderComponent implements OnInit {
         }
       })
     }
+    this.fetching = false;
   }
 
-  public logout(): void {
+  logout(): void {
     this.authservice.logout();
   }
 
