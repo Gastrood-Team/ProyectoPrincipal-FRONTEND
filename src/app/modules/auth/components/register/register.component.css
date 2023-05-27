@@ -58,3 +58,7 @@ p{
     color: rgb(155, 161, 255);
     cursor: pointer;
 }
+.error-message{
+    color: #E54B4B;
+    font-size: 1rem;
+}

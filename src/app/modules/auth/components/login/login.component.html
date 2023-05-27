@@ -1,14 +1,16 @@
 <div class="parent d-flex">
     <div class="child rounded-4">
-        <img src="./assets/images/logo/Entire_Logo_White.jpg" alt="" routerLink="/home">
-        <form>
-            <input type="text" placeholder="Email" name="email" [(ngModel)]="user.email" required>
-            <input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required>
-            <button class="sign" (click)="login($event)">Login</button>
-            <!-- <button class="gmail">Login with Google</button> -->
-            <p class="highlight">Forget your password?</p>
-            <p>Not a member?<span class="highlight" routerLink="/register"> Register</span></p>
-        </form>
+      <img src="./assets/images/logo/Entire_Logo_White.jpg" alt="" routerLink="/home">
+      <form>
+        <input type="text" placeholder="Email" name="email" [(ngModel)]="user.email" required>
+        <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
+        <input type="password" placeholder="Password" name="password" [(ngModel)]="user.password" required>
+        <div *ngIf="passwordError" class="error-message">{{ passwordError }}</div>
+        <button class="sign" (click)="login()">Login</button>
+        <!-- <button class="gmail">Login with Google</button> -->
+        <p class="highlight">Forget your password?</p>
+        <p>Not a member?<span class="highlight" routerLink="/register"> Register</span></p>
+      </form>
     </div>
 </div>
-
+  

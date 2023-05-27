@@ -1,15 +1,17 @@
 <div class="parent">
     <div class="child">
-        <img src="./assets/images/logo/Entire_Logo_White.jpg" alt="" [routerLink]="['/home']">
-        <form>
-            <input type="text" placeholder="Username" name="firstName" [(ngModel)]="singUpData.username">
-            <input type="text" placeholder="First Name" name="firstName" [(ngModel)]="singUpData.firstName">
-            <input type="text" placeholder="Last name" name="lastName" [(ngModel)]="singUpData.lastName">
-            <input type="text" placeholder="Email" name="email" [(ngModel)]="singUpData.email">
-            <input type="password" placeholder="Password" name="password" [(ngModel)]="singUpData.password">
-            <button class="sign" (click)="signup($event)">Register</button>
-            <p>Already registered? <span class="highlight" [routerLink]="['/login']">Login</span></p>
-        </form>
+      <img src="./assets/images/logo/Entire_Logo_White.jpg" alt="" [routerLink]="['/home']">
+      <form>
+        <input type="text" placeholder="Username" name="username" [(ngModel)]="singUpData.username" required>
+        <input type="text" placeholder="First Name" name="firstName" [(ngModel)]="singUpData.firstName" required>
+        <input type="text" placeholder="Last name" name="lastName" [(ngModel)]="singUpData.lastName" required>
+        <input type="email" placeholder="Email" name="email" [(ngModel)]="singUpData.email" required>
+        <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
+        <input type="password" placeholder="Password" name="password" [(ngModel)]="singUpData.password" required>
+        <div *ngIf="passwordError" class="error-message">{{ passwordError }}</div>
+        <button class="sign" (click)="signup()">Register</button>
+        <p>Already registered? <span class="highlight" [routerLink]="['/login']">Login</span></p>
+      </form>
     </div>
-</div>
-
+  </div>
+  
