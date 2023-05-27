@@ -17,7 +17,7 @@ export class AuthService {
      const userCredentialsFormData = new FormData();
      userCredentialsFormData.append('email', user.email);
      userCredentialsFormData.append('password', user.password);
-     return this.http.post<any>(this.baseUrl + "/login", userCredentialsFormData);
+     return this.http.post(this.baseUrl + "/login", userCredentialsFormData);
    };
  
    public signup(data: SignUpData): Observable<any> {
@@ -27,7 +27,7 @@ export class AuthService {
      userFormData.append('lastName', data.lastName);
      userFormData.append('email', data.email);
      userFormData.append('password', data.password);
-     return this.http.post<any>(this.baseUrl + "/signup", userFormData)
+     return this.http.post(this.baseUrl + "/signup", userFormData)
    }
  
    public logout(): void{

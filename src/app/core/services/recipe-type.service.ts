@@ -12,6 +12,6 @@ export class RecipeTypeService {
   constructor(private http: HttpClient) { }
 
   public getAll(): Observable<any>{
-    return this.http.get<any>(this.baseUrl);
+    return this.http.get(this.baseUrl);
   }
 }
