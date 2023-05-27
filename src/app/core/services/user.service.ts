@@ -13,6 +13,6 @@ export class UserService {
     constructor(private http: HttpClient) { }
 
     public getLoggedUser(): Observable<any> {
-        return this.http.get<any>(this.baseUrl);
+        return this.http.get(this.baseUrl);
     }
 }

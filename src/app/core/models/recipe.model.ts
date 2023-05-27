@@ -20,3 +20,13 @@ export class Recipe implements IRecipe
     profile!: Profile;
     id!: number;
 }
+
+export class RecipeAux
+{
+    name!: string;
+    description!: string;
+    image!: File; 
+    types!: number[] | null;
+    profile!: Profile;
+    id!: number;
+}

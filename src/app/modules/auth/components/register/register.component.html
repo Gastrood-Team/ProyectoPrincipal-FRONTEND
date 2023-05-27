@@ -9,7 +9,7 @@
         <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
         <input type="password" placeholder="Password" name="password" [(ngModel)]="singUpData.password" required>
         <div *ngIf="passwordError" class="error-message">{{ passwordError }}</div>
-        <button class="sign" (click)="signup()">Register</button>
+        <button class="sign" (click)="signup($event)">Register</button>
         <p>Already registered? <span class="highlight" [routerLink]="['/login']">Login</span></p>
       </form>
     </div>

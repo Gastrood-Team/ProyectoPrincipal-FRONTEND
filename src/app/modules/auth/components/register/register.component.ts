@@ -19,7 +19,7 @@ export class RegisterComponent {
     private route: Router
   ) { }
 
-  public signup(): void {
+  public signup(event: MouseEvent): void {
     this.emailError = '';
     this.passwordError = '';
 
@@ -38,12 +38,15 @@ export class RegisterComponent {
       return;
     }
 
+    let registerBtn = event.target as HTMLElement;
+    registerBtn.innerHTML = 'Registering...';
     this.authService.signup(this.singUpData).subscribe({
       next: (res) => {
         this.route.navigate(['login']);
         Swal.fire('Registration success', res.message, 'success');
       },
       error: (err) => {
+        registerBtn.innerHTML = 'Register';
         Swal.fire('Ooops', err.error.message, 'error');
       }
     });

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { RecipeType } from '../models/category.model';
 import { Observable } from 'rxjs';
+import { Recipe, RecipeAux } from '../models/recipe.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,15 +17,37 @@ export class RecipeService {
     if(recipeType){
       url += `?type=${recipeType}`;
     }
-    return this.http.get<any>(url);
+    return this.http.get(url);
 
   }
 
   public getbyId(id: number): Observable<any>{
-    return this.http.get<any>(`${this.baseUrl}/${id}`);
+    return this.http.get(`${this.baseUrl}/${id}`);
+  }
+
+  public create(recipe: RecipeAux): Observable<any> {
+    const recipeFormData = new FormData();
+    recipeFormData.append('name', recipe.name);
+    recipeFormData.append('description', recipe.description);
+    recipeFormData.append('image',recipe.image);
+    recipe.types?.forEach((type) => {
+      recipeFormData.append('typesId[]', type.toString())
+    });
+    return this.http.post(`${this.baseUrl}`, recipeFormData);
+  }
+
+  public update(recipe: RecipeAux): Observable<any> {
+    const recipeFormData = new FormData();
+    recipeFormData.append('name', recipe.name);
+    recipeFormData.append('description', recipe.description);
+    recipeFormData.append('image',recipe.image);
+    recipe.types?.forEach((type) => {
+      recipeFormData.append('typesId[]', type.toString())
+    });
+    return this.http.post(`${this.baseUrl}/${recipe.id}`, recipeFormData);
   }
 
   public delete(id: number): Observable<any>{
-    return this.http.delete<any>(`${this.baseUrl}/${id}`);
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 }

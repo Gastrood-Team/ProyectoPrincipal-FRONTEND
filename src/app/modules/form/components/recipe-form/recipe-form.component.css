@@ -1,0 +1,63 @@
+#fileInput {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.custom-container{
+    position: relative;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.wrapper{
+    width: 1600px;
+    border-radius: 25px;
+}
+
+.wrapper .mat-card-title{
+    padding: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.mat-form-field{
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.card-img{
+    height: 583px;
+    margin: 15px 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-description{
+    height: 350px;
+    resize: none;
+}
+
+.responsive-icon{
+    margin-right: 20px;
+}
+
+.btn-text{
+    font-size: 1.1rem;
+}
