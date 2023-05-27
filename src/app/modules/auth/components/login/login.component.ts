@@ -10,19 +10,33 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  public user: User = new User();
+  public emailError: string = "";
+  public passwordError: string ="";
 
   constructor(
     private authService: AuthService,
     private route: Router
-  ) {
-
-  }
-
-  public user: User = new User();
+  ) {}
 
   public login(event: MouseEvent): void {
+    this.emailError = '';
+    this.passwordError = '';
+
+    if (!this.user.email) {
+      this.emailError = 'Email is required.';
+    }
+
+    if (!this.user.password) {
+      this.passwordError = 'Password is required.';
+    }
+
+    if (this.emailError || this.passwordError) {
+      return;
+    }
+
     let loginBtn = event.target as HTMLElement;
-    loginBtn.innerHTML = 'Validating...';
+    loginBtn.innerHTML = 'Validating...'
     this.authService.login(this.user).subscribe({
       next: (res) => {
         this.route.navigate(['home']);
@@ -32,6 +46,6 @@ export class LoginComponent {
         loginBtn.innerHTML = 'Login';
         Swal.fire(err.error.message, err.error.error, 'error');
       }
-    })
+    });
   }
 }

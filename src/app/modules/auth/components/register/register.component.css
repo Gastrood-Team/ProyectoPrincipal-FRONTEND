@@ -3,10 +3,10 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url("src/assets/images/backgrounds/tarjetas_login_register_definitivo.png");
+    background-image: url("src/assets/images/backgrounds/auth-card-bg.png");
 }
 .child{
-    height: 650px;
+    height: 696px;
     width: 400px;
     border-radius: 20px;
     background-color: white;
@@ -57,4 +57,8 @@ p{
 .highlight{
     color: rgb(155, 161, 255);
     cursor: pointer;
+}
+.error-message{
+    color: #E54B4B;
+    font-size: 0.8rem;
 }

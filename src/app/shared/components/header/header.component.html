@@ -1,5 +1,5 @@
 <header class="header_wrp">
-    <div class="header_inner main-color">
+    <div class="header_inner bg-main">
         <div class="header_left">
             <div class="header_logo">
                 <a [routerLink]="['/']">
@@ -13,7 +13,7 @@
                     </p>
                 </div>
                 <div class="header_tab">
-                    <p class="header_tab_name" [routerLink]="['/recipes']" routerLinkActive="router-link-active">
+                    <p class="header_tab_name" [routerLink]="['/categories']" routerLinkActive="router-link-active">
                         {{ 'commons.recipes' | translate }}
                     </p>
                 </div>
@@ -33,70 +33,78 @@
             <div class="header_session_wrp">
                 <span class="material-icons header_burger">menu</span>
                 <div class="header_profile_menu">
-                    <div class="header_section header_section_user" *ngIf="token">
-                        <p class="user">{{profile.firstName}} {{ profile.lastName}}</p>
-                        <p class="email">{{email}}</p>
-                    </div>
-                    <div class="header_section header_section_nav">
-                        <p class="header_section_title">{{ 'profileMenu.navigation' | translate }}</p>
-                        <div class="header_section_option">
-                            <div class="option">
-                                <mat-icon>home</mat-icon>
-                                <p class="option_text" [routerLink]="['/']">{{ 'commons.home' | translate }}</p>
-                            </div>
-                            <div class="option">
-                                <mat-icon> fastfood</mat-icon>
-                                <p class="option_text" [routerLink]="['/recipes']">{{ 'commons.recipes' | translate }}
-                                </p>
-                            </div>
-                            <div class="option">
-                                <mat-icon>info</mat-icon>
-                                <p class="option_text" [routerLink]="['/about']">{{ 'commons.about' | translate }}</p>
-                            </div>
-                            <div class="option">
-                                <mat-icon>contact_support</mat-icon>
-                                <p class="option_text" [routerLink]="['/contact']">{{ 'commons.contact' | translate }}</p>
-                            </div>
+                    <ng-container *ngIf="fetching; then spinner; else dropDownMenu"></ng-container>
+                    <ng-template #dropDownMenu>
+                        <div class="header_section header_section_user" *ngIf="token">
+                            <p class="user">{{profile.firstName}} {{ profile.lastName}}</p>
+                            <p class="email">{{email}}</p>
                         </div>
-                    </div>
-                    <div class="header_section" *ngIf="token">
-                        <p class="header_section_title">{{ 'profileMenu.info' | translate }}</p>
-                        <div class="header_section_option">
-                            <div class="option" [routerLink]="['/profile', profile.username]">
-                                <mat-icon>account_circle</mat-icon>
-                                <p class="option_text">{{ 'profileMenu.profileTitle' | translate }}</p>
-                            </div>
-                            <div class="option">
-                                <mat-icon> local_dining</mat-icon>
-                                <p class="option_text">{{ 'recipes.myRecipesTitle' | translate }}</p>
-                            </div>
-                            <div class="option">
-                                <mat-icon>settings</mat-icon>
-                                <p class="option_text">{{ 'profileMenu.management' | translate }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header_section">
-                        <p class="header_section_title">{{ 'profileMenu.settings' | translate }}</p>
-                        <div class="header_section_option">
-                            <div class="option lenguage_opt">
-                                <mat-icon>translate</mat-icon>
-                                <p class="option_text">{{ 'profileMenu.changeLenguage' | translate }}</p>
-                                <div class="lenguage_container">
-                                    <p class="option" (click)="switchLanguage('es-es')">{{ 'languages.es-es' | translate }}</p>
-                                    <p class="option" (click)="switchLanguage('ca-es')">{{ 'languages.ca-es' | translate }}</p>
-                                    <p class="option" (click)="switchLanguage('en-en')">{{ 'languages.en-en' | translate }}</p>
+                        <div class="header_section header_section_nav">
+                            <p class="header_section_title">{{ 'profileMenu.navigation' | translate }}</p>
+                            <div class="header_section_option">
+                                <div class="option">
+                                    <mat-icon>home</mat-icon>
+                                    <p class="option_text" [routerLink]="['/']">{{ 'commons.home' | translate }}</p>
+                                </div>
+                                <div class="option">
+                                    <mat-icon>fastfood</mat-icon>
+                                    <p class="option_text" [routerLink]="['/categories']">{{ 'commons.recipes' | translate }}
+                                    </p>
+                                </div>
+                                <div class="option">
+                                    <mat-icon>info</mat-icon>
+                                    <p class="option_text" [routerLink]="['/about']">{{ 'commons.about' | translate }}</p>
+                                </div>
+                                <div class="option">
+                                    <mat-icon>contact_support</mat-icon>
+                                    <p class="option_text" [routerLink]="['/contact']">{{ 'commons.contact' | translate }}</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="header_section" *ngIf="token">
-                        <p class="option" (click)="logout()">Logout</p>
-                    </div>
-                    <div class="header_section" *ngIf="!token">
-                        <p class="option" [routerLink]="['/login']">Login</p>
-                        <p class="option" [routerLink]="['/register']">{{ 'commons.register' | translate }}</p>
-                    </div>
+                        <div class="header_section" *ngIf="token">
+                            <p class="header_section_title">{{ 'profileMenu.info' | translate }}</p>
+                            <div class="header_section_option">
+                                <div class="option" [routerLink]="['/profile', profile.username]">
+                                    <mat-icon>account_circle</mat-icon>
+                                    <p class="option_text">{{ 'profileMenu.profileTitle' | translate }}</p>
+                                </div>
+                                <!-- <div class="option">
+                                    <mat-icon> local_dining</mat-icon>
+                                    <p class="option_text">{{ 'recipes.myRecipesTitle' | translate }}</p>
+                                </div> -->
+                                <div class="option">
+                                    <mat-icon>settings</mat-icon>
+                                    <p class="option_text">{{ 'profileMenu.management' | translate }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header_section">
+                            <p class="header_section_title">{{ 'profileMenu.settings' | translate }}</p>
+                            <div class="header_section_option">
+                                <div class="option lenguage_opt">
+                                    <mat-icon>translate</mat-icon>
+                                    <p class="option_text">{{ 'profileMenu.changeLenguage' | translate }}</p>
+                                    <div class="lenguage_container">
+                                        <p class="option" (click)="switchLanguage('es-es')">{{ 'languages.es-es' | translate }}</p>
+                                        <p class="option" (click)="switchLanguage('ca-es')">{{ 'languages.ca-es' | translate }}</p>
+                                        <p class="option" (click)="switchLanguage('en-en')">{{ 'languages.en-en' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header_section" *ngIf="token">
+                            <p class="option" (click)="logout()">Logout</p>
+                        </div>
+                        <div class="header_section" *ngIf="!token">
+                            <p class="option" [routerLink]="['/login']">Login</p>
+                            <p class="option" [routerLink]="['/register']">{{ 'commons.register' | translate }}</p>
+                        </div>
+                    </ng-template>
+                    <ng-template #spinner>
+                        <div class="header_section">
+                            <p class="header_section_title">Loading...</p>
+                        </div>
+                    </ng-template>
                 </div>
             </div>
         </div>

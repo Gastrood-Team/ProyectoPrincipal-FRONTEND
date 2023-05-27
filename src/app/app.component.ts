@@ -13,8 +13,14 @@ export class AppComponent {
     constructor(
         translate: TranslateService
     ) {
-        translate.addLangs(this.supportedLanguages);
-        translate.setDefaultLang('es-es');
+      translate.addLangs(this.supportedLanguages);
+
+      const storedLanguage = localStorage.getItem('selectedLanguage');
+      if (storedLanguage  && this.supportedLanguages.includes(storedLanguage)) {
+          translate.setDefaultLang(storedLanguage);
+      } else{
+          translate.setDefaultLang('es-es');
+      }
     }
 
 }

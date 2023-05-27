@@ -1,13 +1,8 @@
-.header_wrp {
-    background-color: white;
-    margin-bottom: 15px;
-}
-
 .header_inner {
     justify-content: flex-end;
     width: 100%;
     padding: 0 40px;
-    height: 60px;
+    height: 90px;
 }
 
 .header_inner,
@@ -19,6 +14,7 @@
 
 .header_inner .header_logo {
     margin-right: 50px;
+
 }
 
 .header_inner .header_logo,
@@ -39,12 +35,12 @@
 .header_tab {
     cursor: pointer;
     position: relative;
-    margin-right: 40px;
+    margin-right: 60px;
 }
 
 .header_tab_name {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: rgb(231, 231, 231);
     margin: 0;
     transition: 0.3s;
@@ -55,7 +51,7 @@
 }
 
 .carver-icon {
-    width: 180px;
+    width: 230px;
 }
 
 .router-link-active {
@@ -64,7 +60,7 @@
 
 .header_session_wrp {
     display: flex;
-    width: 240px;
+    width: 260px;
     justify-content: flex-end;
     align-items: center;
 }
@@ -74,10 +70,10 @@
     border-radius: 10px;
     box-shadow: 0px 0px 9px rgb(85, 85, 85);
     background-color: white;
-    z-index: 1;
+    z-index: 100;
 }
 .header_profile_menu{
-    top: 55px;
+    top: 70px;
     display: none;
 }
 .user, .email{
@@ -89,12 +85,12 @@
 }
 .user{
     padding-top: 15px;
-    font-size: 19px;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 .email{
     padding-bottom: 15px;
-    font-size: 12px;
+    font-size: 0.8rem;
 }
 .lenguage_container{
     width: 150px;
@@ -106,27 +102,31 @@
 
 
 .header_section {
-    width: 300px;
+    width: 340px;
     border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.header_section:last-child {
+    border-bottom: none;
 }
 
 .header_section_title {
     padding: 10px 10px;
     margin: 0;
-    font-size: 17px;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 
 .option {
     display: flex;
+    font-size: 1.1rem;
     align-items: center;
-    padding: 10px;
+    padding: 14px 10px;
     margin: 5px;
     cursor: pointer;
 }
 
 .option mat-icon{
-    font-size: 20px;
     color: rgb(128, 128, 128);
 }
 
@@ -156,11 +156,9 @@
 }
 
 .header_burger {
-    padding: 20px 0;
-}
-
-.header_burger {
     text-align: center;
+    padding: 20px 0;
+    font-size: 2rem;
     width: 50px;
     cursor: pointer;
     color: white;

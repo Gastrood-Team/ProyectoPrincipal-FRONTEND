@@ -1,0 +1,42 @@
+<ng-container *ngIf="recipes; then recipeList; else noRecipes"></ng-container>
+
+<ng-template #noRecipes>
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh; font-size: 2rem;">No Recipes</div>
+</ng-template>
+
+<ng-template #recipeList>
+    <div class="grid-wrapper">
+        <ng-container *ngFor="let recipe of recipes ">
+            <div class="grid-tile">
+                <div class="grid-tile-img">
+                    <img [src]="recipe.image">
+                </div>
+                <div class="grid-tile-text">
+                    <div class="grid-tile-title">
+                        {{ recipe.name }}
+                    </div>
+                    <div class="grid-tile-subtitle text-main">
+                        <ng-container *ngFor="let type of recipe.types">
+                        {{ type.name }}
+                        </ng-container>
+                    </div>
+                    <div class="grid-tile-description">
+                        {{ recipe.description }}
+                    </div>
+                    <div class="grid-tile-options">
+                        <button mat-raised-button [routerLink]="['/recipes', recipe.id]">
+                            View Details
+                        </button>
+                        <button mat-raised-button class="bg-secondary" [routerLink]="['/recipes/form', recipe.id]">
+                            Edit
+                        </button>
+                        <button mat-raised-button color="warn" (click)="delete(recipe)">
+                            Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</ng-template>
+

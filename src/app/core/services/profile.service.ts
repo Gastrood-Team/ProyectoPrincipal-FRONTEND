@@ -12,7 +12,7 @@ export class ProfileService {
 
   constructor(private http: HttpClient) { }
 
-  public getProfile(username: String): Observable<any>{
-    return this.http.get<any>(this.baseUrl + username);
+  public getById(username: String): Observable<any>{
+    return this.http.get(this.baseUrl + username);
   }
 }
