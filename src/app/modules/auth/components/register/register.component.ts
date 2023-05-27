@@ -12,7 +12,7 @@ import Swal from 'sweetalert2';
 export class RegisterComponent {
   public singUpData: SignUpData = new SignUpData();
   public emailError: string = "";
-  public passwordError: string = "";
+  public passwordError: string = "  ";
 
   constructor(
     private authService: AuthService,
