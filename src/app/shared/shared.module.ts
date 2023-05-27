@@ -20,12 +20,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { RegisterComponent } from '../modules/auth/components/register/register.component';
+import { LoginComponent } from '../modules/auth/components/login/login.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
-    SpinnerComponent
+    SpinnerComponent,
 ],
   imports: [
     CommonModule,
