@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from 'src/app/core/services/auth.service';
 import { UserService } from 'src/app/core/services/user.service';
-import { IProfile } from "src/app/core/models/profile.model";
+import { IProfile, Profile } from "src/app/core/models/profile.model";
 
 @Component({
   selector: 'app-header',
@@ -12,7 +12,7 @@ import { IProfile } from "src/app/core/models/profile.model";
 export class HeaderComponent implements OnInit {
 
   token!: string | null;
-  profile!: IProfile
+  profile: IProfile = new Profile()
   email!: string;
   fetching: boolean = false;
 
@@ -32,17 +32,17 @@ export class HeaderComponent implements OnInit {
   }
 
   getLoggedUser() {
-    this.fetching = true;
     this.token = localStorage.getItem('token');
     if (this.token) {
+      this.fetching = true;
       this.userService.getLoggedUser().subscribe({
         next: (res) => {
           this.profile = res.data;
           this.email = res.data.email;
         }
       })
+      this.fetching = false;
     }
-    this.fetching = false;
   }
 
   logout(): void {

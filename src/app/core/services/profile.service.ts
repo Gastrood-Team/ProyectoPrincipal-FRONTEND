@@ -13,6 +13,6 @@ export class ProfileService {
   constructor(private http: HttpClient) { }
 
   public getById(username: String): Observable<any>{
-    return this.http.get<any>(this.baseUrl + username);
+    return this.http.get(this.baseUrl + username);
   }
 }
