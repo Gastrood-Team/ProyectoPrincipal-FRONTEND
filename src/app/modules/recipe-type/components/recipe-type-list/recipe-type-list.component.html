@@ -14,15 +14,15 @@
         <div class="content">
             <div class="content-text">
                 <div class="content-title poppin">
-                    Find<span class="poppin text-secondary"> Categories </span>to discover
+                    {{ 'categories.findViewTitle' | translate }} <span class="poppin text-secondary"> {{ 'categories.categoryViewTitle' | translate }} </span> {{ 'categories.discoverViewTitle' | translate }}
                 </div>
                 <div class="content-subtitle">
-                    -- Discovered through the things you already love
+                    {{ 'categories.discoverViewDesc' | translate }}
                 </div>
             </div>
             <div class="grid-wrapper">
                 <div class="grid-title poppin text-secondary">
-                    Popular Categories
+                    {{ 'categories.popularViewTitle' | translate }}
                 </div>
                 <div class="grid-inner-wrapper">
                     <ng-container *ngFor="let type of recipeTypes">
@@ -32,7 +32,7 @@
                             </div>
                             <div class="grid-tile-text">
                                 <div class="grid-tile-subtitle text-secondary">
-                                    CATEGORY
+                                    {{ 'commons.category' | translate }}
                                 </div>
                                 <div class="grid-tile-title">
                                     {{ type.name }}

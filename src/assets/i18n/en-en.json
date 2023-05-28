@@ -2,8 +2,13 @@
     "commons": {
         "home": "Home",
         "recipes":"Recipes",
-        "about":"About",
+        "category":"CATEGORY",
+        "about":"About Us",
         "contact":"Contact",
+        "contactUs":"CONTACT US",
+        "explore":"EXPLORE",
+        "policy":"POLICY",
+        "privacy":"Privacy",
         "register":"Register",
         "title": "Title",
         "description": "Description",
@@ -14,8 +19,13 @@
         "delete": "Delete",
         "confirm": "Confirm",
         "cancel": "Cancel",
+        "comment": "Reviews",
         "createBtn": "Create",
         "updateBtn": "Update",
+        "saveBtn": "Save",
+        "viewDetailsBtn": "View Details",
+        "hideDetailsBtn": "Hide details",
+        "viewReviewsBtn": "View Reviews",
         "loggedAs": "Logged in as"
 
     },
@@ -44,5 +54,27 @@
         "deleteConfirmDesc": "You're about to delete the recipe",
         "deleteTitle": "Recipe removed!",
         "deleteDesc": "recipe successfully deleted"
+    },
+    "categories": {
+        "findViewTitle": "Find",
+        "categoryViewTitle": "Categories",
+        "discoverViewTitle": "to descover",
+        "discoverViewDesc": "-- Discovered through the things you already love",
+        "popularViewTitle": "Popular Categories"
+    },
+    "profile": {
+        "editViewTitle": "Edit Profile"
+    },
+    "aboutUs": {
+        "description": "We are a young company that we love to continue renewing the world of cooking, we are aware of how important it is to take care of food health, and that is why we offer you the best recipes so that you can share with friends, family, and we are delighted to Being able to be with you accompanying you on your food journeys.",
+        "doingsTitle": "What we do",
+        "usTitle": "Who are We",
+        "believings": "What we believe",
+        "fact1": "As simple as response to reality",
+        "fact2": "Sustainability is achieved with small actions",
+        "fact3": "Eat well without feeling bad"
+    },
+    "contact": {
+        "description": "If you want to get in touch with our team, simply below we will leave a small form where you will contact us and any suggestion you have or any question we will be happy to answer, the answer will be in an estimated time in a period of 24 and 48 hours , if you do not receive any possible response, please resubmit your suggestion in the form."
     }
 }

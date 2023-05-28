@@ -12,10 +12,10 @@
                     <img [src]="recipe.image">
                 </div>
                 <div class="grid-tile-text">
-                    <div class="grid-tile-title">
+                    <div class="grid-tile-title text-main">
                         {{ recipe.name }}
                     </div>
-                    <div class="grid-tile-subtitle text-main">
+                    <div class="grid-tile-subtitle">
                         <ng-container *ngFor="let type of recipe.types">
                         {{ type.name }}
                         </ng-container>
@@ -25,13 +25,13 @@
                     </div>
                     <div class="grid-tile-options">
                         <button mat-raised-button [routerLink]="['/recipes', recipe.id]">
-                            View Details
+                            {{ 'commons.viewDetailsBtn' | translate }}
                         </button>
                         <button mat-raised-button class="bg-secondary" [routerLink]="['/recipes/form', recipe.id]">
-                            Edit
+                            {{ 'commons.edit' | translate }}
                         </button>
                         <button mat-raised-button color="warn" (click)="delete(recipe)">
-                            Delete
+                            {{ 'commons.delete' | translate }}
                         </button>
                     </div>
                 </div>

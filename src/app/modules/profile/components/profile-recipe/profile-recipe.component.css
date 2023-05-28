@@ -1,14 +1,14 @@
 .grid-wrapper {
-    width: 100%;
-    padding: 40px 0;
+    padding-top: 30px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    width: 100%;
+    padding-bottom: 40px;
 }
 .grid-tile {
-    height: 220px;
-    width: 530px;
-    padding: 9px;
+    height: 450px;
+    width: 380px;
     border-radius: 15px;
     background-color: white;
     overflow: hidden;
@@ -18,24 +18,22 @@
 
 .grid-tile-img,
 .grid-tile-text {
-    height: 100%;
-    display: inline-block;
     overflow: hidden;
 }
 
 .grid-tile-img {
-    width: 200px;
-    border-radius: 15px;
+    height: 190px;
+    width: 100%;
 }
 
 .grid-tile-img img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .grid-tile-text {
-    width: calc(100% - 200px);
-    padding: 5px 20px;
+    padding: 25px 30px;
 }
 
 .grid-tile-title, .grid-tile-subtitle {
@@ -53,11 +51,12 @@
 .grid-tile-description {
     overflow: hidden;
     display: -webkit-box;
-    margin: 10px 0;
-    height: 90px;
-    font-size: 0.9rem;
+    margin: 25px 0;
+    height: 70px;
+    color: rgb(83, 83, 83);
+    font-size: 1rem;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 

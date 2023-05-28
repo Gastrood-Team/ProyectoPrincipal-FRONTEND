@@ -1,0 +1,7 @@
+.background {
+    flex-direction: column;
+    filter: brightness(0.4);
+    height: calc(100vh - 90px);
+    width: 100vw;
+    z-index: 2;
+}

@@ -18,8 +18,7 @@
                     </div>
                     <div class="profile-text">
                         <div class="profile-name">
-                            {{ profile.firstName }} {{ profile.lastName }} <span class="username">{{ profile.username
-                                }}</span>
+                            {{ profile.firstName }} {{ profile.lastName }} <span class="username">{{ profile.username }}</span>
                         </div>
                         <div class="profile-bio">
                             {{ profile.biography }}
@@ -28,23 +27,23 @@
                     <div class="profile-options" *ngIf="userProfile">
                         <div class="option-btn bg-main text-white" [routerLink]="['/recipes/form']">
                             <mat-icon>add</mat-icon>
-                            Crear Receta
+                            {{ 'recipes.createViewTitle' | translate }}
                         </div>
                         <div class="option-btn bg-white">
                             <mat-icon>edit</mat-icon>
-                            Editar Perfil
+                            {{ 'profile.editViewTitle' | translate }}
                         </div>
                     </div>
                 </div>
                 <div class="profile-nav">
                     <div class="nav-tab">
-                        Recipes
+                        {{ 'commons.recipes' | translate }}
                     </div>
                     <div class="nav-tab">
                         Likes
                     </div>
                     <div class="nav-tab">
-                        Reviews
+                        {{ 'commons.comment' | translate }}
                     </div>
                 </div>
                 <app-profile-recipes [recipes]="profile.recipes" (reload)="reloadRecipes()"></app-profile-recipes>

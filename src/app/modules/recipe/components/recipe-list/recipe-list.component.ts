@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { IRecipe } from 'src/app/core/models/recipe.model';
 import { RecipeService } from 'src/app/core/services/recipe.service';
 import Swal from 'sweetalert2';
@@ -14,7 +15,12 @@ export class RecipeListComponent implements OnInit {
   type!: string;
   recipes!: IRecipe[];
 
-  constructor(private route: ActivatedRoute, private recipeService: RecipeService) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private router: Router,
+    private recipeService: RecipeService,
+    public translate: TranslateService
+    ) { }
 
   ngOnInit(): void {
     this.getRecipes();
@@ -36,8 +42,9 @@ export class RecipeListComponent implements OnInit {
               }
             });
           },
-          error: (err) => {
-            
+          error: () => {
+            this.router.navigate(['error']);
+            Swal.fire('Opps...','Something when wrong while loading the recipes','error')
           }
         })
       }

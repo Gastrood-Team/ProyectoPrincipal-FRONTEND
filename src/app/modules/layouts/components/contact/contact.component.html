@@ -3,12 +3,9 @@
     <div class="contact-info">
         <div class="content-phrase">
             <h1>{{ 'commons.contact' | translate }}</h1>
-            <p>If you want to get in touch with our team, simply below we will leave a small form where you will contact
-                us
-                and any suggestion you have or any question we will be happy to answer, the answer will be in an
-                estimated
-                time in a period of 24 and 48 hours , if you do not receive any possible response, please resubmit your
-                suggestion in the form.</p>
+            <p>
+                {{ 'contact.description' | translate }}
+            </p>
         </div>
         <div class="content-img">
             <img class="image-left" src="assets/images/contact/image-left.png" alt="">
@@ -23,18 +20,15 @@
         </div>
     </div>
     <div class="content-form">
-        <h2>Contact</h2>
+        <h2>{{ 'commons.contact' | translate }}</h2>
         <div class="form">
             <form onsubmit="return false">
                 <input type="text" placeholder="User">
                 <input type="text" placeholder="Email">
-                <textarea name="description" id="desc" placeholder="Description..."></textarea>
+                <textarea name="description" id="desc" placeholder="{{ 'commons.description' | translate }}"></textarea>
                 <button type="submit">Send</button>
             </form>
         </div>
     </div>
-</div>
-<div class="lema">
-    <p>“Nurture your mind with great thougths to believe in the heroic makes heroes“</p>
 </div>
 <app-footer></app-footer>

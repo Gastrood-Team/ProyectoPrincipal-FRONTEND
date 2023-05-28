@@ -2,8 +2,13 @@
     "commons": {
         "home": "Inicio",
         "recipes":"Recetas",
-        "about":"Sobre",
+        "category":"CATEGORIA",
+        "about":"Sobre nosotros",
         "contact":"Contacto",
+        "contactUs":"CONTACTA NOS",
+        "explore":"EXPLORA",
+        "policy":"POLITICA",
+        "privacy":"Privacidad",
         "register":"Registrar",
         "title": "Título",
         "description": "Descripción",
@@ -14,8 +19,13 @@
         "delete": "Borrar",
         "confirm": "Confirmar",
         "cancel": "Cancelar",
+        "comment": "Comentarios",
         "createBtn": "Crear",
         "updateBtn": "Actualizar",
+        "saveBtn": "Guardar",
+        "viewDetailsBtn": "Ver Detalles",
+        "hideDetailsBtn": "Ocultar Detalles",
+        "viewReviewsBtn": "Ver comentarios",
         "loggedAs": "Logueado como"
     },
     "profileMenu": {
@@ -43,5 +53,27 @@
         "deleteConfirmDesc": "Estás a punto de eliminar la receta",
         "deleteTitle": "Receta eliminada",
         "deleteDesc": "ha sido eliminada correctamente"
+    },
+    "categories": {
+        "findViewTitle": "Encuentra",
+        "categoryViewTitle": "Categorias",
+        "discoverViewTitle": "por descobrir",
+        "discoverViewDesc": "-- Descubierto a través de las cosas que ya amas",
+        "popularViewTitle": "Categorias Populares"
+    },
+    "profile": {
+        "editViewTitle": "Editar Perfil"
+    },
+    "aboutUs": {
+        "description": "Somos una empresa joven que nos encanta seguir renovando el mundo de la cocina, somos conscientes de lo importante que es cuidar la salud alimentaria, y por eso te ofrecemos las mejores recetas para que puedas compartir con amigos, familia , y estamos encantados de poder estar contigo acompañándote en tus viajes gastronómicos.",
+        "doingsTitle": "Que hacemos",
+        "usTitle": "Quienes somos nosotras",
+        "believings": "Lo que creemos",
+        "fact1": "Tan simple como responder a la realidad",
+        "fact2": "La sostenibilidad se consigue con pequeñas acciones",
+        "fact3": "Come bien sin sentirte mal"
+    },
+    "contact": {
+        "description": "Si quieres ponerte en contacto con nuestro equipo, simplemente debajo te dejaremos un pequeño formulario donde podrás contáctanos y cualquier sugerencia que tengas o cualquier duda estaremos encantados de atenderte, la respuesta será en un tiempo estimado en un plazo de 24 y 48 horas, si no recibe alguna posible respuesta, por favor vuelva a enviar su ugerencia en el formulario."
     }
 }
