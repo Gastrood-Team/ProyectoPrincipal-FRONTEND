@@ -14,6 +14,8 @@ export class RecipeListComponent implements OnInit {
 
   type!: string;
   recipes!: IRecipe[];
+  filteredRecipes!: IRecipe[];
+  fetching: boolean = true;
 
   constructor(
     private route: ActivatedRoute, 
@@ -30,6 +32,7 @@ export class RecipeListComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.type = params['id'];
       if (this.type) {
+        this.fetching = true;
         this.recipeService.getAll(this.type).subscribe({
           next: (res) => {
             this.recipes = res.data.map((recipe: IRecipe) => {
@@ -41,13 +44,26 @@ export class RecipeListComponent implements OnInit {
                 types: recipe.types?.slice(0, 3),
               }
             });
+            this.filteredRecipes = this.recipes
           },
           error: () => {
             this.router.navigate(['error']);
             Swal.fire('Opps...','Something when wrong while loading the recipes','error')
           }
         })
+        this.fetching = false;
       }
     })
+  }
+
+  filterRecipe(): void {
+    const inputElement = document.getElementById("searchBarInput") as HTMLInputElement;
+    const inputValue = inputElement.value.toLowerCase();
+    if(inputValue){
+      this.filteredRecipes = this.recipes.filter((recipe: IRecipe) => recipe.name.toLowerCase().includes(inputValue))
+    } else{
+      this.filteredRecipes = this.recipes;
+    }
+    
   }
 }

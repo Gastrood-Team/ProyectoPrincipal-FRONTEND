@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<ng-container *ngIf="recipes; then listRecipes; else spinner"></ng-container>
+<ng-container *ngIf="fetching; then spinner; else listRecipes"></ng-container>
 
 <ng-template #spinner>
     <app-spinner></app-spinner>
@@ -9,11 +9,18 @@
 <ng-template #listRecipes>
     <div class="custom-container">
         <div class="content">
-            <div class="content-title poppin">
-                {{ type }}
+            <div class="d-flex" style="justify-content: space-between; align-items: center;">
+                <div class="content-title poppin">
+                    {{ type }}
+                </div>
+                <div class="search-bar icon">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Recipe..." id="searchBarInput"/>
+                    <button (click)="filterRecipe()">Seach</button>
+                </div>
             </div>
             <div class="grid-wrapper">
-                <ng-container *ngFor="let recipe of recipes ">
+                <ng-container *ngFor="let recipe of filteredRecipes">
                     <div class="grid-tile">
                         <div class="grid-tile-img">
                             <img [src]="recipe.image">
