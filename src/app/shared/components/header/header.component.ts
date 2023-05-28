@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   token!: string | null;
   profile: IProfile = new Profile()
   email!: string;
-  fetching: boolean = false;
+  fetching: boolean = true;
 
   constructor(
     private authservice: AuthService,
