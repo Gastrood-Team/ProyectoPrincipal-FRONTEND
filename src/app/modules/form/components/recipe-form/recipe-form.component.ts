@@ -17,6 +17,7 @@ export class RecipeFormComponent implements OnInit {
 
   recipe: RecipeAux = new RecipeAux();
   recipeTypes!: IRecipeType[];
+  types: number[] = [];
   selectedTypes: number[] = [];
   imageUrl: any;
   fetching: boolean = false;
@@ -43,12 +44,13 @@ export class RecipeFormComponent implements OnInit {
         this.recipeService.getbyId(id).subscribe({
           next: (res) => {
             let types = res.data.types
-            this.recipe = res.data;
+            this.recipe = res.data
             this.imageUrl = res.data.image
             types.forEach((type: any) => {
-              this.recipe.types?.push(type.id)
+              this.types?.push(type.id)
               this.fetching = false;
             })
+          this.recipe.types = this.types;
           },
           error: (err) => {
             this.router.navigate(['home']);
@@ -89,16 +91,21 @@ export class RecipeFormComponent implements OnInit {
         Swal.fire("Recipe created successfully", res.message, 'success')
       },
       error: () => {
+        Swal.fire('Ooops', 'Something when wrong, try again later!', 'error');
       }
     })
   }
 
   update(): void {
+    console.log(this.recipe)
     this.recipeService.update(this.recipe).subscribe({
       next: (res) => {
+        this.back();
         Swal.fire("Recipe updated successfully", res.message, 'success')
       },
       error: () => {
+        this.back();
+        Swal.fire('Ooops', 'Something when wrong, try again later!', 'error');
       }
     })
   }
