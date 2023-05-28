@@ -2,8 +2,13 @@
     "commons": {
         "home": "Inici",
         "recipes":"Recetas",
-        "about":"Sobre",
+        "category":"CATEGORIA",
+        "about":"Sobre Nosoltres",
         "contact":"Contacte",
+        "contactUs":"CONTACTA NOS",
+        "explore":"EXPLORA",
+        "policy":"POLITICA",
+        "privacy":"Privacitat",
         "register":"Registre",
         "title": "Títol",
         "description": "Descripció",
@@ -14,8 +19,13 @@
         "delete": "Eliminar",
         "confirm": "Confirmar",
         "cancel": "Cancel·lar",
+        "comment": "Comentaris",
         "createBtn": "Crear",
         "updateBtn": "Actualitzar",
+        "saveBtn": "Desa",
+        "viewDetailsBtn": "Veure detalls",
+        "hideDetailsBtn": "Amagar detalls",
+        "viewReviewsBtn": "Veure Comentaris",
         "loggedAs": "Loguejat com"
     },
     "profileMenu": {
@@ -43,5 +53,28 @@
         "deleteConfirmDesc": "Estàs a punt d'eliminar la receta",
         "deleteTitle": "Receta eliminada!",
         "deleteDesc": "eliminada correctament"
+    },
+    "categories": {
+        "findViewTitle": "Troba",
+        "categoryViewTitle": "Categorias",
+        "discoverViewTitle": "per descobri",
+        "discoverViewDesc": "-- Descobert a través de les coses que ja estimes",
+        "popularViewTitle": "Categorias Populars"
+    },
+    "profile": {
+        "editViewTitle": "Editar Perfil"
+    },
+    "aboutUs": {
+        "description": "Som una empresa jove que ens encanta seguir renovant el món de la cuina, som conscients de l'important que és cuidar la salut dels aliments, i per això us oferim les millors receptes perquè les compartiu amb amics, familiars. , i estem encantats de poder estar amb tu acompanyant-te en els teus viatges gastronòmics.",
+        "doingsTitle": "Què fem",
+        "usTitle": "Qui sóm",
+        "believings": "El que creiem",
+        "fact1": "Tan senzill com la resposta a la realitat",
+        "fact2": "La sostenibilitat s'aconsegueix amb petites accions",
+        "fact3": "Menja bé sense sentir-te malament"
+    },
+    "contact": {
+        "description": "Si vols posar-te en contacte amb el nostre equip, simplement a continuació et deixarem un petit formulari on ho faràs posa't en contacte amb nosaltres i qualsevol suggeriment que tinguis o qualsevol pregunta estarem encantats de respondre, la resposta estarà en un temps estimat en un període de 24 i 48 hores, si no rebeu cap resposta possible, torneu a enviar el vostre suggeriment en el formulari."
     }
+
 }

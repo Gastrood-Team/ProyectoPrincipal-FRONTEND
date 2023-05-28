@@ -11,7 +11,7 @@
             <img [src]="recipe.image">
         </div>
         <div class="content">
-            <div class="content-text">
+            <div class="content-text" #mainSection>
                 <div class="content-title poppin">
                     {{ recipe.name }}
                 </div>
@@ -22,8 +22,8 @@
                     {{ recipe.description }}
                 </div>
                 <div class="content-options">
-                    <a mat-flat-button (click)="scrollToDetails()">View Details</a>
-                    <a mat-flat-button>See Reviews</a>
+                    <a mat-flat-button (click)="scrollToDetails()">{{ 'commons.viewDetailsBtn' | translate }}</a>
+                    <a mat-flat-button>{{ 'commons.viewReviewsBtn' | translate }}</a>
                 </div>
                 <div class="content-information">
                     <div class="content-information-text">
@@ -39,14 +39,14 @@
                     <div class="content-information-text">
                         <div class="icon"><mat-icon>comment</mat-icon></div>
                         <p class="value">12</p>
-                        <p class="info">Reviews</p>
+                        <p class="info">{{ 'commons.comment' | translate }}</p>
                     </div>
                 </div>
             </div>
             <div *ngIf="showDetails" class="recipe-wraper" #detailsSection>
                 <div class="custom-card">
                     <div class="card-title poppin">
-                        Description
+                        {{ 'commons.description' | translate}}
                     </div>
                     <div class="card-description">
                         {{ recipe.description }}
@@ -57,7 +57,7 @@
                         </ng-container>
                     </div>
                 </div>
-                <button class="hide-details" (click)="hideDetails()">Hide Details</button>
+                <button class="hide-details" (click)="hideDetails()">{{ 'commons.hideDetailsBtn' | translate }}</button>
             </div>
         </div>
     </div>

@@ -2,9 +2,11 @@
     background-color: #f5f5f5;
     border-radius: 26px;
     display: flex;
-    padding: 50px;
+    padding: 30px 50px;
     position: relative;
-    margin-top: 160px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    height: calc(100vh - 90px);
 }
 
 p {
@@ -17,7 +19,7 @@ p {
 
 .content-form {
     width: 569px;
-    height: 520px;
+    height: 480px;
     background-color: #e54b4b;
     position: absolute;
     right: 40px;
@@ -29,7 +31,7 @@ p {
 }
 
 .contact-info {
-    width: 585px;
+    width: 555px;
     height: 600px;
 }
 

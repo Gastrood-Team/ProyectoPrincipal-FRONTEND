@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { IRecipeType } from 'src/app/core/models/category.model';
 import { RecipeTypeService } from 'src/app/core/services/recipe-type.service';
 
@@ -13,6 +14,7 @@ export class RecipeTypeListComponent implements OnInit {
 
   constructor(
     private recipeTypeService: RecipeTypeService,
+    public translate: TranslateService
     ) { }
 
   ngOnInit(): void {

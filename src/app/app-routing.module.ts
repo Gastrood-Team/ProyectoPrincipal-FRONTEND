@@ -18,9 +18,11 @@ import { RecipeListComponent } from './modules/recipe/components/recipe-list/rec
 import { RecipeDetailsComponent } from './modules/recipe/components/recipe-details/recipe-details.component';
 import { RecipeFormComponent } from './modules/form/components/recipe-form/recipe-form.component';
 import { ProfileViewComponent } from './modules/profile/components/profile-view/profile-view.component';
+import { InternalServerComponent } from './modules/layouts/components/internal-server/internal-server.component';
 
 const routes: Routes = [
   { path: "", pathMatch: 'full', redirectTo: '/home' },
+  { path: 'error', component: InternalServerComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutUsComponent},
   { path: 'login', component: LoginComponent },

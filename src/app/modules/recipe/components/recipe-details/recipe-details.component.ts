@@ -1,9 +1,11 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { delay } from 'rxjs';
 import { IProfile } from 'src/app/core/models/profile.model';
 import { IRecipe } from 'src/app/core/models/recipe.model';
 import { RecipeService } from 'src/app/core/services/recipe.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-recipe-details',
@@ -16,10 +18,13 @@ export class RecipeDetailsComponent implements OnInit {
   profile! : IProfile;
   showDetails: boolean = false;
   @ViewChild('detailsSection') detailsSection!: ElementRef;
+  @ViewChild('mainSection') mainSection!: ElementRef;
 
   constructor(
     private recipeService: RecipeService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router,
+    public translate: TranslateService
     ) { }
 
   ngOnInit(): void {
@@ -34,6 +39,10 @@ export class RecipeDetailsComponent implements OnInit {
           next: (res) => {
             this.profile = res.data;
             this.recipe = res.data;
+          },
+          error: (err) => {
+            this.router.navigate(['home']);
+            Swal.fire('Opps...','Something when wrong, try again later!','error');
           }
         })
       }
@@ -47,5 +56,6 @@ export class RecipeDetailsComponent implements OnInit {
 
   hideDetails() {
     this.showDetails = false;
+    this.mainSection.nativeElement.scrollIntoView();
   }
 }
