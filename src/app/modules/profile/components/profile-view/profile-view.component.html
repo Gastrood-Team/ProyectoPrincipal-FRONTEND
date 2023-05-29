@@ -33,7 +33,7 @@
                             <mat-icon>add</mat-icon>
                             {{ 'recipes.createViewTitle' | translate }}
                         </div>
-                        <div class="option-btn bg-white">
+                        <div class="option-btn bg-white" [routerLink]="['/profile', profile.username, 'edit']">
                             <mat-icon>edit</mat-icon>
                             {{ 'profile.editViewTitle' | translate }}
                         </div>
