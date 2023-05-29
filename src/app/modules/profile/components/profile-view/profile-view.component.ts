@@ -41,7 +41,7 @@ export class ProfileViewComponent implements OnInit {
             this.profile.biography = this.profile.biography ?? "No Biography defined";
           }, error: (err) => {
             this.router.navigate(['home']);
-            Swal.fire('Opps...','Something when wrong, try again later','error');
+            Swal.fire("Opps...",err.error.message,'error');
           }
         })
       }

@@ -75,6 +75,12 @@
 
 .profile-bio{
     font-size: 1.2rem;
+    height: 120px;
+}
+
+.profile-web{
+    display: flex;
+    align-items: center;
 }
 
 .profile-name .username{
