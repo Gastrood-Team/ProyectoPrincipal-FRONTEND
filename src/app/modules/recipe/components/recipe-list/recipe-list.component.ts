@@ -15,7 +15,7 @@ export class RecipeListComponent implements OnInit {
   type!: string;
   recipes!: IRecipe[];
   filteredRecipes!: IRecipe[];
-  fetching: boolean = true;
+  fetching: boolean = false;
 
   constructor(
     private route: ActivatedRoute, 

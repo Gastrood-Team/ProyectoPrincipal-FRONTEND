@@ -42,7 +42,7 @@ export class RecipeDetailsComponent implements OnInit {
           },
           error: (err) => {
             this.router.navigate(['home']);
-            Swal.fire('Opps...','Something when wrong, try again later!','error');
+            Swal.fire('Opps...',err.error.message,'error');
           }
         })
       }

@@ -23,6 +23,9 @@
                         <div class="profile-bio">
                             {{ profile.biography }}
                         </div>
+                        <div class="profile-web" *ngIf="profile.websiteUrl">
+                            <mat-icon style="margin-right: 5px;">local_activity</mat-icon><a [href]="profile.websiteUrl">Website</a>
+                        </div>
                     </div>
                     <div class="profile-options" *ngIf="userProfile">
                         <div class="option-btn bg-main text-white" [routerLink]="['/recipes/form']">

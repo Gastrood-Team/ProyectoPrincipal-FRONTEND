@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { User, SignUpData } from '../models/user.model';
+import * as crypto from 'crypto-js';
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,18 +17,20 @@ export class AuthService {
  
    public login(user: User): Observable<any> {
      const userCredentialsFormData = new FormData();
+     let encryptedPassword = crypto.SHA256(user.password).toString();
      userCredentialsFormData.append('email', user.email);
-     userCredentialsFormData.append('password', user.password);
+     userCredentialsFormData.append('password', encryptedPassword);
      return this.http.post(this.baseUrl + "/login", userCredentialsFormData);
    };
  
    public signup(data: SignUpData): Observable<any> {
      const userFormData = new FormData();
+     let encryptedPassword = crypto.SHA256(data.password).toString();
      userFormData.append('username', data.username);
      userFormData.append('firstName', data.firstName);
      userFormData.append('lastName', data.lastName);
      userFormData.append('email', data.email);
-     userFormData.append('password', data.password);
+     userFormData.append('password', encryptedPassword);
      return this.http.post(this.baseUrl + "/signup", userFormData)
    }
  
