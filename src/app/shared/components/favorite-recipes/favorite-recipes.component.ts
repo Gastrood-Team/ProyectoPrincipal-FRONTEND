@@ -6,11 +6,11 @@ import { RecipeService } from 'src/app/core/services/recipe.service';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-recipe-list',
-  templateUrl: './recipe-list.component.html',
-  styleUrls: ['./recipe-list.component.css']
+  selector: 'app-favorite-recipes',
+  templateUrl: './favorite-recipes.component.html',
+  styleUrls: ['./favorite-recipes.component.css']
 })
-export class RecipeListComponent implements OnInit {
+export class FavoriteRecipesComponent implements OnInit {
 
   type!: string;
   recipes!: IRecipe[];
@@ -30,7 +30,7 @@ export class RecipeListComponent implements OnInit {
 
   getRecipes(): void {
     this.route.params.subscribe(params => {
-      this.type = params['id'];
+      this.type = "pasta"
       if (this.type) {
         this.fetching = true;
         this.recipeService.getAll(this.type).subscribe({
@@ -43,8 +43,7 @@ export class RecipeListComponent implements OnInit {
                 image: recipe.image,
                 types: recipe.types?.slice(0, 3),
               }
-            });
-            this.fetching = false;
+            }).slice(0, 8);
             this.filteredRecipes = this.recipes
           },
           error: () => {
@@ -52,18 +51,9 @@ export class RecipeListComponent implements OnInit {
             Swal.fire('Opps...','Something when wrong while loading the recipes','error')
           }
         })
+        this.fetching = false;
       }
     })
   }
 
-  filterRecipe(): void {
-    const inputElement = document.getElementById("searchBarInput") as HTMLInputElement;
-    const inputValue = inputElement.value.toLowerCase();
-    if(inputValue){
-      this.filteredRecipes = this.recipes.filter((recipe: IRecipe) => recipe.name.toLowerCase().includes(inputValue))
-    } else{
-      this.filteredRecipes = this.recipes;
-    }
-    
-  }
 }

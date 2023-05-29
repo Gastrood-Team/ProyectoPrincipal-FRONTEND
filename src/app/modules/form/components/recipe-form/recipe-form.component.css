@@ -37,7 +37,7 @@
 }
 
 .card-img{
-    height: 583px;
+    height: 427px;
     margin: 15px 0;
     border-radius: 15px;
     overflow: hidden;
@@ -50,7 +50,7 @@
 }
 
 .card-description{
-    height: 350px;
+    height: 200px;
     resize: none;
 }
 

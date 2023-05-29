@@ -80,10 +80,14 @@ export class RecipeFormComponent implements OnInit {
   }
 
   create(): void {
+    
     if(!this.recipe.name || !this.recipe.description || !this.recipe.types || !this.recipe.image){
       Swal.fire('Ooops', 'Please fill in all fields.', 'error');
       return;
     }
+
+    let actionBtn = document.getElementById('action-btn');
+    actionBtn!.innerHTML = `${this.translate.instant('commons.validating')}`
 
     this.recipeService.create(this.recipe).subscribe({
       next: (res) => {
@@ -91,13 +95,22 @@ export class RecipeFormComponent implements OnInit {
         Swal.fire("Recipe created successfully", res.message, 'success')
       },
       error: () => {
-        Swal.fire('Ooops', 'Something when wrong, try again later!', 'error');
+        Swal.fire('Opps...', 'Something when wrong, try again later!', 'error');
+        actionBtn!.innerHTML = `${this.translate.instant('commons.createBtn')}`
       }
     })
   }
 
   update(): void {
-    console.log(this.recipe)
+
+    if(!this.recipe.name || !this.recipe.description || !this.recipe.types || !this.recipe.image){
+      Swal.fire('Opps...', 'Please fill in all fields.', 'error');
+      return;
+    }
+
+    let actionBtn = document.getElementById('action-btn');
+    actionBtn!.innerHTML = `${this.translate.instant('commons.validating')}`    
+    
     this.recipeService.update(this.recipe).subscribe({
       next: (res) => {
         this.back();

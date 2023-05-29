@@ -1,17 +1,23 @@
 {
     "commons": {
         "home": "Home",
-        "recipes":"Recipes",
-        "category":"CATEGORY",
-        "about":"About Us",
-        "contact":"Contact",
-        "contactUs":"CONTACT US",
-        "explore":"EXPLORE",
-        "policy":"POLICY",
-        "privacy":"Privacy",
-        "register":"Register",
+        "recipes": "Recipes",
+        "category": "CATEGORY",
+        "about": "About Us",
+        "contact": "Contact",
+        "contactUs": "CONTACT US",
+        "explore": "EXPLORE",
+        "policy": "POLICY",
+        "share": "SHARE",
+        "privacy": "Privacy",
+        "register": "Register",
+        "registerNow":"Register Now",
         "title": "Title",
         "description": "Description",
+        "name": "Name",
+        "type": "Types",
+        "selectImage": "Select Image",
+        "validating": "Validating...",
         "password": "Password",
         "link": "Link",
         "image": "Image URL",
@@ -27,7 +33,6 @@
         "hideDetailsBtn": "Hide details",
         "viewReviewsBtn": "View Reviews",
         "loggedAs": "Logged in as"
-
     },
     "profileMenu": {
         "info": "My Information",
@@ -41,8 +46,14 @@
         "es-es": "Spanish",
         "ca-es": "Catalan",
         "en-en": "English"
+    },    
+    "home":{
+        "firstSliderTitle":"Your culinary adventure awaits",
+        "secondSliderTitle":"From West to East, the place where you can find food around the world",
+        "thirdSliderTitle":"Be part of us and make your own dishes recognizable"
     },
     "recipes": {
+        "seeRecipesTitle": "See Recipes",
         "myRecipesTitle": "My Recipes",
         "createViewTitle": "Create Recipe",
         "createTitle": "Recipe created",
@@ -53,7 +64,8 @@
         "deleteConfirmTitle": "Are you sure?",
         "deleteConfirmDesc": "You're about to delete the recipe",
         "deleteTitle": "Recipe removed!",
-        "deleteDesc": "recipe successfully deleted"
+        "deleteDesc": "recipe successfully deleted",
+        "popularViewTitle": "POPULAR CATEGORIES"
     },
     "categories": {
         "findViewTitle": "Find",

@@ -22,12 +22,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { RegisterComponent } from '../modules/auth/components/register/register.component';
 import { LoginComponent } from '../modules/auth/components/login/login.component';
+import { FavoriteRecipesComponent } from './components/favorite-recipes/favorite-recipes.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     HeaderComponent,
     SpinnerComponent,
+    FavoriteRecipesComponent,
 ],
   imports: [
     CommonModule,
@@ -51,6 +53,7 @@ import { LoginComponent } from '../modules/auth/components/login/login.component
     SpinnerComponent,
     FooterComponent,
     HeaderComponent,
+    FavoriteRecipesComponent,
     CommonModule,
     FormsModule,
     RouterModule,
