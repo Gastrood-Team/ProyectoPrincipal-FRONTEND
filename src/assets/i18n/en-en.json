@@ -65,7 +65,7 @@
         "deleteConfirmDesc": "You're about to delete the recipe",
         "deleteTitle": "Recipe removed!",
         "deleteDesc": "recipe successfully deleted",
-        "popularViewTitle": "POPULAR CATEGORIES"
+        "popularViewTitle": "POPULAR RECIPES"
     },
     "categories": {
         "findViewTitle": "Find",
@@ -75,7 +75,10 @@
         "popularViewTitle": "Popular Categories"
     },
     "profile": {
-        "editViewTitle": "Edit Profile"
+        "editViewTitle": "Edit Profile",
+        "lastname": "Lastname",
+        "website": "Website",
+        "biography": "Biography"
     },
     "aboutUs": {
         "description": "We are a young company that we love to continue renewing the world of cooking, we are aware of how important it is to take care of food health, and that is why we offer you the best recipes so that you can share with friends, family, and we are delighted to Being able to be with you accompanying you on your food journeys.",

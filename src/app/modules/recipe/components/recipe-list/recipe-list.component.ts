@@ -55,9 +55,12 @@ export class RecipeListComponent implements OnInit {
             this.fetching = false;
             this.filteredRecipes = this.recipes;
 
-            if (this.recipes.length === 0) {
-              this.disableNextButton = true;
+            if(this.recipes.length === 0){
               this.moreRecipes = false;
+            }
+
+            if (this.recipes.length != 8) {
+              this.disableNextButton = true;
             } else {
               this.disableNextButton = false;
             }
@@ -77,7 +80,6 @@ export class RecipeListComponent implements OnInit {
 
 
   changePage(page: number): void {
-    console.log(page);
     this.moreRecipes = true;
     if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
@@ -89,7 +91,6 @@ export class RecipeListComponent implements OnInit {
   }
 
   filterRecipe(): void {
-    console.log('hege')
     const inputElement = document.getElementById("searchBarInput") as HTMLInputElement;
     const inputValue = inputElement.value.toLowerCase();
     if (inputValue) {

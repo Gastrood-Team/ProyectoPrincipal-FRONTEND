@@ -1,7 +1,7 @@
 {
     "commons": {
         "home": "Inici",
-        "recipes":"Recetas",
+        "recipes":"Receptas",
         "category":"CATEGORIA",
         "about":"Sobre Nosoltres",
         "contact":"Contacte",
@@ -53,19 +53,19 @@
         "thirdSliderTitle":"Forma part de nosaltres i fes que els teus propis plats siguin reconeixibles"
     },
     "recipes": {
-        "seeRecipesTitle": "Veure Recetas",
-        "myRecipesTitle": "Les meves recetas",
-        "createViewTitle": "Crear receta",
-        "createTitle": "Receta creada",
+        "seeRecipesTitle": "Veure Receptes",
+        "myRecipesTitle": "Les meves receptes",
+        "createViewTitle": "Crear recepta",
+        "createTitle": "Recepta creada",
         "createDesc": "creada correctament",
-        "updateViewTitle": "Actualitzar receta",
-        "updateTitle": "Receta actualitzada",
-        "updateDesc": "Receta actualitzada correctament",
+        "updateViewTitle": "Actualitzar recepta",
+        "updateTitle": "Recepta actualitzada",
+        "updateDesc": "Recepta actualitzada correctament",
         "deleteConfirmTitle": "Estàs segur?",
-        "deleteConfirmDesc": "Estàs a punt d'eliminar la receta",
-        "deleteTitle": "Receta eliminada!",
+        "deleteConfirmDesc": "Estàs a punt d'eliminar la Recepta",
+        "deleteTitle": "Recepta eliminada!",
         "deleteDesc": "eliminada correctament",
-        "popularViewTitle": "CATEGORIAS POPULARS"
+        "popularViewTitle": "RECEPTES POPULARS"
     },
     "categories": {
         "findViewTitle": "Troba",
@@ -75,7 +75,10 @@
         "popularViewTitle": "Categorias Populars"
     },
     "profile": {
-        "editViewTitle": "Editar Perfil"
+        "editViewTitle": "Editar Perfil",
+        "lastname": "Cognom",
+        "website": "Página Web",
+        "biography": "Biografia"
     },
     "aboutUs": {
         "description": "Som una empresa jove que ens encanta seguir renovant el món de la cuina, som conscients de l'important que és cuidar la salut dels aliments, i per això us oferim les millors receptes perquè les compartiu amb amics, familiars. , i estem encantats de poder estar amb tu acompanyant-te en els teus viatges gastronòmics.",

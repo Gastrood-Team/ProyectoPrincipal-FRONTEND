@@ -66,7 +66,7 @@
         "deleteConfirmDesc": "Estás a punto de eliminar la receta",
         "deleteTitle": "Receta eliminada",
         "deleteDesc": "ha sido eliminada correctamente",
-        "popularViewTitle": "CATEGORIAS POPULARES"
+        "popularViewTitle": "RECETAS POPULARES"
     },
     "categories": {
         "findViewTitle": "Encuentra",
@@ -76,7 +76,10 @@
         "popularViewTitle": "Categorias Populares"
     },
     "profile": {
-        "editViewTitle": "Editar Perfil"
+        "editViewTitle": "Editar Perfil",
+        "lastname": "Apellido",
+        "website": "Página Web",
+        "biography": "Biografia"
     },
     "aboutUs": {
         "description": "Somos una empresa joven que nos encanta seguir renovando el mundo de la cocina, somos conscientes de lo importante que es cuidar la salud alimentaria, y por eso te ofrecemos las mejores recetas para que puedas compartir con amigos, familia , y estamos encantados de poder estar contigo acompañándote en tus viajes gastronómicos.",
