@@ -39,6 +39,7 @@ export class HeaderComponent implements OnInit {
         next: (res) => {
           this.profile = res.data;
           this.email = res.data.email;
+          console.log(res.data)
         }
       })
       this.fetching = false;

@@ -51,6 +51,8 @@ export class RecipeListComponent implements OnInit {
                 types: recipe.types?.slice(0, 3),
               }
             });
+
+            this.fetching = false;
             this.filteredRecipes = this.recipes;
 
             if (this.recipes.length === 0) {

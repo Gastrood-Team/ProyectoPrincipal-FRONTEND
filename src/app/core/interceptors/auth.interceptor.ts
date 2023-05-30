@@ -1,18 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler } from '@angular/common/http';
+import { NO_TOKEN } from 'src/app/helpers/token.context';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  intercept(request: HttpRequest<any>, next: HttpHandler) {
+  intercept(req: HttpRequest<any>, next: HttpHandler) {
+
+    let clonedRequest = req;
     const token = localStorage.getItem('token');
-    if (token) {
-      request = request.clone({
-        setHeaders: {
-          Authorization: `Bearer ${token}`
-        }
+
+    if (token && !clonedRequest.context.get(NO_TOKEN)) {
+      clonedRequest = clonedRequest.clone({
+        headers: clonedRequest.headers.set(
+          "Authorization", `Bearer ${token}`
+        )
       });
     }
-    return next.handle(request);
+    
+    return next.handle(clonedRequest);
   }
 }

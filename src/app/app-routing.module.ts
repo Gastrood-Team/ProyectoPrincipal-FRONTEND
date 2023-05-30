@@ -19,6 +19,7 @@ import { RecipeDetailsComponent } from './modules/recipe/components/recipe-detai
 import { RecipeFormComponent } from './modules/form/components/recipe-form/recipe-form.component';
 import { ProfileViewComponent } from './modules/profile/components/profile-view/profile-view.component';
 import { InternalServerComponent } from './modules/layouts/components/internal-server/internal-server.component';
+import { ProfileFormComponent } from './modules/profile/components/profile-form/profile-form.component';
 
 const routes: Routes = [
   { path: "", pathMatch: 'full', redirectTo: '/home' },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'recipes/form/:id', component: RecipeFormComponent},
   { path: 'recipes/:id', component: RecipeDetailsComponent},
   { path: 'profile/:username', component: ProfileViewComponent },
+  { path: 'profile/:username/edit', component: ProfileFormComponent },
 ]
 
 @NgModule({

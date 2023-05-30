@@ -15,22 +15,22 @@
                         <img [src]="imageUrl">
                     </div>
                     <mat-form-field appearance="fill">
-                        <input matInput value="Select Image">
+                        <input matInput value="{{ 'commons.selectImage' | translate }}">
                         <input type="file" id="fileInput" (change)="onFileSelect($event)" required>
                     </mat-form-field>
                 </div>
                 <div class="d-inline-block mx-2" style="width: 45%;">
                     <mat-form-field appearance="fill">
-                        <mat-label>Name</mat-label>
+                        <mat-label>{{ 'commons.name' | translate }}</mat-label>
                         <input type="text" matInput [(ngModel)]="recipe.name" required>
                     </mat-form-field>
                     <mat-form-field appearance="fill">
-                        <mat-label>Description</mat-label>
+                        <mat-label>{{ 'commons.description' | translate }}</mat-label>
                         <textarea matInput [(ngModel)]="recipe.description" required
                             class="card-description"></textarea>
                     </mat-form-field>
                     <mat-form-field appearance="fill">
-                        <mat-label>Recipes</mat-label>
+                        <mat-label>{{ 'commons.type' | translate }}</mat-label>
                         <mat-select [(ngModel)]="recipe.types" multiple required>
                             <mat-option *ngFor="let type of recipeTypes" [value]="type.id">{{ type.name }}</mat-option>
                         </mat-select>
@@ -40,8 +40,9 @@
                             matTooltip="{{( recipe.id ? 'commons.updateBtn' : 'commons.createBtn') | translate }}"
                             color="primary" type="submit" (click)="recipe.id ? update() : create()">
                             <mat-icon class="responsive-icon">check</mat-icon>
-                            <span class="btn-text">{{( recipe.id ? 'commons.updateBtn' : 'commons.createBtn') |
-                                translate }}</span>
+                            <span class="btn-text" id="action-btn">
+                                {{( recipe.id ? 'commons.updateBtn' : 'commons.createBtn') |translate }}
+                            </span>
                         </button>
                         <button mat-raised-button matTooltip="{{ 'commons.cancel' | translate }}" color="warn"
                             class=" ms-3 px-4 py-2" (click)="back()">

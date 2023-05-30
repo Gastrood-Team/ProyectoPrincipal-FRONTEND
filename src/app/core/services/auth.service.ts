@@ -3,6 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { User, SignUpData } from '../models/user.model';
 import * as crypto from 'crypto-js';
+import { skipToken } from 'src/app/helpers/token.context';
 
 
 @Injectable({
@@ -20,7 +21,7 @@ export class AuthService {
      let encryptedPassword = crypto.SHA256(user.password).toString();
      userCredentialsFormData.append('email', user.email);
      userCredentialsFormData.append('password', encryptedPassword);
-     return this.http.post(this.baseUrl + "/login", userCredentialsFormData);
+     return this.http.post(`${this.baseUrl}/login`, userCredentialsFormData, { context: skipToken() });
    };
  
    public signup(data: SignUpData): Observable<any> {
@@ -31,7 +32,7 @@ export class AuthService {
      userFormData.append('lastName', data.lastName);
      userFormData.append('email', data.email);
      userFormData.append('password', encryptedPassword);
-     return this.http.post(this.baseUrl + "/signup", userFormData)
+     return this.http.post(`${this.baseUrl}/signup`, userFormData, { context: skipToken() });
    }
  
    public logout(): void{

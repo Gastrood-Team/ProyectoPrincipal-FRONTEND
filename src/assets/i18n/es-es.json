@@ -8,10 +8,17 @@
         "contactUs":"CONTACTA NOS",
         "explore":"EXPLORA",
         "policy":"POLITICA",
+                "share":"COMPARTE",
         "privacy":"Privacidad",
         "register":"Registrar",
+                "registerNow":"Registrate ahora",
+
         "title": "Título",
         "description": "Descripción",
+        "name": "Nombre",
+        "type":"Tipos",
+        "selectImage":"Seleccionar Imagen",
+        "validating":"Validando...",
         "password": "Contraseña",
         "link": "Enlace",
         "image": "URL Imagen",
@@ -41,7 +48,13 @@
         "ca-es": "Catalán",
         "en-en": "Inglés"
     },
+    "home":{
+        "firstSliderTitle":"Tu aventura culinaria te espera",
+        "secondSliderTitle":"De oeste a este, el lugar donde se puede encontrar comida en todo el mundo",
+        "thirdSliderTitle":"Forma parte de nosotros y haz que tus propios platos sean reconocibles"
+    },
     "recipes": {
+        "seeRecipesTitle": "Ver Recetas",
         "myRecipesTitle": "Mis recetas",
         "createViewTitle": "Crear receta",
         "createTitle": "Receta creada",
@@ -52,7 +65,8 @@
         "deleteConfirmTitle": "¿Estás seguro?",
         "deleteConfirmDesc": "Estás a punto de eliminar la receta",
         "deleteTitle": "Receta eliminada",
-        "deleteDesc": "ha sido eliminada correctamente"
+        "deleteDesc": "ha sido eliminada correctamente",
+        "popularViewTitle": "CATEGORIAS POPULARES"
     },
     "categories": {
         "findViewTitle": "Encuentra",

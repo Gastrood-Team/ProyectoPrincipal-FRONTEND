@@ -15,4 +15,15 @@ export class ProfileService {
   public getById(username: String): Observable<any>{
     return this.http.get(this.baseUrl + username);
   }
+
+  public update(profile: Profile): Observable<any>{
+    const profileFormData = new FormData();
+    profileFormData.append('firstName', profile.firstName);
+    profileFormData.append('lastName', profile.lastName);
+    profileFormData.append('biography', profile.biography);
+    profileFormData.append('websiteUrl', profile.websiteUrl);
+    profileFormData.append('profileImg', profile.profileImg);
+    profileFormData.append('bannerImg', profile.bannerImg);
+    return this.http.post(`${this.baseUrl}${profile.username}`, profileFormData);
+  }
 }

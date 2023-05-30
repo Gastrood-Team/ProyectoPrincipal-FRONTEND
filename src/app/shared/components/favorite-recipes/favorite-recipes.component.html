@@ -1,0 +1,47 @@
+<ng-container *ngIf="fetching; then spinner; else listRecipes"></ng-container>
+
+<ng-template #spinner>
+    <app-spinner></app-spinner>
+</ng-template>
+
+<ng-template #listRecipes>
+    <div class="custom-container">
+        <div class="content">
+            <div>
+                <div class="content-title poppin text-center">
+                    {{ 'recipes.popularViewTitle' | translate }}
+                </div>
+                <div class="grid-wrapper">
+                    <ng-container *ngFor="let recipe of filteredRecipes">
+                        <div class="grid-tile">
+                            <div class="grid-tile-img">
+                                <img [src]="recipe.image">
+                            </div>
+                            <div class="grid-tile-text">
+                                <div class="grid-tile-title text-main">
+                                    {{ recipe.name }}
+                                </div>
+                                <div class="grid-tile-subtitle">
+                                    <ng-container *ngFor="let type of recipe.types">
+                                        {{ type.name }}
+                                    </ng-container>
+                                </div>
+                                <div class="grid-tile-description">
+                                    {{ recipe.description }}
+                                </div>
+                                <div class="grid-tile-options">
+                                    <button mat-raised-button color="warn">
+                                        {{ 'commons.saveBtn' | translate }}
+                                    </button>
+                                    <button mat-raised-button [routerLink]="['/recipes', recipe.id]">
+                                        {{ 'commons.viewDetailsBtn' | translate }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
