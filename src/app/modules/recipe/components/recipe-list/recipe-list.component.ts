@@ -62,7 +62,7 @@ export class RecipeListComponent implements OnInit {
               this.disableNextButton = false;
             }
 
-          },
+          } ,
           error: () => {
             this.router.navigate(['error']);
             Swal.fire('Opps...', 'Something went wrong while loading the recipes', 'error');
