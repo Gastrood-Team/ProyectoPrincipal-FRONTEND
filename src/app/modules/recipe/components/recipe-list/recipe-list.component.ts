@@ -15,14 +15,20 @@ export class RecipeListComponent implements OnInit {
   type!: string;
   recipes!: IRecipe[];
   filteredRecipes!: IRecipe[];
+  currentPage: number = 1;
+  totalPages: number = 8;
+  disableNextButton: boolean = false;
+  moreRecipes: boolean = true;
+
+  originalRecipes: IRecipe[] = [];
   fetching: boolean = false;
 
   constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private router: Router,
     private recipeService: RecipeService,
     public translate: TranslateService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.getRecipes();
@@ -33,10 +39,11 @@ export class RecipeListComponent implements OnInit {
       this.type = params['id'];
       if (this.type) {
         this.fetching = true;
-        this.recipeService.getAll(this.type).subscribe({
+        this.disableNextButton = true;
+        this.recipeService.getAll(this.type, this.currentPage).subscribe({
           next: (res) => {
             this.recipes = res.data.map((recipe: IRecipe) => {
-              return{
+              return {
                 id: recipe.id,
                 name: recipe.name,
                 description: recipe.description,
@@ -44,26 +51,53 @@ export class RecipeListComponent implements OnInit {
                 types: recipe.types?.slice(0, 3),
               }
             });
+
             this.fetching = false;
-            this.filteredRecipes = this.recipes
-          },
+            this.filteredRecipes = this.recipes;
+
+            if (this.recipes.length === 0) {
+              this.disableNextButton = true;
+              this.moreRecipes = false;
+            } else {
+              this.disableNextButton = false;
+            }
+
+          } ,
           error: () => {
             this.router.navigate(['error']);
-            Swal.fire('Opps...','Something when wrong while loading the recipes','error')
+            Swal.fire('Opps...', 'Something went wrong while loading the recipes', 'error');
+          },
+          complete: () => {
+            this.fetching = false;
           }
-        })
+        });
       }
-    })
+    });
+  }
+
+
+  changePage(page: number): void {
+    console.log(page);
+    this.moreRecipes = true;
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.getRecipes();
+      setTimeout(() => {
+        this.filterRecipe()
+      }, 1000);
+    }
   }
 
   filterRecipe(): void {
+    console.log('hege')
     const inputElement = document.getElementById("searchBarInput") as HTMLInputElement;
     const inputValue = inputElement.value.toLowerCase();
-    if(inputValue){
-      this.filteredRecipes = this.recipes.filter((recipe: IRecipe) => recipe.name.toLowerCase().includes(inputValue))
-    } else{
+    if (inputValue) {
+      this.filteredRecipes = this.recipes.filter((recipe: IRecipe) =>
+        recipe.name.toLowerCase().includes(inputValue))
+    } else {
       this.filteredRecipes = this.recipes;
     }
-    
+
   }
 }

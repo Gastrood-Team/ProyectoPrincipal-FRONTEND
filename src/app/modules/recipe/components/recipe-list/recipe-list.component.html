@@ -1,56 +1,79 @@
 <app-header></app-header>
 
-<ng-container *ngIf="fetching; then spinner; else listRecipes"></ng-container>
-
-<ng-template #spinner>
-    <app-spinner></app-spinner>
-</ng-template>
-
-<ng-template #listRecipes>
-    <div class="custom-container">
-        <div class="content">
-            <div class="d-flex" style="justify-content: space-between; align-items: center;">
-                <div class="content-title poppin">
-                    {{ type }}
-                </div>
-                <div class="search-bar icon">
-                    <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Recipe..." id="searchBarInput"/>
-                    <button (click)="filterRecipe()">Seach</button>
-                </div>
+<div class="custom-container">
+    <div class="content">
+        <div class="d-flex" style="justify-content: space-between; align-items: center;">
+            <div class="content-title poppin">
+                {{ type }}
             </div>
-            <div class="grid-wrapper">
-                <ng-container *ngFor="let recipe of filteredRecipes">
-                    <div class="grid-tile">
-                        <div class="grid-tile-img">
-                            <img [src]="recipe.image">
-                        </div>
-                        <div class="grid-tile-text">
-                            <div class="grid-tile-title text-main">
-                                {{ recipe.name }}
-                            </div>
-                            <div class="grid-tile-subtitle">
-                                <ng-container *ngFor="let type of recipe.types">
-                                    {{ type.name }}
-                                </ng-container>
-                            </div>
-                            <div class="grid-tile-description">
-                                {{ recipe.description }}
-                            </div>
-                            <div class="grid-tile-options">
-                                <button mat-raised-button color="warn">
-                                    {{ 'commons.saveBtn' | translate }}
-                                </button>
-                                <button mat-raised-button [routerLink]="['/recipes', recipe.id]">
-                                    {{ 'commons.viewDetailsBtn' | translate }}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </ng-container>
+            <div class="search-bar icon">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Recipe..." id="searchBarInput" />
+                <button (click)="filterRecipe()">Seach</button>
             </div>
         </div>
+        
+        <ng-container *ngIf="fetching; then spinner; else listRecipes"></ng-container>
+
+        <ng-template #spinner>
+            <app-spinner></app-spinner>
+        </ng-template>
+
+        <ng-template #listRecipes>
+
+            <ng-container *ngIf="moreRecipes; then recipePage, else noRecipes"></ng-container>
+
+            <ng-template #recipePage>
+            <div class="grid-wrapper">
+                
+                    <ng-container *ngFor="let recipe of filteredRecipes">
+                        <div class="grid-tile">
+                            <div class="grid-tile-img">
+                                <img [src]="recipe.image">
+                            </div>
+                            <div class="grid-tile-text">
+                                <div class="grid-tile-title text-main">
+                                    {{ recipe.name }}
+                                </div>
+                                <div class="grid-tile-subtitle">
+                                    <ng-container *ngFor="let type of recipe.types">
+                                        {{ type.name }}
+                                    </ng-container>
+                                </div>
+                                <div class="grid-tile-description">
+                                    {{ recipe.description }}
+                                </div>
+                                <div class="grid-tile-options">
+                                    <button mat-raised-button color="warn">
+                                        {{ 'commons.saveBtn' | translate }}
+                                    </button>
+                                    <button mat-raised-button [routerLink]="['/recipes', recipe.id]">
+                                        {{ 'commons.viewDetailsBtn' | translate }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>            
+                </div>
+            </ng-template>
+
+            <ng-template #noRecipes>
+                <div class="full">
+                    No More Recipes Available
+                </div>
+            </ng-template>
+            
+            <div class="pagination">
+                <button class="pagination-button" [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+                    Previous
+                </button>
+                <span class="pagination-current">{{ currentPage }}</span>
+                <button class="pagination-button" [disabled]="disableNextButton" (click)="changePage(currentPage + 1)">
+                    Next
+                </button>
+            </div>
+        </ng-template>
     </div>
-</ng-template>
+</div>
 
 <app-footer></app-footer>

@@ -12,15 +12,16 @@ export class RecipeService {
 
   constructor(private http: HttpClient) { }
 
-  public getAll(recipeType?: string, page?: number): Observable<any>{
+  public getAll(recipeType?: string, page: number = 1): Observable<any> {
     let url = this.baseUrl;
-    if(recipeType){
-      url += `?type=${recipeType}`;
+    if (recipeType) {
+      url += `?type=${recipeType}&page=${page}`;
+    } else {
+      url += `?page=${page}`;
     }
     return this.http.get(url);
-
   }
-
+  
   public getbyId(id: number): Observable<any>{
     return this.http.get(`${this.baseUrl}/${id}`);
   }
