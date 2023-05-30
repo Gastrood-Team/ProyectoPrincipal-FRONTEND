@@ -18,6 +18,8 @@ export class RecipeListComponent implements OnInit {
   currentPage: number = 1;
   totalPages: number = 8;
   disableNextButton: boolean = false;
+  moreRecipes: boolean = true;
+
   originalRecipes: IRecipe[] = [];
   fetching: boolean = false;
 
@@ -37,7 +39,7 @@ export class RecipeListComponent implements OnInit {
       this.type = params['id'];
       if (this.type) {
         this.fetching = true;
-        this.disableNextButton = true; // Deshabilitar el botón "Next" inicialmente
+        this.disableNextButton = true;
         this.recipeService.getAll(this.type, this.currentPage).subscribe({
           next: (res) => {
             this.recipes = res.data.map((recipe: IRecipe) => {
@@ -51,12 +53,9 @@ export class RecipeListComponent implements OnInit {
             });
             this.filteredRecipes = this.recipes;
 
-            // Verificar si no hay más resultados de recetas
             if (this.recipes.length === 0) {
               this.disableNextButton = true;
-              Swal.fire('No more recipes', 'There are no more recipes available', 'info').then(() => {
-                location.reload();
-              });
+              this.moreRecipes = false;
             } else {
               this.disableNextButton = false;
             }
@@ -75,19 +74,25 @@ export class RecipeListComponent implements OnInit {
   }
 
 
-
   changePage(page: number): void {
-    if (page >= 1 && page <= this.totalPages && !this.disableNextButton) {
+    console.log(page);
+    this.moreRecipes = true;
+    if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
       this.getRecipes();
+      setTimeout(() => {
+        this.filterRecipe()
+      }, 1000);
     }
   }
 
   filterRecipe(): void {
+    console.log('hege')
     const inputElement = document.getElementById("searchBarInput") as HTMLInputElement;
     const inputValue = inputElement.value.toLowerCase();
     if (inputValue) {
-      this.filteredRecipes = this.recipes.filter((recipe: IRecipe) => recipe.name.toLowerCase().includes(inputValue))
+      this.filteredRecipes = this.recipes.filter((recipe: IRecipe) =>
+        recipe.name.toLowerCase().includes(inputValue))
     } else {
       this.filteredRecipes = this.recipes;
     }
