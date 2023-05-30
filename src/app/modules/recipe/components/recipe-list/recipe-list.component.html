@@ -15,7 +15,7 @@
                 </div>
                 <div class="search-bar icon">
                     <i class="bi bi-search"></i>
-                    <input type="text" placeholder="Recipe..." id="searchBarInput"/>
+                    <input type="text" placeholder="Recipe..." id="searchBarInput" />
                     <button (click)="filterRecipe()">Seach</button>
                 </div>
             </div>
@@ -48,6 +48,15 @@
                         </div>
                     </div>
                 </ng-container>
+            </div>
+            <div class="pagination">
+                <button class="pagination-button" [disabled]="currentPage === 1" (click)="changePage(currentPage - 1)">
+                    Previous
+                </button>
+                <span class="pagination-current">{{ currentPage }}</span>
+                <button class="pagination-button" [disabled]="disableNextButton" (click)="changePage(currentPage + 1)">
+                    Next
+                </button>
             </div>
         </div>
     </div>
