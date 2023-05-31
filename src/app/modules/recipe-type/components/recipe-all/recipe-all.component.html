@@ -1,0 +1,28 @@
+<ng-container *ngIf="recipeTypes; then listRecipeTypes; else spinner"></ng-container>
+
+<ng-template #spinner>
+    <app-spinner></app-spinner>
+</ng-template>
+
+<ng-template #listRecipeTypes>
+    <div class="content-title poppin text-center">
+        {{ 'commons.category' | translate }}
+    </div>
+    <div class="grid-inner-wrapper">
+        <ng-container *ngFor="let type of recipeTypes">
+            <div class="grid-tile" [routerLink]="['/categories', type.name]">
+                <div class="grid-tile-img">
+                    <img [src]="type.image">
+                </div>
+                <div class="grid-tile-text">
+                    <div class="grid-tile-subtitle text-main">
+                        {{ 'commons.category' | translate }}
+                    </div>
+                    <div class="grid-tile-title">
+                        {{ type.name }}
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</ng-template>

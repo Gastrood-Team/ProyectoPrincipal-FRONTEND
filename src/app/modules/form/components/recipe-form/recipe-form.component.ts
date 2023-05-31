@@ -64,7 +64,7 @@ export class RecipeFormComponent implements OnInit {
 
   readAll(): void {
     this.recipeTypeService.getAll().subscribe(res => {
-      this.recipeTypes = res.data.slice(0, 12);
+      this.recipeTypes = res.data;
     })
   }
 
